@@ -5,6 +5,7 @@ import dev.darkhorizon.es.sm.commands.Staff;
 import dev.darkhorizon.es.sm.events.SEventsListener;
 import org.bukkit.Bukkit;
 import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -14,8 +15,9 @@ import java.util.HashMap;
 public class Main extends JavaPlugin {
 
 
-    public HashMap<String, Inventory> staff_inventory = null;
+    public HashMap<String, ItemStack[]> staff_inventory = null;
     public ArrayList<String> staff_players = null;
+    public ArrayList<String> frozen = null;
     public Essentials ess = null;
 
 
@@ -35,7 +37,8 @@ public class Main extends JavaPlugin {
 
     private void initVariables() {
         staff_players = new ArrayList<String>();
-        staff_inventory = new HashMap<String, Inventory>();
+        staff_inventory = new HashMap<String, ItemStack[]>();
+        frozen = new ArrayList<String>();
         ess = (Essentials) getServer().getPluginManager().getPlugin("Essentials");
     }
 

@@ -1,22 +1,14 @@
 package dev.darkhorizon.es.sm.commands;
 
-import com.earth2me.essentials.Essentials;
 import com.earth2me.essentials.IUser;
 import dev.darkhorizon.es.sm.Main;
 import dev.darkhorizon.es.sm.config.Lang;
 import dev.darkhorizon.es.sm.config.Perms;
 import dev.darkhorizon.es.sm.items.Items;
-import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.Inventory;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.inventory.meta.SkullMeta;
-
-import java.util.List;
 
 public class Staff implements CommandExecutor {
 
@@ -48,12 +40,12 @@ public class Staff implements CommandExecutor {
             plugin.staff_players.remove(p.getName());
             plugin.staff_inventory.remove(p.getName());
             // Rehab players inventory
-            item.rehabInventory(p, plugin.staff_inventory.get(p.getName()));
+            item.rehabInventory(p);
 
             p.sendMessage(Lang.diabledStaffMode);
         } else {
             plugin.staff_players.add(p.getName());
-            plugin.staff_inventory.put(p.getName(), p.getInventory());
+            plugin.staff_inventory.put(p.getName(), p.getInventory().getContents());
 
             // Get essentials user
             IUser user = plugin.ess.getUser(p);

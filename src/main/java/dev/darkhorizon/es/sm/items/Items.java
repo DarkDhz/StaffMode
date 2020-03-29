@@ -28,7 +28,7 @@ public class Items {
 
     private static void createInstance() {
         if (INSTANCE == null) {
-            synchronized(Main.class) {
+            synchronized(Items.class) {
                 if (INSTANCE == null) {
                     INSTANCE = new Items();
                 }
@@ -36,11 +36,10 @@ public class Items {
         }
     }
 
-    public void rehabInventory(Player p, Inventory inv) {
+    public void rehabInventory(Player p) {
         p.getInventory().clear();
-        for (int i = 0; i < inv.getSize(); i++) {
-            p.getInventory().setItem(i, inv.getItem(i));
-        }
+        ItemStack[] content = plugin.staff_inventory.get(p.getName());
+        p.getInventory().setContents(content);
     }
 
     public void setInventory(Player p) {
