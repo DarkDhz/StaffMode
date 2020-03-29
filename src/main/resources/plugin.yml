@@ -1,0 +1,8 @@
+name: StaffMode
+version: 1.0
+main: dev.darkhorizon.es.sm.Main
+commands:
+  staff:
+    description: Staff Mode command
+    usage: /<command>
+    aliases: [sm, staffm, staffmode, smode]
