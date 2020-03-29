@@ -4,7 +4,10 @@ import com.earth2me.essentials.IUser;
 import dev.darkhorizon.es.sm.Main;
 import dev.darkhorizon.es.sm.config.Lang;
 import dev.darkhorizon.es.sm.config.Perms;
+import dev.darkhorizon.es.sm.events.DisableStaffMode;
+import dev.darkhorizon.es.sm.events.EnableStaffMode;
 import dev.darkhorizon.es.sm.items.Items;
+import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -42,6 +45,8 @@ public class Staff implements CommandExecutor {
             // Rehab players inventory
             item.rehabInventory(p);
 
+            Bukkit.getPluginManager().callEvent(new DisableStaffMode(p));
+
             p.sendMessage(Lang.diabledStaffMode);
         } else {
             plugin.staff_players.add(p.getName());
@@ -49,6 +54,10 @@ public class Staff implements CommandExecutor {
 
             // Get essentials user
             IUser user = plugin.ess.getUser(p);
+
+            //Generate Event
+            Bukkit.getPluginManager().callEvent(new EnableStaffMode(p));
+
             // Enable vanish for user
             user.setVanished(true);
 
@@ -56,6 +65,4 @@ public class Staff implements CommandExecutor {
             p.sendMessage(Lang.enabledStaffMode);
         }
     }
-
-
 }

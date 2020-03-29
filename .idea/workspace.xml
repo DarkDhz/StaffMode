@@ -7,11 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67bced4b-a0b0-49bc-bd59-a80a910e5d40" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/DisableStaffMode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/EnableStaffMode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/commands/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/commands/Staff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/items/Items.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/items/Items.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1585503529863</updated>
       <workItem from="1585503531637" duration="5561000" />
-      <workItem from="1585510264039" duration="1883000" />
+      <workItem from="1585510264039" duration="2963000" />
     </task>
     <task id="LOCAL-00001" summary="Init plugin">
       <created>1585507470049</created>
@@ -102,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585509035762</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Handling new events">
+      <created>1585512301545</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1585512301545</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,7 +117,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init plugin" />
     <MESSAGE value="Start to handle events" />
-    <option name="LAST_COMMIT_MESSAGE" value="Start to handle events" />
+    <MESSAGE value="Handling new events" />
+    <option name="LAST_COMMIT_MESSAGE" value="Handling new events" />
   </component>
   <component name="WindowStateProjectService">
     <state x="659" y="171" key="#com.intellij.ide.util.MemberChooser" timestamp="1585507159431">
@@ -122,18 +129,18 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="584" y="209" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585511905646" />
-    <state x="478" y="56" key="CommitChangelistDialog2" timestamp="1585509033666">
+    <state x="478" y="56" key="CommitChangelistDialog2" timestamp="1585513250350">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="478" y="56" key="CommitChangelistDialog2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585509033666" />
+    <state x="478" y="56" key="CommitChangelistDialog2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585513250350" />
     <state x="334" y="36" key="SettingsEditor" timestamp="1585504877599">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="334" y="36" key="SettingsEditor/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585504877599" />
-    <state x="446" y="195" key="Vcs.Push.Dialog.v2" timestamp="1585509037347">
+    <state x="446" y="195" key="Vcs.Push.Dialog.v2" timestamp="1585512308334">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="446" y="195" key="Vcs.Push.Dialog.v2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585509037347" />
+    <state x="446" y="195" key="Vcs.Push.Dialog.v2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585512308334" />
     <state x="665" y="240" key="chooseDestDirectoryDialog" timestamp="1585507999881">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
