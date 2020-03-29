@@ -2,6 +2,7 @@ package dev.darkhorizon.es.sm;
 
 import com.earth2me.essentials.Essentials;
 import dev.darkhorizon.es.sm.commands.Staff;
+import dev.darkhorizon.es.sm.events.SEventsListener;
 import org.bukkit.Bukkit;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.plugin.PluginManager;
@@ -17,22 +18,6 @@ public class Main extends JavaPlugin {
     public ArrayList<String> staff_players = null;
     public Essentials ess = null;
 
-    private static Main INSTANCE = null;
-
-    public static Main getInstance() {
-        if (INSTANCE == null) createInstance();
-        return INSTANCE;
-    }
-
-    private static void createInstance() {
-        if (INSTANCE == null) {
-            synchronized(Main.class) {
-                if (INSTANCE == null) {
-                    INSTANCE = new Main();
-                }
-            }
-        }
-    }
 
     @Override
     public void onEnable() {
@@ -60,7 +45,7 @@ public class Main extends JavaPlugin {
 
     private void initEvents() {
         PluginManager pm = Bukkit.getPluginManager();
-        //pm.registerEvents(new pwarps.events.joinEvent(), this);
+        pm.registerEvents(new SEventsListener(), this);
     }
 
 

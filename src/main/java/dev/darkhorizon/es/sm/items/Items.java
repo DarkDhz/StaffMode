@@ -1,6 +1,7 @@
 package dev.darkhorizon.es.sm.items;
 
 import dev.darkhorizon.es.sm.Main;
+import dev.darkhorizon.es.sm.config.Lang;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
@@ -13,7 +14,7 @@ import java.util.List;
 
 public class Items {
 
-    private final Main plugin = Main.getInstance();
+    private final Main plugin = Main.getPlugin(Main.class);
     private static Items INSTANCE = null;
 
     private Items() {
@@ -51,7 +52,7 @@ public class Items {
         List<String> lore = new ArrayList<String>();
         lore.add("para congelar al jugador!");
         meta.setLore(lore);
-        meta.setDisplayName("");
+        meta.setDisplayName(Lang.freeze_title);
         item.setItemMeta(meta);
         lore.clear();
         ItemStack skull = getHead(p);

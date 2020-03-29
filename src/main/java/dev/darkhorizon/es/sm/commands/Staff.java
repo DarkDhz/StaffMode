@@ -20,7 +20,7 @@ import java.util.List;
 
 public class Staff implements CommandExecutor {
 
-    private final Main plugin = Main.getInstance();
+    private final Main plugin = Main.getPlugin(Main.class);
     private final Items item = Items.getInstance();
 
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -49,14 +49,16 @@ public class Staff implements CommandExecutor {
             plugin.staff_inventory.remove(p.getName());
             // Rehab players inventory
             item.rehabInventory(p, plugin.staff_inventory.get(p.getName()));
-            // Get essentials user
-            IUser user = plugin.ess.getUser(p);
-            // Enable vanish for user
-            user.setVanished(true);
+
             p.sendMessage(Lang.diabledStaffMode);
         } else {
             plugin.staff_players.add(p.getName());
             plugin.staff_inventory.put(p.getName(), p.getInventory());
+
+            // Get essentials user
+            IUser user = plugin.ess.getUser(p);
+            // Enable vanish for user
+            user.setVanished(true);
 
             item.setInventory(p);
             p.sendMessage(Lang.enabledStaffMode);

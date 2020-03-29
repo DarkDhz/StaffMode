@@ -6,7 +6,19 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67bced4b-a0b0-49bc-bd59-a80a910e5d40" name="Default Changelist" comment="" />
+    <list default="true" id="67bced4b-a0b0-49bc-bd59-a80a910e5d40" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SM_jar/SM.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SM_jar/SM.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/commands/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/commands/Staff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/config/Lang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/config/Lang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/items/Items.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/items/Items.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/darkhorizon/es/sm/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/darkhorizon/es/sm/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/darkhorizon/es/sm/commands/Staff.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/darkhorizon/es/sm/commands/Staff.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/darkhorizon/es/sm/items/Items.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/darkhorizon/es/sm/items/Items.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,6 +34,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\Users\Arnau\Desktop\uni\IdeaProjects\SM\.idea" />
+      </set>
+    </option>
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -30,13 +49,19 @@
     </option>
   </component>
   <component name="ProjectId" id="1ZoRbFcEMKDzJfKT8Ec4GLUxmp2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="sm" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -66,25 +91,49 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585503529863</updated>
-      <workItem from="1585503531637" duration="3880000" />
+      <workItem from="1585503531637" duration="5470000" />
     </task>
+    <task id="LOCAL-00001" summary="Init plugin">
+      <created>1585507470049</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585507470049</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Init plugin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Init plugin" />
   </component>
   <component name="WindowStateProjectService">
     <state x="659" y="171" key="#com.intellij.ide.util.MemberChooser" timestamp="1585507159431">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="659" y="171" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585507159431" />
+    <state x="478" y="56" key="CommitChangelistDialog2" timestamp="1585507467618">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="478" y="56" key="CommitChangelistDialog2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585507467618" />
     <state x="334" y="36" key="SettingsEditor" timestamp="1585504877599">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="334" y="36" key="SettingsEditor/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585504877599" />
-    <state x="516" y="195" width="672" height="678" key="search.everywhere.popup" timestamp="1585506671862">
+    <state x="446" y="195" key="Vcs.Push.Dialog.v2" timestamp="1585507476590">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="516" y="195" width="672" height="678" key="search.everywhere.popup/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585506671862" />
+    <state x="446" y="195" key="Vcs.Push.Dialog.v2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585507476590" />
+    <state x="665" y="240" key="chooseDestDirectoryDialog" timestamp="1585507999881">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="665" y="240" key="chooseDestDirectoryDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585507999881" />
+    <state x="514" y="196" width="672" height="678" key="search.everywhere.popup" timestamp="1585508730397">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="514" y="196" width="672" height="678" key="search.everywhere.popup/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585508730397" />
   </component>
 </project>
