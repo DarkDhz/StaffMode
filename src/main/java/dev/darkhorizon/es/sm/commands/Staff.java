@@ -4,6 +4,7 @@ import com.earth2me.essentials.IUser;
 import dev.darkhorizon.es.sm.Main;
 import dev.darkhorizon.es.sm.config.Lang;
 import dev.darkhorizon.es.sm.config.Perms;
+import dev.darkhorizon.es.sm.data.Data;
 import dev.darkhorizon.es.sm.events.DisableStaffMode;
 import dev.darkhorizon.es.sm.events.EnableStaffMode;
 import dev.darkhorizon.es.sm.items.Items;
@@ -15,7 +16,7 @@ import org.bukkit.entity.Player;
 
 public class Staff implements CommandExecutor {
 
-    private final Main plugin = Main.getPlugin(Main.class);
+    private static final Main plugin = Main.getPlugin(Main.class);
     private final Items item = Items.getInstance();
 
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -39,30 +40,34 @@ public class Staff implements CommandExecutor {
     }
 
     private void manageStaffMode(Player p) {
-        if (plugin.staff_players.contains(p.getName())) {
-            plugin.staff_players.remove(p.getName());
-            plugin.staff_inventory.remove(p.getName());
+        if (Data.staff_players.contains(p.getName())) {
+
             // Rehab players inventory
             item.rehabInventory(p);
 
+            // Generate Event
             Bukkit.getPluginManager().callEvent(new DisableStaffMode(p));
 
+            Data.staff_players.remove(p.getName());
+            Data.staff_inv.remove(p.getName());
             p.sendMessage(Lang.diabledStaffMode);
         } else {
-            plugin.staff_players.add(p.getName());
-            plugin.staff_inventory.put(p.getName(), p.getInventory().getContents());
+            Data.staff_players.add(p.getName());
+            Data.staff_inv.put(p.getName(), p.getInventory().getContents());
+
 
             // Get essentials user
             IUser user = plugin.ess.getUser(p);
-
-            //Generate Event
-            Bukkit.getPluginManager().callEvent(new EnableStaffMode(p));
-
             // Enable vanish for user
             user.setVanished(true);
+
+            // Generate Event
+            Bukkit.getPluginManager().callEvent(new EnableStaffMode(p));
 
             item.setInventory(p);
             p.sendMessage(Lang.enabledStaffMode);
         }
     }
+
+
 }

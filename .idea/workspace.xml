@@ -6,11 +6,21 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67bced4b-a0b0-49bc-bd59-a80a910e5d40" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/DisableStaffMode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/EnableStaffMode.java" afterDir="false" />
+    <list default="true" id="67bced4b-a0b0-49bc-bd59-a80a910e5d40" name="Default Changelist" comment="Added events">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/commands/Punish.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/data/Data.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/gui/Examine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SM_jar/SM.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SM_jar/SM.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/commands/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/commands/Staff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/config/Lang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/config/Lang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/items/Items.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/items/Items.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/darkhorizon/es/sm/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/darkhorizon/es/sm/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/darkhorizon/es/sm/commands/Staff.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/darkhorizon/es/sm/commands/Staff.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/darkhorizon/es/sm/config/Lang.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/darkhorizon/es/sm/config/Lang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/darkhorizon/es/sm/items/Items.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/darkhorizon/es/sm/items/Items.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +65,7 @@
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="sm" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="ToolWindowMessages.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -85,7 +96,9 @@
       <option name="presentableId" value="Default" />
       <updated>1585503529863</updated>
       <workItem from="1585503531637" duration="5561000" />
-      <workItem from="1585510264039" duration="2963000" />
+      <workItem from="1585510264039" duration="3263000" />
+      <workItem from="1585559809734" duration="4417000" />
+      <workItem from="1585564925612" duration="2608000" />
     </task>
     <task id="LOCAL-00001" summary="Init plugin">
       <created>1585507470049</created>
@@ -108,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585512301545</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added events">
+      <created>1585513253547</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1585513253547</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,21 +138,22 @@
     <MESSAGE value="Init plugin" />
     <MESSAGE value="Start to handle events" />
     <MESSAGE value="Handling new events" />
-    <option name="LAST_COMMIT_MESSAGE" value="Handling new events" />
+    <MESSAGE value="Added events" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added events" />
   </component>
   <component name="WindowStateProjectService">
     <state x="659" y="171" key="#com.intellij.ide.util.MemberChooser" timestamp="1585507159431">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="659" y="171" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585507159431" />
-    <state x="584" y="209" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585511905646">
+    <state x="584" y="209" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585563668065">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="584" y="209" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585511905646" />
-    <state x="478" y="56" key="CommitChangelistDialog2" timestamp="1585513250350">
+    <state x="584" y="209" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585563668065" />
+    <state x="478" y="56" key="CommitChangelistDialog2" timestamp="1585567610248">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="478" y="56" key="CommitChangelistDialog2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585513250350" />
+    <state x="478" y="56" key="CommitChangelistDialog2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585567610248" />
     <state x="334" y="36" key="SettingsEditor" timestamp="1585504877599">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -145,10 +166,18 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="665" y="240" key="chooseDestDirectoryDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585507999881" />
-    <state x="550" y="286" key="com.intellij.ide.util.TipDialog" timestamp="1585510262977">
+    <state x="550" y="286" key="com.intellij.ide.util.TipDialog" timestamp="1585564924761">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="550" y="286" key="com.intellij.ide.util.TipDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585510262977" />
+    <state x="550" y="286" key="com.intellij.ide.util.TipDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585564924761" />
+    <state x="584" y="228" key="extract.method.dialog" timestamp="1585566230678">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="584" y="228" key="extract.method.dialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585566230678" />
+    <state x="510" y="211" key="run.anything.popup" timestamp="1585567470507">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="510" y="211" key="run.anything.popup/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585567470507" />
     <state x="514" y="196" width="672" height="678" key="search.everywhere.popup" timestamp="1585508730397">
       <screen x="0" y="0" width="1707" height="920" />
     </state>

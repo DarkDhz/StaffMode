@@ -1,20 +1,18 @@
 package dev.darkhorizon.es.sm.items;
 
+import com.earth2me.essentials.IUser;
 import dev.darkhorizon.es.sm.Main;
 import dev.darkhorizon.es.sm.config.Lang;
+import dev.darkhorizon.es.sm.data.Data;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Items {
 
-    private final Main plugin = Main.getPlugin(Main.class);
+    private static final Main plugin = Main.getPlugin(Main.class);
     private static Items INSTANCE = null;
 
     private Items() {
@@ -38,52 +36,68 @@ public class Items {
 
     public void rehabInventory(Player p) {
         p.getInventory().clear();
-        ItemStack[] content = plugin.staff_inventory.get(p.getName());
-        p.getInventory().setContents(content);
+        p.getInventory().setContents(Data.staff_inv.get(p.getName()));
     }
 
     public void setInventory(Player p) {
-
         p.getInventory().clear();
+        p.getInventory().setItem(Lang.freeze_slot, this.getFrezze());
+        p.getInventory().setItem(Lang.random_slot, this.getRandom());
+        p.getInventory().setItem(Lang.vanish_slot, this.getVanish(p));
+        p.getInventory().setItem(Lang.examine_slot, this.getExamine());
+        p.getInventory().setItem(Lang.slist_slot, this.getHead(p));
+    }
 
-        ItemStack item = new ItemStack(Material.ICE);
+    private ItemStack getVanish(Player p) {
+        ItemStack item = Lang.vanish_item;
         ItemMeta meta = item.getItemMeta();
-        List<String> lore = new ArrayList<String>();
-        lore.add("para congelar al jugador!");
-        meta.setLore(lore);
+        meta.setLore(Lang.vanish_lore);
+        String title = Lang.vanish_title;
+        IUser user = plugin.ess.getUser(p);
+        if (user.isVanished()) {
+            title = title.replaceAll("%state", Lang.vanish_title_active);
+        } else {
+            title = title.replaceAll("%state", Lang.vanish_title_unactive);
+        }
+        meta.setDisplayName(title);
+        item.setItemMeta(meta);
+        return item;
+    }
+
+    private ItemStack getExamine() {
+        ItemStack item = Lang.examine_item;
+        ItemMeta meta = item.getItemMeta();
+        meta.setLore(Lang.examine_lore);
+        meta.setDisplayName(Lang.examine_title);
+        item.setItemMeta(meta);
+        return item;
+    }
+
+    private ItemStack getFrezze() {
+        ItemStack item = Lang.freeze_item;
+        ItemMeta meta = item.getItemMeta();
+        meta.setLore(Lang.freeze_lore);
         meta.setDisplayName(Lang.freeze_title);
         item.setItemMeta(meta);
-        lore.clear();
-        ItemStack skull = getHead(p);
-        ItemStack item3 = new ItemStack(Material.CHEST);
-        ItemMeta meta3 = item3.getItemMeta();
-        lore.add("para examinar al jugador!");
-        meta3.setLore(lore);
-        meta3.setDisplayName("");
-        item3.setItemMeta(meta3);
-        lore.clear();
-        ItemStack item4 = new ItemStack(Material.COMPASS);
-        ItemMeta meta4 = item4.getItemMeta();
-        lore.add("para teletransportarte aleatoriamente!");
-        meta4.setLore(lore);
-        meta4.setDisplayName("TP");
-        item4.setItemMeta(meta4);
-        lore.clear();
-        p.getInventory().setItem(4, item3);
-        p.getInventory().setItem(0, item);
-        p.getInventory().setItem(1, item4);
-        p.getInventory().setItem(8, skull);
+        return item;
+    }
+
+    private ItemStack getRandom() {
+        ItemStack item = Lang.random_item;
+        ItemMeta meta = item.getItemMeta();
+        meta.setLore(Lang.random_lore);
+        meta.setDisplayName(Lang.random_title);
+        item.setItemMeta(meta);
+        return item;
     }
 
     private ItemStack getHead(Player p) {
         ItemStack item = new ItemStack(Material.SKULL_ITEM, 1, (short)3);
-        SkullMeta sm = (SkullMeta)item.getItemMeta();
-        List<String> lore = new ArrayList<String>();
-        lore.add("para ver al staff!");
+        SkullMeta sm = (SkullMeta) item.getItemMeta();
         sm.setOwner(p.getName());
-        sm.setDisplayName("DE STAFF");
-        sm.setLore(lore);
-        item.setItemMeta((ItemMeta)sm);
+        sm.setDisplayName(Lang.slist_title);
+        sm.setLore(Lang.slist_lore);
+        item.setItemMeta(sm);
         return item;
     }
 }
