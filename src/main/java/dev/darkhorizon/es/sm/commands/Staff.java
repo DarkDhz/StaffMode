@@ -16,7 +16,7 @@ import org.bukkit.entity.Player;
 
 public class Staff implements CommandExecutor {
 
-    private static final Main plugin = Main.getPlugin(Main.class);
+    private final Main plugin = Main.getPlugin(Main.class);
     private final Items item = Items.getInstance();
 
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -28,7 +28,7 @@ public class Staff implements CommandExecutor {
                 p.sendMessage(Lang.no_prem);
             }
         }
-        return false;
+        return true;
     }
 
     private void manageCommand(Player p, String [] args) {

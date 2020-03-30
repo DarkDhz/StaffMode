@@ -10,6 +10,9 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Items {
 
     private static final Main plugin = Main.getPlugin(Main.class);
@@ -37,24 +40,36 @@ public class Items {
     public void rehabInventory(Player p) {
         p.getInventory().clear();
         p.getInventory().setContents(Data.staff_inv.get(p.getName()));
+        p.updateInventory();
+    }
+
+    public void updateVanish(Player p, boolean state) {
+        p.getInventory().setItem(Lang.vanish_slot, this.getVanish(p, state));
+        p.updateInventory();
     }
 
     public void setInventory(Player p) {
+
         p.getInventory().clear();
         p.getInventory().setItem(Lang.freeze_slot, this.getFrezze());
         p.getInventory().setItem(Lang.random_slot, this.getRandom());
-        p.getInventory().setItem(Lang.vanish_slot, this.getVanish(p));
+        p.getInventory().setItem(Lang.vanish_slot, this.getVanish(p, plugin.ess.getUser(p).isVanished()));
         p.getInventory().setItem(Lang.examine_slot, this.getExamine());
         p.getInventory().setItem(Lang.slist_slot, this.getHead(p));
+        p.updateInventory();
     }
 
-    private ItemStack getVanish(Player p) {
-        ItemStack item = Lang.vanish_item;
+    private ItemStack getVanish(Player p, boolean state) {
+        ItemStack item = Lang.vanish_item_enabled;
+        if (!state) {
+            item = Lang.vanish_item_disabled;
+        }
+
         ItemMeta meta = item.getItemMeta();
         meta.setLore(Lang.vanish_lore);
         String title = Lang.vanish_title;
-        IUser user = plugin.ess.getUser(p);
-        if (user.isVanished()) {
+
+        if (state) {
             title = title.replaceAll("%state", Lang.vanish_title_active);
         } else {
             title = title.replaceAll("%state", Lang.vanish_title_unactive);
@@ -100,4 +115,49 @@ public class Items {
         item.setItemMeta(sm);
         return item;
     }
+
+    public ItemStack getSeparator() {
+        ItemStack item = Lang.separator_item;
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName(Lang.separator_title);
+        item.setItemMeta(meta);
+        return item;
+    }
+
+    public ItemStack getInfoItem(Player target) {
+        ItemStack item = Lang.user_info_item;
+        ItemMeta meta = item.getItemMeta();
+        IUser user = plugin.ess.getUser(target);
+
+        String god = Lang.user_info_disabled;
+        if (user.isGodModeEnabled()) {
+            god = Lang.user_info_enabled;
+        }
+
+        String fly = Lang.user_info_disabled;
+        if (target.isFlying()) {
+            fly = Lang.user_info_enabled;
+        }
+
+        String loc = "X: " + target.getLocation().getBlockX() + " Y: " + target.getLocation().getBlockY()
+                + " Z: " + target.getLocation().getBlockZ();
+
+        meta.setDisplayName(Lang.user_info_title.replaceAll("%player", target.getName()));
+
+
+        meta.setLore(Lang.generateUserInfoLore(god, fly, "" + target.getHealth(), loc, target.getWorld().getName()));
+        item.setItemMeta(meta);
+        return item;
+    }
+
+    public ItemStack getExTeleportItem() {
+        ItemStack item = Lang.ex_teleport_item;
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName(Lang.ex_teleport_title);
+        meta.setLore(Lang.ex_teleport_lore);
+        item.setItemMeta(meta);
+        return item;
+    }
+
+
 }

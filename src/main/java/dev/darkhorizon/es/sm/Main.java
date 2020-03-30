@@ -1,7 +1,7 @@
 package dev.darkhorizon.es.sm;
 
 import com.earth2me.essentials.Essentials;
-import dev.darkhorizon.es.sm.commands.Staff;
+import dev.darkhorizon.es.sm.commands.*;
 import dev.darkhorizon.es.sm.events.SEventsListener;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
@@ -25,6 +25,7 @@ public class Main extends JavaPlugin {
     @Override
     public void onDisable() {
         super.onDisable();
+
     }
 
     private void initVariables() {
@@ -33,6 +34,10 @@ public class Main extends JavaPlugin {
 
     private void initCommands() {
         this.getCommand("staff").setExecutor(new Staff());
+        this.getCommand("examine").setExecutor(new Examine());
+        this.getCommand("freeze").setExecutor(new Freeze());
+        this.getCommand("stafflist").setExecutor(new StaffList());
+        this.getCommand("playertp").setExecutor(new RandomTP());
     }
 
     private void initEvents() {

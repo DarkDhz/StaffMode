@@ -6,3 +6,14 @@ commands:
     description: Staff Mode command
     usage: /<command>
     aliases: [sm, staffm, staffmode, smode]
+  examine:
+    usage: <command>
+    aliases: [examinar]
+  freeze:
+    usage: <command>
+    aliases: [ss, congelar]
+  stafflist:
+    usage: <command>
+    aliases: [slist, staffl]
+  playertp:
+    usage: <command>

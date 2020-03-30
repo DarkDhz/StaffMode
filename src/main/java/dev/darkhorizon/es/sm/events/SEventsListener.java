@@ -1,31 +1,101 @@
 package dev.darkhorizon.es.sm.events;
 
+import com.earth2me.essentials.IUser;
 import dev.darkhorizon.es.sm.Main;
+import dev.darkhorizon.es.sm.commands.StaffList;
 import dev.darkhorizon.es.sm.config.Lang;
 import dev.darkhorizon.es.sm.config.Perms;
 import dev.darkhorizon.es.sm.data.Data;
 import dev.darkhorizon.es.sm.items.Items;
+import net.ess3.api.events.VanishStatusChangeEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.block.CreatureSpawner;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
-import org.bukkit.event.player.PlayerDropItemEvent;
-import org.bukkit.event.player.PlayerPickupItemEvent;
-import org.bukkit.event.player.PlayerQuitEvent;
+import org.bukkit.event.inventory.InventoryCloseEvent;
+import org.bukkit.event.inventory.InventoryDragEvent;
+import org.bukkit.event.inventory.InventoryOpenEvent;
+import org.bukkit.event.player.*;
+import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
+import java.util.Arrays;
+
 public class SEventsListener implements Listener {
-    private static final Main plugin = Main.getPlugin(Main.class);
-    private final Items item = Items.getInstance();
+    private final Main plugin = Main.getPlugin(Main.class);
+    private final Items items = Items.getInstance();
 
+    @EventHandler
+    public void onVanishChange(VanishStatusChangeEvent e) {
+        Player p = Bukkit.getPlayer(e.getAffected().getName());
+        if (Data.staff_players.contains(p.getName())) {
+            items.updateVanish(p, e.getValue());
+        }
+    }
 
+    @EventHandler
+    public void onInteract(PlayerInteractEntityEvent e) {
+        if (!(e.getRightClicked() instanceof Player))
+            return;
+
+        Player clicker = e.getPlayer();
+        Player hitted = (Player) e.getRightClicked();
+
+        if (Data.staff_players.contains(clicker.getName())) {
+            if (clicker.getItemInHand().getType() == Lang.freeze_item.getType() && clicker.getItemInHand().hasItemMeta()
+                    && clicker.getItemInHand().getItemMeta().getDisplayName().equals(Lang.freeze_title)) {
+                String command = "freeze " + hitted.getName();
+                clicker.performCommand(command);
+                e.setCancelled(true);
+            }
+            if (clicker.getItemInHand().getType() == Lang.examine_item.getType() && clicker.getItemInHand().hasItemMeta()
+                    && clicker.getItemInHand().getItemMeta().getDisplayName().equals(Lang.examine_title)) {
+                String command = "examine " + hitted.getName();
+                clicker.performCommand(command);
+                e.setCancelled(true);
+            }
+        }
+    }
+
+    @EventHandler
+    public void interact(PlayerInteractEvent e) {
+        Player p = e.getPlayer();
+
+        if (e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.RIGHT_CLICK_BLOCK) {
+            if (p.getItemInHand().getType() == Material.SKULL_ITEM && p.getItemInHand().hasItemMeta()
+                    && p.getItemInHand().getItemMeta().getDisplayName().contains(Lang.slist_title)) {
+                String command = "stafflist";
+                p.performCommand(command);
+                e.setCancelled(true);
+                return;
+            }
+            if (p.getItemInHand().getType() == Lang.vanish_item_disabled.getType() && p.getItemInHand().hasItemMeta()
+                    && p.getItemInHand().getItemMeta().getDisplayName().contains(Lang.vanish_title_unactive)) {
+                IUser user = plugin.ess.getUser(p);
+                user.setVanished(true);
+                items.updateVanish(p, true);
+                e.setCancelled(true);
+                return;
+            }
+            if (p.getItemInHand().getType() == Lang.vanish_item_enabled.getType() && p.getItemInHand().hasItemMeta()
+                    && p.getItemInHand().getItemMeta().getDisplayName().contains(Lang.vanish_title_active)) {
+                IUser user = plugin.ess.getUser(p);
+                user.setVanished(false);
+                items.updateVanish(p, false);
+                e.setCancelled(true);
+                return;
+            }
+        }
+
+    }
 
     @EventHandler
     public void onDestroy(BlockBreakEvent e) {
@@ -72,6 +142,9 @@ public class SEventsListener implements Listener {
                 //staff.playSound(staff.getLocation(), Sound.DIG_WOOL, 10.0F, 1.0F);
             }
         }
+        if (Data.frozen.contains(e.getPlayer().getName())) {
+            e.setCancelled(true);
+        }
     }
 
     @EventHandler
@@ -83,6 +156,9 @@ public class SEventsListener implements Listener {
                 e.setCancelled(true);
             }
         }
+        if (Data.frozen.contains(e.getPlayer().getName())) {
+            e.setCancelled(true);
+        }
     }
 
     @EventHandler
@@ -92,10 +168,16 @@ public class SEventsListener implements Listener {
             if (Data.staff_players.contains(hitted.getPlayer().getName())) {
                 e.setCancelled(true);
             }
+            if (Data.frozen.contains(hitted.getName())) {
+                e.setCancelled(true);
+            }
         }
 
         if (e.getDamager() instanceof Player) {
-            Player hitted = (Player) e.getEntity();
+            Player hitted = (Player) e.getDamager();
+            if (Data.frozen.contains(hitted.getName())) {
+                e.setCancelled(true);
+            }
             if (hitted.hasPermission(Perms.main_permission)) {
                 switch (Perms.can_pvp) {
                     case ALL:
@@ -121,16 +203,50 @@ public class SEventsListener implements Listener {
         if (e.getClickedInventory() == null || e.getSlotType() == null) {
             return;
         }
+
+
         Player p = (Player) e.getWhoClicked();
 
         ItemStack item = e.getCurrentItem();
-
-        if (item.getType() == Material.SKULL_ITEM && item.hasItemMeta() && item.getItemMeta().getDisplayName().contains(Lang.freeze_title)) {
-            e.setCancelled(true);
-            return;
+        if (Data.staff_players.contains(p.getName())) {
+            if (item.getType() == Material.SKULL_ITEM && item.hasItemMeta()) {
+                e.setCancelled(true);
+                return;
+            }
+            if (item.getType() == Lang.vanish_item_disabled.getType() && item.hasItemMeta()) {
+                e.setCancelled(true);
+                return;
+            }
+            if (item.getType() == Lang.vanish_item_enabled.getType() && item.hasItemMeta() && item.getItemMeta().getDisplayName().contains(Lang.vanish_title)) {
+                e.setCancelled(true);
+                return;
+            }
+            if (p.getOpenInventory().getTitle().contains(Lang.examine_GUI_title_vis)) {
+                String[] user = p.getOpenInventory().getTitle().split(Lang.examine_GUI_title_vis);
+                Player target = Bukkit.getPlayer(user[1]);
+                if (target == null) {
+                    p.closeInventory();
+                    return;
+                }
+                if (item.getType() == Lang.ex_teleport_item.getType() && item.hasItemMeta() && item.getItemMeta().getDisplayName().contains(Lang.ex_teleport_title)) {
+                    p.teleport(target.getLocation());
+                    p.closeInventory();
+                }
+                if (Data.frozen.contains(user[1])) {
+                    e.setCancelled(false);
+                } else {
+                    e.setCancelled(true);
+                    return;
+                }
+            }
         }
+    }
 
-
+    @EventHandler
+    public void onOpenInventory(InventoryOpenEvent e) {
+        if (Data.frozen.contains(e.getPlayer().getName())) {
+            e.setCancelled(true);
+        }
     }
 
     @EventHandler
@@ -149,10 +265,11 @@ public class SEventsListener implements Listener {
                 e.getPlayer().sendMessage(Lang.staff_no_drop);
                 e.setCancelled(true);
             }
-
+        }
+        if (Data.frozen.contains(e.getPlayer().getName())) {
+            e.setCancelled(true);
         }
     }
-
 
     @EventHandler
     public void onDeath(PlayerDeathEvent e) {
@@ -173,7 +290,14 @@ public class SEventsListener implements Listener {
         if (!Data.staff_players.contains(e.getPlayer().getName()))
             return;
         Data.staff_players.remove(e.getPlayer().getName());
-        item.rehabInventory(e.getPlayer());
+        items.rehabInventory(e.getPlayer());
+    }
+
+    @EventHandler
+    public void onClose(InventoryCloseEvent e) {
+        Inventory inv = e.getInventory();
+        Player p = (Player) e.getPlayer();
+
     }
 
 }
