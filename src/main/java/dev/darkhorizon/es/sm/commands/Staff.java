@@ -22,7 +22,7 @@ public class Staff implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player) {
             Player p = (Player) sender;
-            if (p.hasPermission(Perms.main_premission)) {
+            if (p.hasPermission(Perms.main_permission)) {
                 this.manageCommand(p, args);
             } else {
                 p.sendMessage(Lang.no_prem);

@@ -19,8 +19,16 @@ public class Lang {
 
     public static String staff_usage = prefix + " /staff para activar o desactivar el staffMode";
 
+    // Events Related
+
     public static String staff_no_drop = prefix + "No puedes dropear items en modo staff";
-    public static String staff_no_build = prefix + "No puedes colocar bloques en modo staff";
+    public static String staff_no_place = prefix + "No puedes colocar bloques en modo staff";
+    public static String staff_no_break = prefix + "No puedes romper bloques en modo staff";
+    public static String staff_no_pvp = prefix + "Pvp Desactivado en modo Staff";
+    public static String staff_spawner_break = prefix + "%player ha roto un spawner de %type";
+
+
+    // /staff related
 
     public static String enabledStaffMode = prefix + "¡Ahora estas en modo Staff!";
     public static String diabledStaffMode = prefix + "¡Ya no estas en modo Staff!";
@@ -31,8 +39,9 @@ public class Lang {
     // FREEZE
     public static int freeze_slot = 0;
     public static ItemStack freeze_item = new ItemStack(Material.ICE);
-    public static String freeze_title = "§9§lCongelar";
+    public static String freeze_title = "§9§lCONGELAR";
     public static List<String> freeze_lore = generateFrezzeLore();
+
     private static ArrayList<String> generateFrezzeLore() {
         ArrayList<String> toReturn = new ArrayList<String>();
         toReturn.add("§7¡Clic para examinar al jugador!");
