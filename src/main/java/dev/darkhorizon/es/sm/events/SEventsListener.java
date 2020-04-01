@@ -7,6 +7,7 @@ import dev.darkhorizon.es.sm.config.Lang;
 import dev.darkhorizon.es.sm.config.Perms;
 import dev.darkhorizon.es.sm.data.Data;
 import dev.darkhorizon.es.sm.items.Items;
+import net.ess3.api.events.AfkStatusChangeEvent;
 import net.ess3.api.events.VanishStatusChangeEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -36,6 +37,9 @@ public class SEventsListener implements Listener {
     @EventHandler
     public void onVanishChange(VanishStatusChangeEvent e) {
         Player p = Bukkit.getPlayer(e.getAffected().getName());
+        if (p == null) {
+            return;
+        }
         if (Data.staff_players.contains(p.getName())) {
             items.updateVanish(p, e.getValue());
         }
@@ -297,6 +301,18 @@ public class SEventsListener implements Listener {
     public void onClose(InventoryCloseEvent e) {
         Inventory inv = e.getInventory();
         Player p = (Player) e.getPlayer();
+
+    }
+
+    @EventHandler
+    public void onAfk(AfkStatusChangeEvent e) {
+        Player p = Bukkit.getPlayer(e.getAffected().getName());
+        if (p == null) {
+            return;
+        }
+        if (Data.frozen.contains(p.getName()) && e.getValue()) {
+            e.getAffected().setAfk(false);
+        }
 
     }
 

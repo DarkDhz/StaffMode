@@ -53,8 +53,7 @@ public class Lang {
     public static int random_slot = 1;
     public static ItemStack random_item = new ItemStack(Material.COMPASS);
     public static String random_title = "§7§lRANDOM TP";
-    public static List<String> random_lore = generateRandomLore();
-    private static ArrayList<String> generateRandomLore() {
+    public static ArrayList<String> generateRandomLore() {
         ArrayList<String> toReturn = new ArrayList<String>();
         toReturn.add("§7¡Clic para teletransportarte aleatoriamente!");
         return toReturn;
@@ -65,8 +64,7 @@ public class Lang {
 
     public static int slist_slot = 8;
     public static String slist_title = "§1§lLISTA DE STAFF";
-    public static List<String> slist_lore = slistRandomLore();
-    private static ArrayList<String> slistRandomLore() {
+    public static ArrayList<String> slistRandomLore() {
         ArrayList<String> toReturn = new ArrayList<String>();
         toReturn.add("§7¡Clic para ver al staff!");
         return toReturn;
@@ -77,8 +75,7 @@ public class Lang {
     public static int examine_slot = 6;
     public static ItemStack examine_item = new ItemStack(Material.CHEST);
     public static String examine_title = "§6§lEXAMINAR";
-    public static List<String> examine_lore = generateExamineLore();
-    private static ArrayList<String> generateExamineLore() {
+    public static ArrayList<String> generateExamineLore() {
         ArrayList<String> toReturn = new ArrayList<String>();
         toReturn.add("§7¡Clic para examinar al jugador!");
         return toReturn;
@@ -92,8 +89,7 @@ public class Lang {
     public static String vanish_title = "§b§lVANISH §8(%state§8)"; //STATE FOR ENABLED OR DISABLED
     public static String vanish_title_active = "§6§lACTIVADO";
     public static String vanish_title_unactive = "§c§lDESACTIVADO";
-    public static List<String> vanish_lore = generateVanishLore();
-    private static ArrayList<String> generateVanishLore() {
+    public static ArrayList<String> generateVanishLore() {
         ArrayList<String> toReturn = new ArrayList<String>();
         toReturn.add("§7¡Clic para modificar el vanish!");
         return toReturn;
@@ -124,8 +120,7 @@ public class Lang {
     // TELEPORT
     public static ItemStack ex_teleport_item = new ItemStack(Material.COMPASS);
     public static String ex_teleport_title = "Ir a donde esta el jugador";
-    public static List<String> ex_teleport_lore = generateExTeleportLore();
-    private static ArrayList<String> generateExTeleportLore() {
+    public static ArrayList<String> generateExTeleportLore() {
         ArrayList<String> toReturn = new ArrayList<String>();
         toReturn.add("§7Clic para ir");
         return toReturn;

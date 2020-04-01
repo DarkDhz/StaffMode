@@ -66,7 +66,7 @@ public class Items {
         }
 
         ItemMeta meta = item.getItemMeta();
-        meta.setLore(Lang.vanish_lore);
+        meta.setLore(Lang.generateVanishLore());
         String title = Lang.vanish_title;
 
         if (state) {
@@ -82,7 +82,7 @@ public class Items {
     private ItemStack getExamine() {
         ItemStack item = Lang.examine_item;
         ItemMeta meta = item.getItemMeta();
-        meta.setLore(Lang.examine_lore);
+        meta.setLore(Lang.generateExamineLore());
         meta.setDisplayName(Lang.examine_title);
         item.setItemMeta(meta);
         return item;
@@ -100,7 +100,7 @@ public class Items {
     private ItemStack getRandom() {
         ItemStack item = Lang.random_item;
         ItemMeta meta = item.getItemMeta();
-        meta.setLore(Lang.random_lore);
+        meta.setLore(Lang.generateRandomLore());
         meta.setDisplayName(Lang.random_title);
         item.setItemMeta(meta);
         return item;
@@ -111,7 +111,7 @@ public class Items {
         SkullMeta sm = (SkullMeta) item.getItemMeta();
         sm.setOwner(p.getName());
         sm.setDisplayName(Lang.slist_title);
-        sm.setLore(Lang.slist_lore);
+        sm.setLore(Lang.generateRandomLore());
         item.setItemMeta(sm);
         return item;
     }
@@ -154,7 +154,7 @@ public class Items {
         ItemStack item = Lang.ex_teleport_item;
         ItemMeta meta = item.getItemMeta();
         meta.setDisplayName(Lang.ex_teleport_title);
-        meta.setLore(Lang.ex_teleport_lore);
+        meta.setLore(Lang.generateExTeleportLore());
         item.setItemMeta(meta);
         return item;
     }
