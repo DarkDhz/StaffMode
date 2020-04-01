@@ -1,58 +1,70 @@
-messages:
-  prefix: "&8[&6SM&r&8]&7"
-  global:
-    no_perm: "%prefix No tienes permisos para ejecutar este comando."
-    offline_player: "%prefix El usuario %player no se encuentra conectado!"
-    invalid_player: "%prefix Este jugador es invalido o OP."
-  commands:
-    staff:
-      usage: "%prefix /staff para activar o desactivar el staffMode"
-      enable: "%prefix ¡Ahora estas en modo Staff!"
-      disable: "%prefix ¡Ya no estas en modo Staff!"
-    playertp:
-      teleport_to: "%prefix Te has teletransportado a %player."
-      teleport_invalid: "%prefix No hay jugadores disponibles."
+config:
+  messages:
+    prefix: "&8[&6SM&r&8]&7"
+    global:
+      no_perm: "%prefix No tienes permisos para ejecutar este comando."
+      offline_player: "%prefix El usuario %player no se encuentra conectado!"
+      invalid_player: "%prefix Este jugador es invalido o OP."
+    commands:
+      examine:
+        usage: "%prefix /examine <player>"
+      staff:
+        usage: "%prefix /staff para activar o desactivar el staffMode"
+        enable: "%prefix ¡Ahora estas en modo Staff!"
+        disable: "%prefix ¡Ya no estas en modo Staff!"
+      playertp:
+        teleport_to: "%prefix Te has teletransportado a %player."
+        teleport_invalid: "%prefix No hay jugadores disponibles."
+      freeze:
+        usage: "%prefix /freeze <player>"
+        freezed: "%prefix Has congelado a %player."
+        unfreezed: "%prefix EL jugador %player ya no esta en revisión."
+        target_unfreezed: "%prefix Ya no estas en revisión."
+        ss_msg:
+          - "&1"
+          - "&7&m================================"
+          - "&2"
+          - "&7Estas congelado para poder ser revisado por diferentes motivos."
+          - "&c&nConectate a nuestro discord§7 para la revisión."
+          - "&7LINK"
+          - "&3"
+          - "&7&m================================"
+          - "&4"
+  events:
+    can:
+      drop : false
+      pickup: false
+      place: false
+      break: false
+      pvp: NEVER
+    advises:
+      drop: "%prefix No puedes dropear items en modo staff"
+      place: "%prefix No puedes colocar bloques en modo staff"
+      break: "%prefix No puedes romper bloques en modo staff"
+      pvp: "%prefix Pvp Desactivado en modo Staff"
+      spawner_event: "%prefix %player ha roto un spawner de %type"
     freeze:
-      usage: "%prefix /freeze <player>"
-      freezed: "%prefix Has congelado a %player."
-      unfreezed: "%prefix EL jugador %player ya no esta en revisión."
-      target_unfreezed: "%prefix Ya no estas en revisión."
-      ss_msg:
-        - "&1"
-        - "&7&m================================"
-        - "&2"
-        - "&7Estas congelado para poder ser revisado por diferentes motivos."
-        - "&c&nConectate a nuestro discord§7 para la revisión."
-        - "&7LINK"
-        - "&3"
-        - "&7&m================================"
-        - "&4"
-
-
-
-events:
-  can:
-    drop : false
-    pickup: false
-    place: false
-    break: false
-    pvp: NEVER
-  advises:
-    drop: "%prefix No puedes dropear items en modo staff"
-    place: "%prefix No puedes colocar bloques en modo staff"
-    break: "%prefix No puedes romper bloques en modo staff"
-    pvp: "%prefix Pvp Desactivado en modo Staff"
-    spawner_event: "%prefix %player ha roto un spawner de %type"
-  freeze:
-      on_pvp: "%prefix Este usuario esta en revisión."
-
-hotbar:
-
-gui:
-  examine:
-    size: 6
-    view_title: "Visualizando: "
-    edit_title: "Editando: "
-    items:
+        on_pvp: "%prefix Este usuario esta en revisión."
+  hotbar:
+    freeze:
+      slot: 0
+      item: 79
+      title: "&9&lCONGELAR"
+      lore:
+        - "&7Clic para examinar al jugador!"
+    examine:
+      slot: 6
+    vanish:
+      slot: 4
+    stafflist:
+      slot: 8
+    random:
+      slot: 1
+  gui:
+    examine:
+      size: 6
+      view_title: "Visualizando: "
+      edit_title: "Editando: "
+      items:
 
 

@@ -1,12 +1,16 @@
 package dev.darkhorizon.es.sm.utils;
 
+import com.earth2me.essentials.IUser;
 import dev.darkhorizon.es.sm.Main;
+import dev.darkhorizon.es.sm.config.Lang;
 import org.bukkit.entity.Player;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Utils {
 
     private static final Main plugin = Main.getPlugin(Main.class);
-
     public static void reverse(Object[] array) {
         if (array == null)
             return;
@@ -26,6 +30,7 @@ public class Utils {
     }
 
     public static String slistItemReplace(String cadena, Player p) {
+
         return cadena.replaceAll("%x","" + p.getLocation().getBlockX())
                 .replaceAll("%y", "" + p.getLocation().getBlockY())
                 .replaceAll("%z", "" + p.getLocation().getBlockZ())
@@ -34,6 +39,14 @@ public class Utils {
 
     public static String simpleMessageReplace(String path, String prefix) {
         return plugin.getConfig().getString(path).replaceAll("&", "§").replaceAll("%prefix", prefix);
+    }
+
+    public static List<String> simpleListMessageReplace(String path, String prefix) {
+        List<String> toReturn = new ArrayList<>();
+        for (String s : plugin.getConfig().getStringList(path)) {
+            toReturn.add(s.replaceAll("&", "§").replaceAll("%prefix", prefix));
+        }
+        return toReturn;
     }
 
 }

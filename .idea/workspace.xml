@@ -9,12 +9,14 @@
     <list default="true" id="67bced4b-a0b0-49bc-bd59-a80a910e5d40" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/SM_jar/SM.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SM_jar/SM.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/commands/Freeze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/commands/Freeze.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/commands/Examine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/commands/Examine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/config/Lang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/config/Lang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/gui/ExamineGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/gui/ExamineGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/utils/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/darkhorizon/es/sm/commands/Staff.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/darkhorizon/es/sm/commands/Staff.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/darkhorizon/es/sm/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/darkhorizon/es/sm/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dev/darkhorizon/es/sm/config/Lang.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/darkhorizon/es/sm/config/Lang.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +105,10 @@
       <workItem from="1585730195172" duration="809000" />
       <workItem from="1585737451970" duration="1327000" />
       <workItem from="1585742565882" duration="4049000" />
-      <workItem from="1585752762824" duration="2866000" />
+      <workItem from="1585752762824" duration="3040000" />
+      <workItem from="1585765255073" duration="819000" />
+      <workItem from="1585766312267" duration="665000" />
+      <workItem from="1585776841803" duration="4655000" />
     </task>
     <task id="LOCAL-00001" summary="Init plugin">
       <created>1585507470049</created>
@@ -182,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585754557236</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Started config.yml">
+      <created>1585755748059</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1585755748059</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,26 +230,26 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="602" y="309" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585753198129" />
-    <state x="478" y="56" key="CommitChangelistDialog2" timestamp="1585754553826">
+    <state x="478" y="56" key="CommitChangelistDialog2" timestamp="1585755745113">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="478" y="56" key="CommitChangelistDialog2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585754553826" />
+    <state x="478" y="56" key="CommitChangelistDialog2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585755745113" />
     <state x="334" y="36" key="SettingsEditor" timestamp="1585504877599">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="334" y="36" key="SettingsEditor/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585504877599" />
-    <state x="446" y="195" key="Vcs.Push.Dialog.v2" timestamp="1585754565883">
+    <state x="446" y="195" key="Vcs.Push.Dialog.v2" timestamp="1585755754735">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="446" y="195" key="Vcs.Push.Dialog.v2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585754565883" />
+    <state x="446" y="195" key="Vcs.Push.Dialog.v2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585755754735" />
     <state x="665" y="240" key="chooseDestDirectoryDialog" timestamp="1585507999881">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="665" y="240" key="chooseDestDirectoryDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585507999881" />
-    <state x="550" y="286" key="com.intellij.ide.util.TipDialog" timestamp="1585752762771">
+    <state x="550" y="286" key="com.intellij.ide.util.TipDialog" timestamp="1585776842574">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="550" y="286" key="com.intellij.ide.util.TipDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585752762771" />
+    <state x="550" y="286" key="com.intellij.ide.util.TipDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585776842574" />
     <state x="584" y="228" key="extract.method.dialog" timestamp="1585579628788">
       <screen x="0" y="0" width="1707" height="920" />
     </state>

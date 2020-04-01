@@ -3,6 +3,7 @@ package dev.darkhorizon.es.sm.commands;
 import dev.darkhorizon.es.sm.Main;
 import dev.darkhorizon.es.sm.config.Lang;
 import dev.darkhorizon.es.sm.config.Perms;
+import dev.darkhorizon.es.sm.data.Data;
 import dev.darkhorizon.es.sm.gui.ExamineGUI;
 import dev.darkhorizon.es.sm.items.Items;
 import org.bukkit.Bukkit;
@@ -10,6 +11,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.event.inventory.InventoryType;
 
 public class Examine  implements CommandExecutor {
 
@@ -30,7 +32,7 @@ public class Examine  implements CommandExecutor {
 
     private void manageCommand(Player p, String[] args) {
         if (args.length == 0) {
-            p.sendMessage("CMD USAGE");
+            p.sendMessage(lang.examine_usage);
             return;
         }
         if (args.length == 1) {
@@ -39,7 +41,15 @@ public class Examine  implements CommandExecutor {
                 p.sendMessage(lang.offline_player.replaceAll("5player", args[0]));
                 return;
             }
-            ExamineGUI ex = new ExamineGUI(p, target);
+            if (Data.frozen.contains(target.getName())) {
+                if (p.hasPermission(Perms.examine_edit_permission)) {
+                    ExamineGUI ex = new ExamineGUI(p, target, true);
+                } else {
+                    ExamineGUI ex = new ExamineGUI(p, target, false);
+                }
+            } else {
+                ExamineGUI ex = new ExamineGUI(p, target, false);
+            }
         }
     }
 }

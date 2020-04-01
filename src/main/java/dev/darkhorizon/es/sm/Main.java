@@ -2,9 +2,11 @@ package dev.darkhorizon.es.sm;
 
 import com.earth2me.essentials.Essentials;
 import dev.darkhorizon.es.sm.commands.*;
+import dev.darkhorizon.es.sm.data.Data;
 import dev.darkhorizon.es.sm.events.SEventsListener;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -26,6 +28,12 @@ public class Main extends JavaPlugin {
     @Override
     public void onDisable() {
         super.onDisable();
+        for (String name : Data.staff_players) {
+            Player p = Bukkit.getPlayer(name);
+            if (p != null) {
+                p.getInventory().setContents(Data.staff_inv.get(p.getName()));
+            }
+        }
 
     }
 
