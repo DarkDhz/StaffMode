@@ -28,7 +28,6 @@ public class StaffList implements CommandExecutor {
     private void manageCommand(Player p, String[] args) {
         if (args.length == 0) {
             StaffListGUI gui = new StaffListGUI(p);
-            gui.setVisible();
         } else {
             p.sendMessage("USAGE");
         }
