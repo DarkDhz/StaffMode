@@ -19,7 +19,7 @@ public class ExamineGUI {
     }
 
     private void generateInventory(Player p, Player target) {
-        Inventory inv = Bukkit.createInventory(p, 54, lang.examine_GUI_title_vis + "" + target.getName());
+        Inventory inv = Bukkit.createInventory(p, lang.examine_GUI_title_size*9, lang.examine_GUI_title_vis + "" + target.getName());
         ItemStack[] items = target.getInventory().getContents();
         inv.setContents(items);
         for (int i = 36; i <= 44; i++) {

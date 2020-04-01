@@ -3,6 +3,7 @@ messages:
   global:
     no_perm: "%prefix No tienes permisos para ejecutar este comando."
     offline_player: "%prefix El usuario %player no se encuentra conectado!"
+    invalid_player: "%prefix Este jugador es invalido o OP."
   commands:
     staff:
       usage: "%prefix /staff para activar o desactivar el staffMode"
@@ -13,6 +14,19 @@ messages:
       teleport_invalid: "%prefix No hay jugadores disponibles."
     freeze:
       usage: "%prefix /freeze <player>"
+      freezed: "%prefix Has congelado a %player."
+      unfreezed: "%prefix EL jugador %player ya no esta en revisión."
+      target_unfreezed: "%prefix Ya no estas en revisión."
+      ss_msg:
+        - "&1"
+        - "&7&m================================"
+        - "&2"
+        - "&7Estas congelado para poder ser revisado por diferentes motivos."
+        - "&c&nConectate a nuestro discord§7 para la revisión."
+        - "&7LINK"
+        - "&3"
+        - "&7&m================================"
+        - "&4"
 
 
 
@@ -32,7 +46,13 @@ events:
   freeze:
       on_pvp: "%prefix Este usuario esta en revisión."
 
-items:
+hotbar:
 
 gui:
+  examine:
+    size: 6
+    view_title: "Visualizando: "
+    edit_title: "Editando: "
+    items:
+
 

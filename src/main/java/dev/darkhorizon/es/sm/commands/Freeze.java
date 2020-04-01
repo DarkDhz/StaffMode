@@ -41,23 +41,23 @@ public class Freeze implements CommandExecutor {
                 return;
             } else {
                 if (target.isOp()) {
-                    p.sendMessage("INVALID PLAYER");
+                    p.sendMessage(lang.invalid_player);
                     return;
                 }
                 if (Data.frozen.contains(target.getName())) {
                     Data.frozen.remove(target.getName());
-                    p.sendMessage("EL JUGADOR YA NO ESTA EN REVISION");
-                    target.sendMessage("Ya no estas en revision");
+                    p.sendMessage(lang.freeze_cmd_player_unfreezed.replaceAll("%player", target.getName()));
+                    target.sendMessage(lang.freeze_cmd_target_unfreezed);
                 } else {
                     Data.frozen.add(target.getName());
-                    p.sendMessage("HAS CONEGELADO A UN USUARIO");
+                    p.sendMessage(lang.freeze_cmd_player_freezed.replaceAll("%player", target.getName()));
                     final Location pLoc = target.getLocation();
 
                     (new BukkitRunnable() {
                         @Override
                         public void run() {
                             if (Data.frozen.contains(target.getName())) {
-                                for (String msg : lang.frozen_ss_msg()) {
+                                for (String msg : lang.frozen_ss_msg) {
                                     target.sendMessage(msg);
                                 }
                             } else {

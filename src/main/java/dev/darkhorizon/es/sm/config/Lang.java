@@ -41,6 +41,7 @@ public class Lang {
     // GLOBAL
     public String no_prem = Utils.simpleMessageReplace("messages.global.no_perm", prefix);
     public String offline_player = Utils.simpleMessageReplace("messages.global.offline_player", prefix);
+    public String invalid_player = Utils.simpleMessageReplace("messages.global.invalid_player", prefix);
 
     // Events Related
 
@@ -53,22 +54,10 @@ public class Lang {
     // /freeze retaled
     public String frozen_pvp_msg = Utils.simpleMessageReplace("events.freeze.on_pvp", prefix);
     public String freeze_cmd_usage = Utils.simpleMessageReplace("messages.commands.freeze.usage", prefix);
-
-
-    public List<String> frozen_ss_msg() {
-        ArrayList<String> toReturn = new ArrayList<>();
-        toReturn.add("§1");
-        toReturn.add("§7§m================================");
-        toReturn.add("§2");
-        toReturn.add("§7Estas congelado para poder ser revisado por diferentes motivos.");
-        toReturn.add("§c§nConectate a nuestro discord§7 para la revisión.");
-        toReturn.add("§7LINK");
-        toReturn.add("§3");
-        toReturn.add("§7§m================================");
-        toReturn.add("§4");
-        return toReturn;
-    }
-
+    public String freeze_cmd_player_freezed = Utils.simpleMessageReplace("messages.commands.freeze.freezed", prefix);
+    public String freeze_cmd_player_unfreezed = Utils.simpleMessageReplace("messages.commands.freeze.unfreezed", prefix);
+    public String freeze_cmd_target_unfreezed = Utils.simpleMessageReplace("messages.commands.freeze.target_unfreezed", prefix);
+    public List<String> frozen_ss_msg = plugin.getConfig().getStringList("messages.commands.freeze.ss_msg");
 
     // /staff related
 
@@ -80,15 +69,17 @@ public class Lang {
     public String teleport_msg = Utils.simpleMessageReplace("messages.commands.playertp.teleport_to", prefix);
     public String teleport_invalid_msg = Utils.simpleMessageReplace("messages.commands.playertp.teleport_invalid", prefix);
 
+    
+   
+
+    // HOTBAR
+
     // FREEZE
+
     public int freeze_slot = 0;
     public ItemStack freeze_item = new ItemStack(Material.ICE);
     public String freeze_title = "§9§lCONGELAR";
     public List<String> freeze_lore = generateFrezzeLore();
-
-    // HOTBAR
-
-
     private ArrayList<String> generateFrezzeLore() {
         ArrayList<String> toReturn = new ArrayList<String>();
         toReturn.add("§7¡Clic para examinar al jugador!");
@@ -145,8 +136,9 @@ public class Lang {
     // END OF HOTBAR
 
     // EXAMINE GUI
-    public String examine_GUI_title_vis = "Visualizando: ";
-    public String examine_GUI_title_edit = "Editando: ";
+    public int examine_GUI_title_size = plugin.getConfig().getInt("gui.examine.size");
+    public String examine_GUI_title_vis = plugin.getConfig().getString("gui.examine.view_title");
+    public String examine_GUI_title_edit = plugin.getConfig().getString("gui.examine.edit_title");
 
     // USER INFO
     public ItemStack user_info_item = new ItemStack(Material.SKULL_ITEM);

@@ -35,4 +35,5 @@ public class Utils {
     public static String simpleMessageReplace(String path, String prefix) {
         return plugin.getConfig().getString(path).replaceAll("&", "§").replaceAll("%prefix", prefix);
     }
+
 }
