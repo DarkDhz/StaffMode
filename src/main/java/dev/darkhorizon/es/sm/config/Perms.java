@@ -2,7 +2,7 @@ package dev.darkhorizon.es.sm.config;
 
 public class Perms {
 
-    //permissions
+    // Permissions
     public static String main_permission = "virtual.staff.basic";
     public static String freeze_permission = "virtual.staff.freeze";
 
@@ -13,7 +13,7 @@ public class Perms {
     public static String examine_edit_permission = "virtual.staff.examine.edit";
     public static String spawner_advise_permission = main_permission;
 
-    //EVENTS
+    // EVENTS
     public static boolean can_drop = false;
     public static boolean can_pickup = false;
     public static boolean can_place = false;

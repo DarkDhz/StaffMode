@@ -159,5 +159,16 @@ public class Items {
         return item;
     }
 
+    public ItemStack getListStaff(Player p) {
+        ItemStack item = new ItemStack(Material.SKULL_ITEM, 1, (short)3);
+        SkullMeta sm = (SkullMeta) item.getItemMeta();
+        sm.setOwner(p.getName());
+        sm.setDisplayName(Lang.lstaff_title.replaceAll("%player", p.getName()));
+        sm.setLore(Lang.generatLStaffLore(p));
+        item.setItemMeta(sm);
+        return item;
+
+    }
+
 
 }

@@ -28,6 +28,11 @@ public class Lang {
     public static String staff_no_pvp = prefix + "Pvp Desactivado en modo Staff";
     public static String staff_spawner_break = prefix + "%player ha roto un spawner de %type";
 
+    // /freeze retaled
+    public static String frozen_pvp_msg = prefix + "Este usuario esta en revisión.";
+
+
+
     // /staff related
 
     public static String enabledStaffMode = prefix + "¡Ahora estas en modo Staff!";
@@ -41,6 +46,10 @@ public class Lang {
     public static ItemStack freeze_item = new ItemStack(Material.ICE);
     public static String freeze_title = "§9§lCONGELAR";
     public static List<String> freeze_lore = generateFrezzeLore();
+
+
+    // HOTBAR
+
 
     private static ArrayList<String> generateFrezzeLore() {
         ArrayList<String> toReturn = new ArrayList<String>();
@@ -95,10 +104,11 @@ public class Lang {
         return toReturn;
     }
 
-    //SEPARATOR
+    // END OF HOTBAR
 
-    public static ItemStack separator_item = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short)4);
-    public static String separator_title = "EXAMINANDO...";
+    // EXAMINE GUI
+    public static String examine_GUI_title_vis = "Visualizando: ";
+    public static String examine_GUI_title_edit = "Editando: ";
 
     //USER INFO
     public static ItemStack user_info_item = new ItemStack(Material.SKULL_ITEM);
@@ -126,8 +136,32 @@ public class Lang {
         return toReturn;
     }
 
-    // EXAMINE GUI
-    public static String examine_GUI_title_vis = "Visualizando: ";
-    public static String examine_GUI_title_edit = "Editando: ";
+    //SEPARATOR
+
+    public static ItemStack separator_item = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short)4);
+    public static String separator_title = "EXAMINANDO...";
+
+    // END OF EXAMINE GUI
+
+    // STAFFLIST GUI
+
+    public static String stafflist_GUI_title = "STAFFLIST";
+
+
+    //PLAYER HEAD
+    public static String lstaff_title = "§1§l%player";
+    public static ArrayList<String> generatLStaffLore(Player p) {
+        ArrayList<String> toReturn = new ArrayList<>();
+        toReturn.add("§1");
+        toReturn.add(Utils.slistItemReplace("§7Posición:", p));
+        toReturn.add(Utils.slistItemReplace("§7X: %x", p));
+        toReturn.add(Utils.slistItemReplace("§7Y: %y", p));
+        toReturn.add(Utils.slistItemReplace("§7Z: %z", p));
+        toReturn.add(Utils.slistItemReplace("§7Mundo: %world", p));
+        toReturn.add("§7");
+        return toReturn;
+    }
+
+    // END OF STAFFLIST GUI
 
 }

@@ -6,13 +6,16 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67bced4b-a0b0-49bc-bd59-a80a910e5d40" name="Default Changelist" comment="">
+    <list default="true" id="67bced4b-a0b0-49bc-bd59-a80a910e5d40" name="Default Changelist" comment="staffl">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/commands/StaffList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/commands/StaffList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/config/Lang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/config/Lang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/config/Perms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/config/Perms.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/gui/ExamineGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/gui/ExamineGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/gui/StaffListGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/gui/StaffListGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/items/Items.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/items/Items.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/darkhorizon/es/sm/config/Lang.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/darkhorizon/es/sm/config/Lang.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/darkhorizon/es/sm/items/Items.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/utils/Utils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +99,8 @@
       <workItem from="1585587210782" duration="1959000" />
       <workItem from="1585590933722" duration="803000" />
       <workItem from="1585596570021" duration="155000" />
-      <workItem from="1585730195172" duration="284000" />
+      <workItem from="1585730195172" duration="809000" />
+      <workItem from="1585737451970" duration="1283000" />
     </task>
     <task id="LOCAL-00001" summary="Init plugin">
       <created>1585507470049</created>
@@ -147,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585591714860</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Disabled afk quit while frozen">
+      <created>1585730561776</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1585730561776</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,7 +172,8 @@
     <MESSAGE value="Hotbar working" />
     <MESSAGE value="Events working" />
     <MESSAGE value="Finished Basic examine and teleport" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished Basic examine and teleport" />
+    <MESSAGE value="Disabled afk quit while frozen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Disabled afk quit while frozen" />
   </component>
   <component name="WindowStateProjectService">
     <state x="659" y="171" key="#com.intellij.ide.util.MemberChooser" timestamp="1585507159431">
@@ -176,10 +188,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="584" y="209" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585563668065" />
-    <state x="478" y="56" key="CommitChangelistDialog2" timestamp="1585591712103">
+    <state x="478" y="56" key="CommitChangelistDialog2" timestamp="1585738693213">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="478" y="56" key="CommitChangelistDialog2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585591712103" />
+    <state x="478" y="56" key="CommitChangelistDialog2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585738693213" />
     <state x="334" y="36" key="SettingsEditor" timestamp="1585504877599">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -192,10 +204,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="665" y="240" key="chooseDestDirectoryDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585507999881" />
-    <state x="550" y="286" key="com.intellij.ide.util.TipDialog" timestamp="1585730202737">
+    <state x="550" y="286" key="com.intellij.ide.util.TipDialog" timestamp="1585737454652">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="550" y="286" key="com.intellij.ide.util.TipDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585730202737" />
+    <state x="550" y="286" key="com.intellij.ide.util.TipDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585737454652" />
     <state x="584" y="228" key="extract.method.dialog" timestamp="1585579628788">
       <screen x="0" y="0" width="1707" height="920" />
     </state>

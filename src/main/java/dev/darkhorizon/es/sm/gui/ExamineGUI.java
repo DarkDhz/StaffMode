@@ -11,7 +11,7 @@ import org.bukkit.inventory.ItemStack;
 
 public class ExamineGUI {
 
-    private final Main plugin = Main.getPlugin(Main.class);
+    //private final Main plugin = Main.getPlugin(Main.class);
     private final Items item = Items.getInstance();
 
     public ExamineGUI(Player p, Player target) {

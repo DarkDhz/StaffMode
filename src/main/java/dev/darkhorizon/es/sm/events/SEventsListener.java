@@ -180,6 +180,7 @@ public class SEventsListener implements Listener {
         if (e.getDamager() instanceof Player) {
             Player hitted = (Player) e.getDamager();
             if (Data.frozen.contains(hitted.getName())) {
+                hitted.sendMessage(Lang.frozen_pvp_msg);
                 e.setCancelled(true);
             }
             if (hitted.hasPermission(Perms.main_permission)) {
@@ -208,11 +209,14 @@ public class SEventsListener implements Listener {
             return;
         }
 
-
         Player p = (Player) e.getWhoClicked();
+        if (Data.frozen.contains(p.getName())) {
+            e.setCancelled(true);
+            return;
+        }
 
         ItemStack item = e.getCurrentItem();
-        if (Data.staff_players.contains(p.getName())) {
+        if (p.hasPermission(Perms.main_permission)) {
             if (item.getType() == Material.SKULL_ITEM && item.hasItemMeta()) {
                 e.setCancelled(true);
                 return;
@@ -225,6 +229,12 @@ public class SEventsListener implements Listener {
                 e.setCancelled(true);
                 return;
             }
+
+            if (p.getInventory().getTitle().equals(Lang.stafflist_GUI_title)) {
+                e.setCancelled(true);
+                return;
+            }
+
             if (p.getOpenInventory().getTitle().contains(Lang.examine_GUI_title_vis)) {
                 String[] user = p.getOpenInventory().getTitle().split(Lang.examine_GUI_title_vis);
                 Player target = Bukkit.getPlayer(user[1]);

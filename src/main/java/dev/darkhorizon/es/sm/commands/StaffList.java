@@ -3,6 +3,7 @@ package dev.darkhorizon.es.sm.commands;
 import dev.darkhorizon.es.sm.Main;
 import dev.darkhorizon.es.sm.config.Lang;
 import dev.darkhorizon.es.sm.config.Perms;
+import dev.darkhorizon.es.sm.gui.StaffListGUI;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -25,6 +26,12 @@ public class StaffList implements CommandExecutor {
     }
 
     private void manageCommand(Player p, String[] args) {
+        if (args.length == 0) {
+            StaffListGUI gui = new StaffListGUI(p);
+            gui.setVisible();
+        } else {
+            p.sendMessage("USAGE");
+        }
 
     }
 }
