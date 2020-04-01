@@ -17,6 +17,7 @@ public class Items {
 
     private static final Main plugin = Main.getPlugin(Main.class);
     private static Items INSTANCE = null;
+    private Lang lang = Lang.getInstance();
 
     private Items() {
         //TODO Singleton for only 1 object instance
@@ -44,35 +45,35 @@ public class Items {
     }
 
     public void updateVanish(Player p, boolean state) {
-        p.getInventory().setItem(Lang.vanish_slot, this.getVanish(p, state));
+        p.getInventory().setItem(lang.vanish_slot, this.getVanish(p, state));
         p.updateInventory();
     }
 
     public void setInventory(Player p) {
 
         p.getInventory().clear();
-        p.getInventory().setItem(Lang.freeze_slot, this.getFrezze());
-        p.getInventory().setItem(Lang.random_slot, this.getRandom());
-        p.getInventory().setItem(Lang.vanish_slot, this.getVanish(p, plugin.ess.getUser(p).isVanished()));
-        p.getInventory().setItem(Lang.examine_slot, this.getExamine());
-        p.getInventory().setItem(Lang.slist_slot, this.getHead(p));
+        p.getInventory().setItem(lang.freeze_slot, this.getFrezze());
+        p.getInventory().setItem(lang.random_slot, this.getRandom());
+        p.getInventory().setItem(lang.vanish_slot, this.getVanish(p, plugin.ess.getUser(p).isVanished()));
+        p.getInventory().setItem(lang.examine_slot, this.getExamine());
+        p.getInventory().setItem(lang.slist_slot, this.getHead(p));
         p.updateInventory();
     }
 
     private ItemStack getVanish(Player p, boolean state) {
-        ItemStack item = Lang.vanish_item_enabled;
+        ItemStack item = lang.vanish_item_enabled;
         if (!state) {
-            item = Lang.vanish_item_disabled;
+            item = lang.vanish_item_disabled;
         }
 
         ItemMeta meta = item.getItemMeta();
-        meta.setLore(Lang.generateVanishLore());
-        String title = Lang.vanish_title;
+        meta.setLore(lang.generateVanishLore());
+        String title = lang.vanish_title;
 
         if (state) {
-            title = title.replaceAll("%state", Lang.vanish_title_active);
+            title = title.replaceAll("%state", lang.vanish_title_active);
         } else {
-            title = title.replaceAll("%state", Lang.vanish_title_unactive);
+            title = title.replaceAll("%state", lang.vanish_title_unactive);
         }
         meta.setDisplayName(title);
         item.setItemMeta(meta);
@@ -80,28 +81,28 @@ public class Items {
     }
 
     private ItemStack getExamine() {
-        ItemStack item = Lang.examine_item;
+        ItemStack item = lang.examine_item;
         ItemMeta meta = item.getItemMeta();
-        meta.setLore(Lang.generateExamineLore());
-        meta.setDisplayName(Lang.examine_title);
+        meta.setLore(lang.generateExamineLore());
+        meta.setDisplayName(lang.examine_title);
         item.setItemMeta(meta);
         return item;
     }
 
     private ItemStack getFrezze() {
-        ItemStack item = Lang.freeze_item;
+        ItemStack item = lang.freeze_item;
         ItemMeta meta = item.getItemMeta();
-        meta.setLore(Lang.freeze_lore);
-        meta.setDisplayName(Lang.freeze_title);
+        meta.setLore(lang.freeze_lore);
+        meta.setDisplayName(lang.freeze_title);
         item.setItemMeta(meta);
         return item;
     }
 
     private ItemStack getRandom() {
-        ItemStack item = Lang.random_item;
+        ItemStack item = lang.random_item;
         ItemMeta meta = item.getItemMeta();
-        meta.setLore(Lang.generateRandomLore());
-        meta.setDisplayName(Lang.random_title);
+        meta.setLore(lang.generateRandomLore());
+        meta.setDisplayName(lang.random_title);
         item.setItemMeta(meta);
         return item;
     }
@@ -110,51 +111,51 @@ public class Items {
         ItemStack item = new ItemStack(Material.SKULL_ITEM, 1, (short)3);
         SkullMeta sm = (SkullMeta) item.getItemMeta();
         sm.setOwner(p.getName());
-        sm.setDisplayName(Lang.slist_title);
-        sm.setLore(Lang.generateRandomLore());
+        sm.setDisplayName(lang.slist_title);
+        sm.setLore(lang.generateRandomLore());
         item.setItemMeta(sm);
         return item;
     }
 
     public ItemStack getSeparator() {
-        ItemStack item = Lang.separator_item;
+        ItemStack item = lang.separator_item;
         ItemMeta meta = item.getItemMeta();
-        meta.setDisplayName(Lang.separator_title);
+        meta.setDisplayName(lang.separator_title);
         item.setItemMeta(meta);
         return item;
     }
 
     public ItemStack getInfoItem(Player target) {
-        ItemStack item = Lang.user_info_item;
+        ItemStack item = lang.user_info_item;
         ItemMeta meta = item.getItemMeta();
         IUser user = plugin.ess.getUser(target);
 
-        String god = Lang.user_info_disabled;
+        String god = lang.user_info_disabled;
         if (user.isGodModeEnabled()) {
-            god = Lang.user_info_enabled;
+            god = lang.user_info_enabled;
         }
 
-        String fly = Lang.user_info_disabled;
+        String fly = lang.user_info_disabled;
         if (target.isFlying()) {
-            fly = Lang.user_info_enabled;
+            fly = lang.user_info_enabled;
         }
 
         String loc = "X: " + target.getLocation().getBlockX() + " Y: " + target.getLocation().getBlockY()
                 + " Z: " + target.getLocation().getBlockZ();
 
-        meta.setDisplayName(Lang.user_info_title.replaceAll("%player", target.getName()));
+        meta.setDisplayName(lang.user_info_title.replaceAll("%player", target.getName()));
 
 
-        meta.setLore(Lang.generateUserInfoLore(god, fly, "" + target.getHealth(), loc, target.getWorld().getName()));
+        meta.setLore(lang.generateUserInfoLore(god, fly, "" + target.getHealth(), loc, target.getWorld().getName()));
         item.setItemMeta(meta);
         return item;
     }
 
     public ItemStack getExTeleportItem() {
-        ItemStack item = Lang.ex_teleport_item;
+        ItemStack item = lang.ex_teleport_item;
         ItemMeta meta = item.getItemMeta();
-        meta.setDisplayName(Lang.ex_teleport_title);
-        meta.setLore(Lang.generateExTeleportLore());
+        meta.setDisplayName(lang.ex_teleport_title);
+        meta.setLore(lang.generateExTeleportLore());
         item.setItemMeta(meta);
         return item;
     }
@@ -163,8 +164,8 @@ public class Items {
         ItemStack item = new ItemStack(Material.SKULL_ITEM, 1, (short)3);
         SkullMeta sm = (SkullMeta) item.getItemMeta();
         sm.setOwner(p.getName());
-        sm.setDisplayName(Lang.lstaff_title.replaceAll("%player", p.getName()));
-        sm.setLore(Lang.generatLStaffLore(p));
+        sm.setDisplayName(lang.lstaff_title.replaceAll("%player", p.getName()));
+        sm.setLore(lang.generatLStaffLore(p));
         item.setItemMeta(sm);
         return item;
 

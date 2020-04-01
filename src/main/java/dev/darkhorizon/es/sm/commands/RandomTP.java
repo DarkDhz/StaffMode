@@ -15,6 +15,7 @@ import java.util.Random;
 public class RandomTP implements CommandExecutor {
 
     private final Main plugin = Main.getPlugin(Main.class);
+    private Lang lang = Lang.getInstance();
 
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player) {
@@ -22,7 +23,7 @@ public class RandomTP implements CommandExecutor {
             if (p.hasPermission(Perms.tp_permission)) {
                 this.manageCommand(p, args);
             } else {
-                p.sendMessage(Lang.no_prem);
+                p.sendMessage(lang.no_prem);
             }
         }
         return true;
@@ -37,8 +38,13 @@ public class RandomTP implements CommandExecutor {
         }
         Random r = new Random();
         int max = players.size();
-        int result = r.nextInt(max + 1);
-        p.teleport(players.get(result));
-        p.sendMessage(Lang.teleport_msg.replaceAll("%player", players.get(result).getName()));
+        if (max > 0) {
+            int result = r.nextInt(max);
+            p.teleport(players.get(result));
+            p.sendMessage(lang.teleport_msg.replaceAll("%player", players.get(result).getName()));
+        } else {
+            p.sendMessage(lang.teleport_invalid_msg);
+        }
+
     }
 }

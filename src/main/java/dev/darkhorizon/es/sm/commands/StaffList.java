@@ -12,6 +12,7 @@ import org.bukkit.entity.Player;
 public class StaffList implements CommandExecutor {
 
     private final Main plugin = Main.getPlugin(Main.class);
+    private Lang lang = Lang.getInstance();
 
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player) {
@@ -19,7 +20,7 @@ public class StaffList implements CommandExecutor {
             if (p.hasPermission(Perms.slist_permission)) {
                 this.manageCommand(p, args);
             } else {
-                p.sendMessage(Lang.no_prem);
+                p.sendMessage(lang.no_prem);
             }
         }
         return true;

@@ -18,6 +18,7 @@ public class Staff implements CommandExecutor {
 
     private final Main plugin = Main.getPlugin(Main.class);
     private final Items item = Items.getInstance();
+    private Lang lang = Lang.getInstance();
 
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player) {
@@ -25,7 +26,7 @@ public class Staff implements CommandExecutor {
             if (p.hasPermission(Perms.main_permission)) {
                 this.manageCommand(p, args);
             } else {
-                p.sendMessage(Lang.no_prem);
+                p.sendMessage(lang.no_prem);
             }
         }
         return true;
@@ -35,7 +36,7 @@ public class Staff implements CommandExecutor {
         if (args.length == 0) {
             manageStaffMode(p);
         } else {
-            p.sendMessage(Lang.staff_usage);
+            p.sendMessage(lang.staff_usage);
         }
     }
 
@@ -50,7 +51,7 @@ public class Staff implements CommandExecutor {
 
             Data.staff_players.remove(p.getName());
             Data.staff_inv.remove(p.getName());
-            p.sendMessage(Lang.diabledStaffMode);
+            p.sendMessage(lang.diabledStaffMode);
         } else {
             Data.staff_players.add(p.getName());
             Data.staff_inv.put(p.getName(), p.getInventory().getContents());
@@ -65,7 +66,7 @@ public class Staff implements CommandExecutor {
             Bukkit.getPluginManager().callEvent(new EnableStaffMode(p));
 
             item.setInventory(p);
-            p.sendMessage(Lang.enabledStaffMode);
+            p.sendMessage(lang.enabledStaffMode);
         }
     }
 

@@ -11,21 +11,21 @@ public class StaffListGUI {
 
     //private final Main plugin = Main.getPlugin(Main.class);
     private final Items item = Items.getInstance();
+    private Lang lang = Lang.getInstance();
 
     public StaffListGUI(Player p) {
         this.generateInventory(p);
     }
 
     private void generateInventory(Player p) {
-        Inventory inv = Bukkit.createInventory(p, 54, Lang.stafflist_GUI_title);
+        Inventory inv = Bukkit.createInventory(p, 54, lang.stafflist_GUI_title);
         int count = 0;
         for (Player staff : Bukkit.getOnlinePlayers()) {
-            if (count <= 53) {
-                inv.setItem(count, item.getListStaff(p));
+            if (count <= 53 && staff != null) {
+                inv.setItem(count, item.getListStaff(staff));
                 count++;
             }
         }
         p.openInventory(inv);
     }
-
 }

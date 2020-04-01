@@ -1,5 +1,7 @@
 package dev.darkhorizon.es.sm.config;
 
+import dev.darkhorizon.es.sm.Main;
+import dev.darkhorizon.es.sm.items.Items;
 import dev.darkhorizon.es.sm.utils.Utils;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -12,46 +14,82 @@ import java.util.List;
 
 public class Lang {
 
-    public static String prefix = "§8[§6SM§r§8] §7";
+    private final Main plugin = Main.getPlugin(Main.class);
+    private static Lang INSTANCE = null;
 
-    //Permisions Related
-    public static String no_prem = prefix + "No tienes permisos para ejecutar este comando";
+    private Lang() {
+        //TODO Singleton for only 1 object instance
+    }
 
+    public static Lang getInstance() {
+        if (INSTANCE == null) createInstance();
+        return INSTANCE;
+    }
 
-    public static String staff_usage = prefix + " /staff para activar o desactivar el staffMode";
+    private static void createInstance() {
+        if (INSTANCE == null) {
+            synchronized(Lang.class) {
+                if (INSTANCE == null) {
+                    INSTANCE = new Lang();
+                }
+            }
+        }
+    }
+
+    public String prefix = plugin.getConfig().getString("messages.prefix").replaceAll("&", "§");
+
+    // GLOBAL
+    public String no_prem = Utils.simpleMessageReplace("messages.global.no_perm", prefix);
+    public String offline_player = Utils.simpleMessageReplace("messages.global.offline_player", prefix);
 
     // Events Related
 
-    public static String staff_no_drop = prefix + "No puedes dropear items en modo staff";
-    public static String staff_no_place = prefix + "No puedes colocar bloques en modo staff";
-    public static String staff_no_break = prefix + "No puedes romper bloques en modo staff";
-    public static String staff_no_pvp = prefix + "Pvp Desactivado en modo Staff";
-    public static String staff_spawner_break = prefix + "%player ha roto un spawner de %type";
+    public String staff_no_drop = Utils.simpleMessageReplace("events.advises.drop", prefix);
+    public String staff_no_place = Utils.simpleMessageReplace("events.advises.place", prefix);
+    public String staff_no_break = Utils.simpleMessageReplace("events.advises.break", prefix);
+    public String staff_no_pvp = Utils.simpleMessageReplace("events.advises.pvp", prefix);
+    public String staff_spawner_break = Utils.simpleMessageReplace("events.advises.spawner_event", prefix);
 
     // /freeze retaled
-    public static String frozen_pvp_msg = prefix + "Este usuario esta en revisión.";
+    public String frozen_pvp_msg = Utils.simpleMessageReplace("events.freeze.on_pvp", prefix);
+    public String freeze_cmd_usage = Utils.simpleMessageReplace("messages.commands.freeze.usage", prefix);
 
+
+    public List<String> frozen_ss_msg() {
+        ArrayList<String> toReturn = new ArrayList<>();
+        toReturn.add("§1");
+        toReturn.add("§7§m================================");
+        toReturn.add("§2");
+        toReturn.add("§7Estas congelado para poder ser revisado por diferentes motivos.");
+        toReturn.add("§c§nConectate a nuestro discord§7 para la revisión.");
+        toReturn.add("§7LINK");
+        toReturn.add("§3");
+        toReturn.add("§7§m================================");
+        toReturn.add("§4");
+        return toReturn;
+    }
 
 
     // /staff related
 
-    public static String enabledStaffMode = prefix + "¡Ahora estas en modo Staff!";
-    public static String diabledStaffMode = prefix + "¡Ya no estas en modo Staff!";
+    public String staff_usage = Utils.simpleMessageReplace("messages.commands.staff.usage", prefix);
+    public String enabledStaffMode = Utils.simpleMessageReplace("messages.commands.staff.enable", prefix);
+    public String diabledStaffMode = Utils.simpleMessageReplace("messages.commands.staff.disable", prefix);
 
     // /teleport related
-    public static String teleport_msg = prefix + "Te has teletransportado a %player";
+    public String teleport_msg = Utils.simpleMessageReplace("messages.commands.playertp.teleport_to", prefix);
+    public String teleport_invalid_msg = Utils.simpleMessageReplace("messages.commands.playertp.teleport_invalid", prefix);
 
     // FREEZE
-    public static int freeze_slot = 0;
-    public static ItemStack freeze_item = new ItemStack(Material.ICE);
-    public static String freeze_title = "§9§lCONGELAR";
-    public static List<String> freeze_lore = generateFrezzeLore();
-
+    public int freeze_slot = 0;
+    public ItemStack freeze_item = new ItemStack(Material.ICE);
+    public String freeze_title = "§9§lCONGELAR";
+    public List<String> freeze_lore = generateFrezzeLore();
 
     // HOTBAR
 
 
-    private static ArrayList<String> generateFrezzeLore() {
+    private ArrayList<String> generateFrezzeLore() {
         ArrayList<String> toReturn = new ArrayList<String>();
         toReturn.add("§7¡Clic para examinar al jugador!");
         return toReturn;
@@ -59,10 +97,10 @@ public class Lang {
 
     // RANDOM TP
 
-    public static int random_slot = 1;
-    public static ItemStack random_item = new ItemStack(Material.COMPASS);
-    public static String random_title = "§7§lRANDOM TP";
-    public static ArrayList<String> generateRandomLore() {
+    public int random_slot = 1;
+    public ItemStack random_item = new ItemStack(Material.COMPASS);
+    public String random_title = "§7§lRANDOM TP";
+    public ArrayList<String> generateRandomLore() {
         ArrayList<String> toReturn = new ArrayList<String>();
         toReturn.add("§7¡Clic para teletransportarte aleatoriamente!");
         return toReturn;
@@ -71,9 +109,9 @@ public class Lang {
 
     // STAFF LIST
 
-    public static int slist_slot = 8;
-    public static String slist_title = "§1§lLISTA DE STAFF";
-    public static ArrayList<String> slistRandomLore() {
+    public int slist_slot = 8;
+    public String slist_title = "§1§lLISTA DE STAFF";
+    public ArrayList<String> slistRandomLore() {
         ArrayList<String> toReturn = new ArrayList<String>();
         toReturn.add("§7¡Clic para ver al staff!");
         return toReturn;
@@ -81,10 +119,10 @@ public class Lang {
 
     // EXAMINE
 
-    public static int examine_slot = 6;
-    public static ItemStack examine_item = new ItemStack(Material.CHEST);
-    public static String examine_title = "§6§lEXAMINAR";
-    public static ArrayList<String> generateExamineLore() {
+    public int examine_slot = 6;
+    public ItemStack examine_item = new ItemStack(Material.CHEST);
+    public String examine_title = "§6§lEXAMINAR";
+    public ArrayList<String> generateExamineLore() {
         ArrayList<String> toReturn = new ArrayList<String>();
         toReturn.add("§7¡Clic para examinar al jugador!");
         return toReturn;
@@ -92,13 +130,13 @@ public class Lang {
 
     // VANISH
 
-    public static int vanish_slot = 4;
-    public static ItemStack vanish_item_enabled = new ItemStack(Material.GLASS_BOTTLE);
-    public static ItemStack vanish_item_disabled = new ItemStack(Material.POTION);
-    public static String vanish_title = "§b§lVANISH §8(%state§8)"; //STATE FOR ENABLED OR DISABLED
-    public static String vanish_title_active = "§6§lACTIVADO";
-    public static String vanish_title_unactive = "§c§lDESACTIVADO";
-    public static ArrayList<String> generateVanishLore() {
+    public int vanish_slot = 4;
+    public ItemStack vanish_item_enabled = new ItemStack(Material.GLASS_BOTTLE);
+    public ItemStack vanish_item_disabled = new ItemStack(Material.POTION);
+    public String vanish_title = "§b§lVANISH §8(%state§8)"; //STATE FOR ENABLED OR DISABLED
+    public String vanish_title_active = "§6§lACTIVADO";
+    public String vanish_title_unactive = "§c§lDESACTIVADO";
+    public ArrayList<String> generateVanishLore() {
         ArrayList<String> toReturn = new ArrayList<String>();
         toReturn.add("§7¡Clic para modificar el vanish!");
         return toReturn;
@@ -107,15 +145,15 @@ public class Lang {
     // END OF HOTBAR
 
     // EXAMINE GUI
-    public static String examine_GUI_title_vis = "Visualizando: ";
-    public static String examine_GUI_title_edit = "Editando: ";
+    public String examine_GUI_title_vis = "Visualizando: ";
+    public String examine_GUI_title_edit = "Editando: ";
 
-    //USER INFO
-    public static ItemStack user_info_item = new ItemStack(Material.SKULL_ITEM);
-    public static String user_info_title = "%player";
-    public static String user_info_enabled = "ON";
-    public static String user_info_disabled = "OFF";
-    public static ArrayList<String> generateUserInfoLore(String god, String fly, String h, String loc, String w) {
+    // USER INFO
+    public ItemStack user_info_item = new ItemStack(Material.SKULL_ITEM);
+    public String user_info_title = "%player";
+    public String user_info_enabled = "ON";
+    public String user_info_disabled = "OFF";
+    public ArrayList<String> generateUserInfoLore(String god, String fly, String h, String loc, String w) {
         ArrayList<String> toReturn = new ArrayList<String>();
         toReturn.add("§1");
         toReturn.add(Utils.userReplace("§7Vida: %health/20", god, fly, h, loc, w));
@@ -128,29 +166,29 @@ public class Lang {
     }
 
     // TELEPORT
-    public static ItemStack ex_teleport_item = new ItemStack(Material.COMPASS);
-    public static String ex_teleport_title = "Ir a donde esta el jugador";
-    public static ArrayList<String> generateExTeleportLore() {
+    public ItemStack ex_teleport_item = new ItemStack(Material.COMPASS);
+    public String ex_teleport_title = "Ir a donde esta el jugador";
+    public ArrayList<String> generateExTeleportLore() {
         ArrayList<String> toReturn = new ArrayList<String>();
         toReturn.add("§7Clic para ir");
         return toReturn;
     }
 
-    //SEPARATOR
+    // SEPARATOR
 
-    public static ItemStack separator_item = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short)4);
-    public static String separator_title = "EXAMINANDO...";
+    public ItemStack separator_item = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short)4);
+    public String separator_title = "EXAMINANDO...";
 
     // END OF EXAMINE GUI
 
     // STAFFLIST GUI
 
-    public static String stafflist_GUI_title = "STAFFLIST";
+    public String stafflist_GUI_title = "STAFFLIST";
 
 
-    //PLAYER HEAD
-    public static String lstaff_title = "§1§l%player";
-    public static ArrayList<String> generatLStaffLore(Player p) {
+    // PLAYER HEAD
+    public String lstaff_title = "§1§l%player";
+    public ArrayList<String> generatLStaffLore(Player p) {
         ArrayList<String> toReturn = new ArrayList<>();
         toReturn.add("§1");
         toReturn.add(Utils.slistItemReplace("§7Posición:", p));
@@ -164,4 +202,7 @@ public class Lang {
 
     // END OF STAFFLIST GUI
 
+
+
+    // PUNISH GUI
 }

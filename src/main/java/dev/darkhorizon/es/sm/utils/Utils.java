@@ -1,8 +1,11 @@
 package dev.darkhorizon.es.sm.utils;
 
+import dev.darkhorizon.es.sm.Main;
 import org.bukkit.entity.Player;
 
 public class Utils {
+
+    private static final Main plugin = Main.getPlugin(Main.class);
 
     public static void reverse(Object[] array) {
         if (array == null)
@@ -27,5 +30,9 @@ public class Utils {
                 .replaceAll("%y", "" + p.getLocation().getBlockY())
                 .replaceAll("%z", "" + p.getLocation().getBlockZ())
                 .replaceAll("%world", p.getWorld().getName());
+    }
+
+    public static String simpleMessageReplace(String path, String prefix) {
+        return plugin.getConfig().getString(path).replaceAll("&", "§").replaceAll("%prefix", prefix);
     }
 }

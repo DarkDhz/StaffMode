@@ -17,3 +17,6 @@ commands:
     aliases: [slist, staffl]
   playertp:
     usage: <command>
+  punish:
+    usage: <command>
+    aliases: [bangui, guiban, sancionar]

@@ -4,19 +4,20 @@ import com.earth2me.essentials.Essentials;
 import dev.darkhorizon.es.sm.commands.*;
 import dev.darkhorizon.es.sm.events.SEventsListener;
 import org.bukkit.Bukkit;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import java.util.ArrayList;
-import java.util.HashMap;
 
 public class Main extends JavaPlugin {
 
     public Essentials ess = null;
 
+    private FileConfiguration config = getConfig();
+
     @Override
     public void onEnable() {
         super.onEnable();
+        this.initConfig();
         this.initVariables();
         this.initCommands();
         this.initEvents();
@@ -26,6 +27,11 @@ public class Main extends JavaPlugin {
     public void onDisable() {
         super.onDisable();
 
+    }
+
+    private void initConfig() {
+        this.config.options().copyDefaults(true);
+        saveConfig();
     }
 
     private void initVariables() {
