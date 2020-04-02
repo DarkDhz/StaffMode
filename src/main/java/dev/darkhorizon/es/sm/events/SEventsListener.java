@@ -289,6 +289,11 @@ public class SEventsListener implements Listener {
                     launcher.performCommand("ban " + target.getName() + " Pasar IP ajena");
                     return;
                 }
+                if (item.getItemMeta().getDisplayName().contains("§6§lAcumulación de mutes.")) {
+                    launcher.performCommand("ban " + target.getName() + " 3d Pasar IP ajena");
+                    return;
+                }
+
             }
         }
     }
