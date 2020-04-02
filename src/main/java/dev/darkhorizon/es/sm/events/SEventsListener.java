@@ -241,45 +241,7 @@ public class SEventsListener implements Listener {
                 }
             }
 
-            if (p.getOpenInventory().getTitle().contains("§e§lSanciones para ")) {
-                e.setCancelled(true);
-                String[] user = p.getOpenInventory().getTitle().split("§e§lSanciones para ");
-                Player target = Bukkit.getPlayer(user[1]);
-                this.managePunishMain(p, target, item);
-                return;
-            } else if (p.getOpenInventory().getTitle().contains("§6§lInsultos staff")) {
-                e.setCancelled(true);
-                String[] user = p.getOpenInventory().getTitle().split("§6§lInsultos ");
-                Player target = Bukkit.getPlayer(user[1]);
-                this.manageSubPunish(p, target, item, p.getInventory().getTitle());
-                return;
-            } else if (p.getOpenInventory().getTitle().contains("§6§lAcoso ")) {
-                e.setCancelled(true);
-                String[] user = p.getOpenInventory().getTitle().split("§6§lAcoso ");
-                Player target = Bukkit.getPlayer(user[1]);
-                this.manageSubPunish(p, target, item, p.getInventory().getTitle());
-                return;
-            } else if (p.getOpenInventory().getTitle().contains("§6§lPedir al Staff ")) {
-                e.setCancelled(true);
-                String[] user = p.getOpenInventory().getTitle().split("§6§lPedir al Staff ");
-                Player target = Bukkit.getPlayer(user[1]);
-                this.manageSubPunish(p, target, item, p.getInventory().getTitle());
-                return;
-            } else if (p.getOpenInventory().getTitle().contains("§6§lNO SS ")) {
-                e.setCancelled(true);
-                String[] user = p.getOpenInventory().getTitle().split("§6§lNO SS ");
-                Player target = Bukkit.getPlayer(user[1]);
-                this.manageSubPunish(p, target, item, p.getInventory().getTitle());
-                return;
-            } else if (p.getOpenInventory().getTitle().contains("§6§lAntiAfk ")) {
-                e.setCancelled(true);
-                String[] user = p.getOpenInventory().getTitle().split("§6§lAntiAfk ");
-                Player target = Bukkit.getPlayer(user[1]);
-                this.manageSubPunish(p, target, item, p.getInventory().getTitle());
-                return;
-            }
-
-
+            managePunishTitles(p, e, item);
 
             if (p.getOpenInventory().getTitle().contains(lang.examine_GUI_title_vis)) {
                 String[] user = p.getOpenInventory().getTitle().split(lang.examine_GUI_title_vis);
@@ -311,6 +273,52 @@ public class SEventsListener implements Listener {
                 }
 
             }
+        }
+    }
+
+    private void managePunishTitles(Player p, InventoryClickEvent e, ItemStack item) {
+        if (p.getOpenInventory().getTitle().contains("§e§lSanciones para ")) {
+            e.setCancelled(true);
+            String[] user = p.getOpenInventory().getTitle().split("§e§lSanciones para ");
+            Player target = Bukkit.getPlayer(user[1]);
+            this.managePunishMain(p, target, item);
+            return;
+        } else if (p.getOpenInventory().getTitle().contains("§6§lInsultos staff")) {
+            e.setCancelled(true);
+            String[] user = p.getOpenInventory().getTitle().split("§6§lInsultos ");
+            Player target = Bukkit.getPlayer(user[1]);
+            this.manageSubPunish(p, target, item, p.getInventory().getTitle());
+            return;
+        } else if (p.getOpenInventory().getTitle().contains("§6§lAcoso ")) {
+            e.setCancelled(true);
+            String[] user = p.getOpenInventory().getTitle().split("§6§lAcoso ");
+            Player target = Bukkit.getPlayer(user[1]);
+            this.manageSubPunish(p, target, item, p.getInventory().getTitle());
+            return;
+        } else if (p.getOpenInventory().getTitle().contains("§6§lPedir al Staff ")) {
+            e.setCancelled(true);
+            String[] user = p.getOpenInventory().getTitle().split("§6§lPedir al Staff ");
+            Player target = Bukkit.getPlayer(user[1]);
+            this.manageSubPunish(p, target, item, p.getInventory().getTitle());
+            return;
+        } else if (p.getOpenInventory().getTitle().contains("§6§lNO SS ")) {
+            e.setCancelled(true);
+            String[] user = p.getOpenInventory().getTitle().split("§6§lNO SS ");
+            Player target = Bukkit.getPlayer(user[1]);
+            this.manageSubPunish(p, target, item, p.getInventory().getTitle());
+            return;
+        } else if (p.getOpenInventory().getTitle().contains("§6§lAntiAfk ")) {
+            e.setCancelled(true);
+            String[] user = p.getOpenInventory().getTitle().split("§6§lAntiAfk ");
+            Player target = Bukkit.getPlayer(user[1]);
+            this.manageSubPunish(p, target, item, p.getInventory().getTitle());
+            return;
+        } else if (p.getOpenInventory().getTitle().contains("§6§lFreeKill ")) {
+            e.setCancelled(true);
+            String[] user = p.getOpenInventory().getTitle().split("§6§lFreeKill ");
+            Player target = Bukkit.getPlayer(user[1]);
+            this.manageSubPunish(p, target, item, p.getInventory().getTitle());
+            return;
         }
     }
 
@@ -354,6 +362,8 @@ public class SEventsListener implements Listener {
                     case "§6§lNO SS ":
                         break;
                     case "§6§lAntiAfk ":
+                        break;
+                    case "§6§lFreeKill ":
                         break;
                 }
             }
