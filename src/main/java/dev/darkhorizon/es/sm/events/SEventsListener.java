@@ -10,7 +10,6 @@ import dev.darkhorizon.es.sm.items.Items;
 import net.ess3.api.events.AfkStatusChangeEvent;
 import net.ess3.api.events.VanishStatusChangeEvent;
 import org.bukkit.Bukkit;
-import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.CreatureSpawner;
 import org.bukkit.entity.Player;
@@ -19,7 +18,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
-import org.bukkit.event.entity.EntityDamageByBlockEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
@@ -192,8 +190,6 @@ public class SEventsListener implements Listener {
         }
     }
 
-
-    //TODO
     @EventHandler
     public void onPlayerDamage(EntityDamageEvent e){
         if (e.getEntity() instanceof Player){
@@ -321,14 +317,17 @@ public class SEventsListener implements Listener {
 
     @EventHandler
     public void onLeave(PlayerQuitEvent e) {
-        if (Data.frozen.contains(e.getPlayer().getName())) {
-            /*ItemStack item = this.plugin.helmet.get(e.getPlayer());
-            e.getPlayer().getInventory().setHelmet(item);*/
-        }
-        if (!Data.staff_players.contains(e.getPlayer().getName()))
+        Player p = e.getPlayer();
+        if (Data.frozen.contains(p.getName())) {
+            p.getInventory().setHelmet(Data.freeze_helmet.get(p.getName()));
             return;
-        Data.staff_players.remove(e.getPlayer().getName());
-        items.rehabInventory(e.getPlayer());
+        }
+        if (Data.staff_players.contains(p.getName())) {
+            Data.staff_players.remove(p.getName());
+            items.rehabInventory(p);
+            Data.staff_inv.remove(p.getName());
+            return;
+        }
     }
 
     @EventHandler
@@ -348,7 +347,7 @@ public class SEventsListener implements Listener {
                 new_content[i] = contents[i];
             }
             target.getInventory().setContents(new_content);
-            target.getInventory().setHelmet(contents[45]);
+            Data.freeze_helmet.replace(target.getName(), contents[45]);
             target.getInventory().setChestplate(contents[46]);
             target.getInventory().setLeggings(contents[47]);
             target.getInventory().setBoots(contents[48]);

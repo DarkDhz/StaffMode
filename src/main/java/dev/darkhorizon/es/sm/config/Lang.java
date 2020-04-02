@@ -59,6 +59,7 @@ public class Lang {
     public String freeze_cmd_player_unfreezed = Utils.simpleMessageReplace("config.messages.commands.freeze.unfreezed", prefix);
     public String freeze_cmd_target_unfreezed = Utils.simpleMessageReplace("config.messages.commands.freeze.target_unfreezed", prefix);
     public List<String> frozen_ss_msg = Utils.simpleListMessageReplace("config.messages.commands.freeze.ss_msg", prefix);
+    public ItemStack frozen_item = new ItemStack(Material.PACKED_ICE);
 
     // /staff related
 

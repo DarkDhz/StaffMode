@@ -31,7 +31,13 @@ public class Main extends JavaPlugin {
         for (String name : Data.staff_players) {
             Player p = Bukkit.getPlayer(name);
             if (p != null) {
-                p.getInventory().setContents(Data.staff_inv.get(p.getName()));
+                p.getInventory().setContents(Data.staff_inv.get(name));
+            }
+        }
+        for (String name : Data.freeze_helmet.keySet()) {
+            Player p = Bukkit.getPlayer(name);
+            if (p != null) {
+                p.getInventory().setHelmet(Data.freeze_helmet.get(name));
             }
         }
 

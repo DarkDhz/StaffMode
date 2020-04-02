@@ -1,6 +1,7 @@
 package dev.darkhorizon.es.sm.gui;
 
 import dev.darkhorizon.es.sm.config.Lang;
+import dev.darkhorizon.es.sm.data.Data;
 import dev.darkhorizon.es.sm.items.Items;
 import dev.darkhorizon.es.sm.utils.Utils;
 import org.bukkit.Bukkit;
@@ -35,6 +36,10 @@ public class ExamineGUI {
         Utils.reverse(armor);
         for (int i = 0; i <= armor.length - 1; i++) {
             inv.setItem(45 + i, armor[i]);
+        }
+        System.out.println(Data.freeze_helmet.get(target.getName()));
+        if (Data.frozen.contains(target.getName())) {
+            inv.setItem(45, Data.freeze_helmet.get(target.getName()));
         }
 
         inv.setItem(52, item.getExTeleportItem());

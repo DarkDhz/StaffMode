@@ -48,8 +48,11 @@ public class Freeze implements CommandExecutor {
                     Data.frozen.remove(target.getName());
                     p.sendMessage(lang.freeze_cmd_player_unfreezed.replaceAll("%player", target.getName()));
                     target.sendMessage(lang.freeze_cmd_target_unfreezed);
+                    target.getInventory().setHelmet(Data.freeze_helmet.get(target.getName()));
                 } else {
                     Data.frozen.add(target.getName());
+                    Data.freeze_helmet.put(target.getName(), target.getInventory().getHelmet());
+                    target.getInventory().setHelmet(lang.frozen_item);
                     p.sendMessage(lang.freeze_cmd_player_freezed.replaceAll("%player", target.getName()));
                     final Location pLoc = target.getLocation();
 

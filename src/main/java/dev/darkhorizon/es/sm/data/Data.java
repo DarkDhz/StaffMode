@@ -10,6 +10,7 @@ public class Data {
     public static ArrayList<String> staff_players = new ArrayList<String>();
     public static ArrayList<String> frozen = new ArrayList<String>();
     public static HashMap<String, ItemStack[]> staff_inv = new HashMap<String, ItemStack[]>();
+    public static HashMap<String, ItemStack> freeze_helmet = new HashMap<>();
 
 }
 
