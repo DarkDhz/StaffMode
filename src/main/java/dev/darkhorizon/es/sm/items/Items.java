@@ -10,9 +10,6 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Items {
 
     private static final Main plugin = Main.getPlugin(Main.class);
@@ -161,7 +158,7 @@ public class Items {
         SkullMeta sm = (SkullMeta) item.getItemMeta();
         sm.setOwner(p.getName());
         sm.setDisplayName(lang.lstaff_title.replaceAll("%player", p.getName()));
-        sm.setLore(lang.generatLStaffLore(p));
+        sm.setLore(lang.generateLStaffLore(p));
         item.setItemMeta(sm);
         return item;
 

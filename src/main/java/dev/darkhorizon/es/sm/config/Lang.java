@@ -20,6 +20,25 @@ public class Lang {
     private FileManger fm = FileManger.getInstance();
     private static Lang INSTANCE = null;
 
+    private Lang() {
+        //TODO Singleton for only 1 object instance
+    }
+
+    public static Lang getInstance() {
+        if (INSTANCE == null) createInstance();
+        return INSTANCE;
+    }
+
+    private static void createInstance() {
+        if (INSTANCE == null) {
+            synchronized(Lang.class) {
+                if (INSTANCE == null) {
+                    INSTANCE = new Lang();
+                }
+            }
+        }
+    }
+
 
     public String prefix = fm.getLang().getString("messages.prefix").replaceAll("&", "§");
 
@@ -134,21 +153,13 @@ public class Lang {
 
     // STAFFLIST GUI
 
-    public String stafflist_GUI_title = "STAFFLIST";
+    public String stafflist_GUI_title = Utils.simpleMessageReplace("gui.stafflist.title", prefix, fm.getGUI());
 
 
     // PLAYER HEAD
-    public String lstaff_title = "§1§l%player";
-    public ArrayList<String> generatLStaffLore(Player p) {
-        ArrayList<String> toReturn = new ArrayList<>();
-        toReturn.add("§1");
-        toReturn.add(Utils.slistItemReplace("§7Posición:", p));
-        toReturn.add(Utils.slistItemReplace("§7X: %x", p));
-        toReturn.add(Utils.slistItemReplace("§7Y: %y", p));
-        toReturn.add(Utils.slistItemReplace("§7Z: %z", p));
-        toReturn.add(Utils.slistItemReplace("§7Mundo: %world", p));
-        toReturn.add("§7");
-        return toReturn;
+    public String lstaff_title = Utils.simpleMessageReplace("gui.stafflist.items.user.title", prefix, fm.getGUI());
+    public List<String> generateLStaffLore(Player p) {
+        return Utils.slistItemReplace("gui.stafflist.items.user.lore", fm.getGUI(), p);
     }
 
     // END OF STAFFLIST GUI
@@ -157,23 +168,6 @@ public class Lang {
 
     // PUNISH GUI
 
-    private Lang() {
-        //TODO Singleton for only 1 object instance
-    }
 
-    public static Lang getInstance() {
-        if (INSTANCE == null) createInstance();
-        return INSTANCE;
-    }
-
-    private static void createInstance() {
-        if (INSTANCE == null) {
-            synchronized(Lang.class) {
-                if (INSTANCE == null) {
-                    INSTANCE = new Lang();
-                }
-            }
-        }
-    }
 
 }

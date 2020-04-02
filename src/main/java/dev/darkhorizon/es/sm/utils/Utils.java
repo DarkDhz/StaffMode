@@ -43,12 +43,16 @@ public class Utils {
         return toReturn;
     }
 
-    public static String slistItemReplace(String cadena, Player p) {
-
-        return cadena.replaceAll("%x","" + p.getLocation().getBlockX())
-                .replaceAll("%y", "" + p.getLocation().getBlockY())
-                .replaceAll("%z", "" + p.getLocation().getBlockZ())
-                .replaceAll("%world", p.getWorld().getName());
+    public static List<String> slistItemReplace(String path, FileConfiguration file, Player p) {
+        List<String> toReturn = new ArrayList<>();
+        for (String cadena : file.getStringList(path)) {
+            toReturn.add(cadena.replaceAll("%x","" + p.getLocation().getBlockX())
+                    .replaceAll("%y", "" + p.getLocation().getBlockY())
+                    .replaceAll("%z", "" + p.getLocation().getBlockZ())
+                    .replaceAll("&", "§")
+                    .replaceAll("%world", p.getWorld().getName()));
+        }
+        return toReturn;
     }
 
     public static String simpleMessageReplace(String path, String prefix, FileConfiguration file) {

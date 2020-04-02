@@ -6,7 +6,11 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 
 public class FileManger {
 
@@ -53,7 +57,8 @@ public class FileManger {
 
         langConfig = new YamlConfiguration();
         try {
-            langConfig.load(lang);
+            FileInputStream fileinputstream = new FileInputStream(lang);
+            langConfig.load(new InputStreamReader(fileinputstream, StandardCharsets.UTF_8));
         } catch (IOException | InvalidConfigurationException e) {
             e.printStackTrace();
         }
@@ -75,7 +80,8 @@ public class FileManger {
 
         configConfig = new YamlConfiguration();
         try {
-            configConfig.load(config);
+            FileInputStream fileinputstream = new FileInputStream(config);
+            configConfig.load(new InputStreamReader(fileinputstream, StandardCharsets.UTF_8));
         } catch (IOException | InvalidConfigurationException e) {
             e.printStackTrace();
         }
@@ -98,7 +104,8 @@ public class FileManger {
 
         hotbarConfig = new YamlConfiguration();
         try {
-            hotbarConfig.load(hotbar);
+            FileInputStream fileinputstream = new FileInputStream(hotbar);
+            hotbarConfig.load(new InputStreamReader(fileinputstream, StandardCharsets.UTF_8));
         } catch (IOException | InvalidConfigurationException e) {
             e.printStackTrace();
         }
@@ -121,7 +128,8 @@ public class FileManger {
 
         guiConfig = new YamlConfiguration();
         try {
-            guiConfig.load(gui);
+            FileInputStream fileinputstream = new FileInputStream(gui);
+            guiConfig.load(new InputStreamReader(fileinputstream, StandardCharsets.UTF_8));
         } catch (IOException | InvalidConfigurationException e) {
             e.printStackTrace();
         }

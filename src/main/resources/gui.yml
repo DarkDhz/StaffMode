@@ -21,3 +21,16 @@ gui:
           - "&7Clic para ir"
       separator:
         title: "EXAMINANDO..."
+  stafflist:
+    title: "STAFFLIST"
+    items:
+      user:
+        title: "&1&l%player"
+        lore:
+          - "&1"
+          - "&7Posición:"
+          - "&7X: %x"
+          - "&7Y: %y"
+          - "&7Z: %z"
+          - "&7Mundo: %world"
+          - "&2"
