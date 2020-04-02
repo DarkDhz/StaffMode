@@ -54,6 +54,7 @@ public class Main extends JavaPlugin {
         this.getCommand("freeze").setExecutor(new Freeze());
         this.getCommand("stafflist").setExecutor(new StaffList());
         this.getCommand("playertp").setExecutor(new RandomTP());
+        this.getCommand("punish").setExecutor(new Punish());
     }
 
     private void initEvents() {

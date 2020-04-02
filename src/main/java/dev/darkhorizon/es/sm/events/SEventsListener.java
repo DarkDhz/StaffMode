@@ -240,14 +240,13 @@ public class SEventsListener implements Listener {
                 }
             }
 
-            if (p.getOpenInventory().getTitle().contains("SANCIONES PRINCIPAL")) {
+            if (p.getOpenInventory().getTitle().contains("§e§lMenú de sanciones de ")) {
                 e.setCancelled(true);
-                String[] user = p.getOpenInventory().getTitle().split("SANCIONES PRINCIPAL");
+                String[] user = p.getOpenInventory().getTitle().split("Menú de sanciones de");
                 Player target = Bukkit.getPlayer(user[1]);
-                if (item.getType() == Material.ENCHANTED_BOOK && item.hasItemMeta() && item.getItemMeta().getDisplayName().contains("SANCIONES")) {
-                    PunishGUI gui = new PunishGUI(p, target, PunishGUI.gui_type.SUB);
-                }
-
+                this.managePunishMain(p, target, item);
+                e.setCancelled(true);
+                return;
             }
 
             if (p.getOpenInventory().getTitle().contains(lang.examine_GUI_title_vis)) {
@@ -279,6 +278,17 @@ public class SEventsListener implements Listener {
                     p.closeInventory();
                 }
 
+            }
+        }
+    }
+
+    private void managePunishMain(Player launcher, Player target, ItemStack item) {
+        if (target != null && launcher != null) {
+            if (item.getType() == Material.ENCHANTED_BOOK && item.hasItemMeta()) {
+                if (item.getItemMeta().getDisplayName().contains("§6§lSpam de Ip ajena.")) {
+                    launcher.performCommand("ban " + target.getName() + " Pasar IP ajena");
+                    return;
+                }
             }
         }
     }
