@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="SM:jar" />
+      <artifact name="STAFF:jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67bced4b-a0b0-49bc-bd59-a80a910e5d40" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/gui/PunishGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/gui/PunishGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +59,7 @@
     <property name="ToolWindowMessages.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -106,8 +107,7 @@
       <workItem from="1585827586600" duration="6766000" />
       <workItem from="1585834746095" duration="100000" />
       <workItem from="1585837891122" duration="4070000" />
-      <workItem from="1585850393098" duration="4196000" />
-      <workItem from="1585855620045" duration="242000" />
+      <workItem from="1585850393098" duration="4149000" />
     </task>
     <task id="LOCAL-00001" summary="Init plugin">
       <created>1585507470049</created>
@@ -285,11 +285,11 @@
       <updated>1585854399771</updated>
     </task>
     <task id="LOCAL-00026" summary="Added UTF-8 chars support">
-      <created>1585854612128</created>
+      <created>1585855649797</created>
       <option name="number" value="00026" />
       <option name="presentableId" value="LOCAL-00026" />
       <option name="project" value="LOCAL" />
-      <updated>1585854612128</updated>
+      <updated>1585855649797</updated>
     </task>
     <option name="localTasksCounter" value="27" />
     <servers />
@@ -331,10 +331,11 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="602" y="309" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585753198129" />
-    <state x="478" y="56" key="CommitChangelistDialog2" timestamp="1585854610527">
-      <screen x="0" y="0" width="1707" height="920" />
+    <state x="538" y="63" key="CommitChangelistDialog2" timestamp="1585855649000">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="478" y="56" key="CommitChangelistDialog2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854610527" />
+    <state x="478" y="56" key="CommitChangelistDialog2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854398187" />
+    <state x="538" y="63" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585855649000" />
     <state x="164" y="81" key="DiffContextDialog" timestamp="1585854389909">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -343,30 +344,42 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="384" y="117" key="Maven.ArtifactSearchDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585833457014" />
-    <state x="567" y="178" key="MultipleFileMergeDialog" timestamp="1585854407067">
-      <screen x="0" y="0" width="1707" height="920" />
+    <state x="150" y="51" key="MergeDialog" timestamp="1585856269186">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="150" y="51" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585856269186" />
+    <state x="638" y="201" key="MultipleFileMergeDialog" timestamp="1585856269194">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="567" y="178" key="MultipleFileMergeDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854407067" />
-    <state x="334" y="36" key="SettingsEditor" timestamp="1585823611809">
-      <screen x="0" y="0" width="1707" height="920" />
+    <state x="638" y="201" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585856269194" />
+    <state x="376" y="41" key="SettingsEditor" timestamp="1585855437353">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="334" y="36" key="SettingsEditor/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585823611809" />
-    <state x="446" y="195" key="Vcs.Push.Dialog.v2" timestamp="1585854618530">
-      <screen x="0" y="0" width="1707" height="920" />
+    <state x="376" y="41" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585855437353" />
+    <state x="738" y="236" key="VCS.ChangeListViewerDialog" timestamp="1585856460352">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="446" y="195" key="Vcs.Push.Dialog.v2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854618530" />
+    <state x="738" y="236" key="VCS.ChangeListViewerDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585856460352" />
+    <state x="502" y="220" key="Vcs.Push.Dialog.v2" timestamp="1585855654664">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="446" y="195" key="Vcs.Push.Dialog.v2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854416451" />
+    <state x="502" y="220" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585855654664" />
     <state x="665" y="240" key="chooseDestDirectoryDialog" timestamp="1585507999881">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="665" y="240" key="chooseDestDirectoryDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585507999881" />
-    <state x="550" y="286" key="com.intellij.ide.util.TipDialog" timestamp="1585855631290">
+    <state x="550" y="286" key="com.intellij.ide.util.TipDialog" timestamp="1585850392098">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="550" y="286" key="com.intellij.ide.util.TipDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585855631290" />
-    <state x="663" y="379" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585823420583">
-      <screen x="0" y="0" width="1707" height="920" />
+    <state x="550" y="286" key="com.intellij.ide.util.TipDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585850392098" />
+    <state x="746" y="428" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585856462730">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="663" y="379" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585823420583" />
+    <state x="746" y="428" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585856462730" />
     <state x="584" y="228" key="extract.method.dialog" timestamp="1585579628788">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
