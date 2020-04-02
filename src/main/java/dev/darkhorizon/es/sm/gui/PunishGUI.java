@@ -122,7 +122,7 @@ public class PunishGUI {
         Inventory inv = Bukkit.createInventory(p, 9, title + target.getName());
         List<String> lore;
         switch (title) {
-            case "§6§lInsultos ":
+            case "§6§lInsultos staff":
                 lore = new ArrayList<>();
                 lore.add("§eClic para sancionar!");
                 inv.setItem(0, generateBanItem("§6§l1ª vez - Aviso (warn)", lore));
