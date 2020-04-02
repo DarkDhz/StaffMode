@@ -344,7 +344,7 @@ public class SEventsListener implements Listener {
                             return;
                         }
                         if (item.getItemMeta().getDisplayName().contains("§6§l2ª vez - Baneo temporal de 5 días")) {
-                            launcher.performCommand("ban " + target.getName() + " 7d Comportamiento inadecuado");
+                            launcher.performCommand("ban " + target.getName() + " 5d Comportamiento inadecuado");
                             return;
                         }
                         break;
