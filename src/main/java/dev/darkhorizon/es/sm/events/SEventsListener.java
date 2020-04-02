@@ -5,6 +5,7 @@ import dev.darkhorizon.es.sm.Main;
 import dev.darkhorizon.es.sm.config.Lang;
 import dev.darkhorizon.es.sm.config.Perms;
 import dev.darkhorizon.es.sm.data.Data;
+import dev.darkhorizon.es.sm.gui.PunishGUI;
 import dev.darkhorizon.es.sm.items.Items;
 import net.ess3.api.events.AfkStatusChangeEvent;
 import net.ess3.api.events.VanishStatusChangeEvent;
@@ -243,6 +244,15 @@ public class SEventsListener implements Listener {
                 }
             }
 
+            if (p.getOpenInventory().getTitle().contains("SANCIONES PRINCIPAL")) {
+                e.setCancelled(true);
+                String[] user = p.getOpenInventory().getTitle().split("SANCIONES PRINCIPAL");
+                Player target = Bukkit.getPlayer(user[1]);
+                if (item.getType() == Material.ENCHANTED_BOOK && item.hasItemMeta() && item.getItemMeta().getDisplayName().contains("SANCIONES")) {
+                    PunishGUI gui = new PunishGUI(p, target, PunishGUI.gui_type.SUB);
+                }
+
+            }
 
             if (p.getOpenInventory().getTitle().contains(lang.examine_GUI_title_vis)) {
                 String[] user = p.getOpenInventory().getTitle().split(lang.examine_GUI_title_vis);
