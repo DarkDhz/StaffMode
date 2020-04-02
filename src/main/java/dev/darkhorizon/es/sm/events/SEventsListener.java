@@ -360,8 +360,26 @@ public class SEventsListener implements Listener {
                         }
                         break;
                     case "§6§lNO SS ":
+                        if (item.getItemMeta().getDisplayName().contains("§6§lSanción con rango")) {
+                            launcher.performCommand("warn " + target.getName() + " 30d Negarse a SS");
+                            launcher.closeInventory();
+                            return;
+                        }
+                        if (item.getItemMeta().getDisplayName().contains("§6§lSanción sin rango")) {
+                            launcher.performCommand("ban " + target.getName() + " Negarse a SS");
+                            return;
+                        }
                         break;
                     case "§6§lAntiAfk ":
+                        if (item.getItemMeta().getDisplayName().contains("§6§l1ª vez - Aviso (warn)")) {
+                            launcher.performCommand("warn " + target.getName() + " Mecanismos AntiAFK");
+                            launcher.closeInventory();
+                            return;
+                        }
+                        if (item.getItemMeta().getDisplayName().contains("§6§l2ª vez - Baneo temporal de 5 días")) {
+                            launcher.performCommand("ban " + target.getName() + " 7d Mecanismos AntiAFK");
+                            return;
+                        }
                         break;
                     case "§6§lFreeKill ":
                         break;
