@@ -2,18 +2,16 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="SM:jar" />
+      <artifact name="StaffMode:jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67bced4b-a0b0-49bc-bd59-a80a910e5d40" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/SM_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/STAFF_jar.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/StaffMode.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/SM_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SM_jar/SM.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SM_jar/SM.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/gui/PunishGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/gui/PunishGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SM_jar/SM.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +62,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -379,11 +377,11 @@
     </state>
     <state x="567" y="178" key="MultipleFileMergeDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854407067" />
     <state x="638" y="201" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585857119466" />
-    <state x="334" y="36" key="SettingsEditor" timestamp="1585862921399">
-      <screen x="0" y="0" width="1707" height="920" />
+    <state x="376" y="41" key="SettingsEditor" timestamp="1585867146578">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="334" y="36" key="SettingsEditor/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585862921399" />
-    <state x="376" y="41" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585855437353" />
+    <state x="376" y="41" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585867146578" />
     <state x="738" y="236" key="VCS.ChangeListViewerDialog" timestamp="1585856460352">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -401,11 +399,11 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="550" y="286" key="com.intellij.ide.util.TipDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585863722487" />
-    <state x="746" y="428" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585860359931">
+    <state x="746" y="428" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585865223572">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="663" y="379" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585823420583" />
-    <state x="746" y="428" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585860359931" />
+    <state x="746" y="428" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585865223572" />
     <state x="584" y="228" key="extract.method.dialog" timestamp="1585579628788">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -414,6 +412,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="582" y="253" key="git4idea.merge.GitPullDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854403296" />
+    <state x="342" y="140" key="new project wizard" timestamp="1585866962647">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="342" y="140" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1585866962647" />
     <state x="510" y="211" width="672" height="677" key="run.anything.popup" timestamp="1585852362293">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
