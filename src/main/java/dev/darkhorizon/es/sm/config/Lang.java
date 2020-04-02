@@ -20,24 +20,6 @@ public class Lang {
     private FileManger fm = FileManger.getInstance();
     private static Lang INSTANCE = null;
 
-    private Lang() {
-        //TODO Singleton for only 1 object instance
-    }
-
-    public static Lang getInstance() {
-        if (INSTANCE == null) createInstance();
-        return INSTANCE;
-    }
-
-    private static void createInstance() {
-        if (INSTANCE == null) {
-            synchronized(Lang.class) {
-                if (INSTANCE == null) {
-                    INSTANCE = new Lang();
-                }
-            }
-        }
-    }
 
     public String prefix = fm.getLang().getString("messages.prefix").replaceAll("&", "§");
 
@@ -124,39 +106,29 @@ public class Lang {
     // END OF HOTBAR
 
     // EXAMINE GUI
-    public String examine_GUI_title_vis = fm.getGUI().getString("gui.examine.view_title");
-    public String examine_GUI_title_edit = fm.getGUI().getString("gui.examine.edit_title");
+
+    public String examine_GUI_title_vis = Utils.simpleMessageReplace("gui.examine.view_title", prefix, fm.getGUI());
+    public String examine_GUI_title_edit =  Utils.simpleMessageReplace("gui.examine.edit_title", prefix, fm.getGUI());
 
     // USER INFO
-    public ItemStack user_info_item = new ItemStack(Material.SKULL_ITEM);
-    public String user_info_title = "%player";
-    public String user_info_enabled = "ON";
-    public String user_info_disabled = "OFF";
-    public ArrayList<String> generateUserInfoLore(String god, String fly, String h, Location loc, String w) {
-        ArrayList<String> toReturn = new ArrayList<String>();
-        toReturn.add("§1");
-        toReturn.add(Utils.userReplace("§7Vida: %health/20", god, fly, h, loc, w));
-        toReturn.add(Utils.userReplace("§7Location: %x %y %z", god, fly, h, loc, w));
-        toReturn.add(Utils.userReplace("§7Mundo: %world", god, fly, h, loc, w));
-        toReturn.add(Utils.userReplace("§7God: %god", god, fly, h, loc, w));
-        toReturn.add(Utils.userReplace("§7Fly: %fly", god, fly, h, loc, w));
-        toReturn.add("§2");
-        return toReturn;
+
+    public String user_info_title = Utils.simpleMessageReplace("gui.examine.items.user.title", prefix, fm.getGUI());
+    public String user_info_enabled = Utils.simpleMessageReplace("gui.examine.items.user.info_enabled", prefix, fm.getGUI());
+    public String user_info_disabled = Utils.simpleMessageReplace("gui.examine.items.user.info_disabled", prefix, fm.getGUI());
+    public List<String> generateUserInfoLore(String god, String fly, String h, Location loc, String w) {
+        return Utils.userReplace("gui.examine.items.user.lore", fm.getGUI(), god, fly, h, loc, w);
     }
 
     // TELEPORT
+
     public ItemStack ex_teleport_item = new ItemStack(Material.COMPASS);
-    public String ex_teleport_title = "Ir a donde esta el jugador";
-    public ArrayList<String> generateExTeleportLore() {
-        ArrayList<String> toReturn = new ArrayList<String>();
-        toReturn.add("§7Clic para ir");
-        return toReturn;
-    }
+    public String ex_teleport_title = Utils.simpleMessageReplace("gui.examine.items.teleport.title", prefix, fm.getGUI());
+    public List<String> ex_teleport_lore = Utils.simpleListMessageReplace("gui.examine.items.teleport.lore", prefix, fm.getGUI());
 
     // SEPARATOR
 
     public ItemStack separator_item = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short)4);
-    public String separator_title = "EXAMINANDO...";
+    public String separator_title =  Utils.simpleMessageReplace("gui.examine.items.separator.title", prefix, fm.getGUI());
 
     // END OF EXAMINE GUI
 
@@ -184,4 +156,24 @@ public class Lang {
 
 
     // PUNISH GUI
+
+    private Lang() {
+        //TODO Singleton for only 1 object instance
+    }
+
+    public static Lang getInstance() {
+        if (INSTANCE == null) createInstance();
+        return INSTANCE;
+    }
+
+    private static void createInstance() {
+        if (INSTANCE == null) {
+            synchronized(Lang.class) {
+                if (INSTANCE == null) {
+                    INSTANCE = new Lang();
+                }
+            }
+        }
+    }
+
 }

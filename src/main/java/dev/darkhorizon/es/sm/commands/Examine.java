@@ -42,6 +42,10 @@ public class Examine  implements CommandExecutor {
                 p.sendMessage(lang.offline_player.replaceAll("%player", args[0]));
                 return;
             }
+            if (target.isOp()) {
+                p.sendMessage(lang.invalid_player.replaceAll("%player", args[0]));
+                return;
+            }
             if (Data.frozen.contains(target.getName())) {
                 if (p.hasPermission(Perms.examine_edit_permission)) {
                     ExamineGUI ex = new ExamineGUI(p, target, true);

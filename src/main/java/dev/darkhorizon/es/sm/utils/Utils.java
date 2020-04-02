@@ -27,15 +27,20 @@ public class Utils {
         }
     }
 
-    public static String userReplace(String cadena, String god, String fly, String h, Location loc, String w) {
-        return cadena.replaceAll("%god", god)
-                .replaceAll("%fly", fly)
-                .replaceAll("%health", h)
-                .replaceAll("%loc", loc.toString())
-                .replaceAll("%x", "" + loc.getBlockX())
-                .replaceAll("%y", "" + loc.getBlockY())
-                .replaceAll("%z", "" + loc.getBlockZ())
-                .replaceAll("%world", w);
+    public static List<String> userReplace(String path, FileConfiguration file, String god, String fly, String h, Location loc, String w) {
+        List<String> toReturn = new ArrayList<>();
+        for (String cadena : file.getStringList(path)) {
+            toReturn.add(cadena.replaceAll("%god", god)
+                    .replaceAll("%fly", fly)
+                    .replaceAll("%health", h)
+                    .replaceAll("%loc", loc.toString())
+                    .replaceAll("&", "§")
+                    .replaceAll("%x", "" + loc.getBlockX())
+                    .replaceAll("%y", "" + loc.getBlockY())
+                    .replaceAll("%z", "" + loc.getBlockZ())
+                    .replaceAll("%world", w));
+        }
+        return toReturn;
     }
 
     public static String slistItemReplace(String cadena, Player p) {

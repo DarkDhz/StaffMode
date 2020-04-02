@@ -126,8 +126,9 @@ public class Items {
     }
 
     public ItemStack getInfoItem(Player target) {
-        ItemStack item = lang.user_info_item;
-        ItemMeta meta = item.getItemMeta();
+        ItemStack item = new ItemStack(Material.SKULL_ITEM, 1, (short)3);
+        SkullMeta meta = (SkullMeta) item.getItemMeta();
+        meta.setOwner(target.getName());
         IUser user = plugin.ess.getUser(target);
 
         String god = lang.user_info_disabled;
@@ -150,7 +151,7 @@ public class Items {
         ItemStack item = lang.ex_teleport_item;
         ItemMeta meta = item.getItemMeta();
         meta.setDisplayName(lang.ex_teleport_title);
-        meta.setLore(lang.generateExTeleportLore());
+        meta.setLore(lang.ex_teleport_lore);
         item.setItemMeta(meta);
         return item;
     }

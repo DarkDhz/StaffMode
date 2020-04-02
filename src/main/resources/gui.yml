@@ -3,3 +3,21 @@ gui:
     view_title: "Visualizando: "
     edit_title: "Editando: "
     items:
+      user:
+        title: "%player"
+        info_enabled: "ACTIVADO"
+        info_disabled: "DESACTIVADO"
+        lore:
+          - "&1"
+          - "&7Vida: %health/20"
+          - "&7Location: %x %y %z"
+          - "&7Mundo: %world"
+          - "&7God: %god"
+          - "&7Fly: %fly"
+          - "&2"
+      teleport:
+        title: "&7Ir a donde esta el jugador"
+        lore:
+          - "&7Clic para ir"
+      separator:
+        title: "EXAMINANDO..."
