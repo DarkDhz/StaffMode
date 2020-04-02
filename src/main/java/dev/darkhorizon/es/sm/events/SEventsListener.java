@@ -327,7 +327,6 @@ public class SEventsListener implements Listener {
             if (item.getType() == Material.ENCHANTED_BOOK && item.hasItemMeta()) {
                 switch (title) {
                     case "§6§lInsultos staff ":
-                        System.out.printf(item.getItemMeta().getDisplayName());
                         if (item.getItemMeta().getDisplayName().contains("§6§l1ª vez - Aviso (warn)")) {
                             launcher.performCommand("warn " + target.getName() + " Insultos al staff");
                             launcher.closeInventory();
@@ -339,7 +338,6 @@ public class SEventsListener implements Listener {
                         }
                         break;
                     case "§6§lAcoso ":
-                        System.out.printf(item.getItemMeta().getDisplayName());
                         if (item.getItemMeta().getDisplayName().contains("§6§l1ª vez - Aviso (warn)")) {
                             launcher.performCommand("warn " + target.getName() + " Insultos al staff");
                             launcher.closeInventory();
