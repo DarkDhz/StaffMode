@@ -2,6 +2,7 @@ package dev.darkhorizon.es.sm.events;
 
 import com.earth2me.essentials.IUser;
 import dev.darkhorizon.es.sm.Main;
+import dev.darkhorizon.es.sm.commands.Staff;
 import dev.darkhorizon.es.sm.config.Lang;
 import dev.darkhorizon.es.sm.config.Perms;
 import dev.darkhorizon.es.sm.data.Data;
@@ -252,7 +253,21 @@ public class SEventsListener implements Listener {
                 Player target = Bukkit.getPlayer(user[1]);
                 this.manageSubPunish(p, target, item, p.getInventory().getTitle());
                 return;
-            } 
+            }  else if (p.getOpenInventory().getTitle().contains("§6§lAcoso ")) {
+                e.setCancelled(true);
+                String[] user = p.getOpenInventory().getTitle().split("§6§lAcoso ");
+                Player target = Bukkit.getPlayer(user[1]);
+                this.manageSubPunish(p, target, item, p.getInventory().getTitle());
+                return;
+            }  else if (p.getOpenInventory().getTitle().contains("§6§lPedir al Staff ")) {
+                e.setCancelled(true);
+                String[] user = p.getOpenInventory().getTitle().split("§6§lPedir al Staff ");
+                Player target = Bukkit.getPlayer(user[1]);
+                this.manageSubPunish(p, target, item, p.getInventory().getTitle());
+                return;
+            }
+
+
 
             if (p.getOpenInventory().getTitle().contains(lang.examine_GUI_title_vis)) {
                 String[] user = p.getOpenInventory().getTitle().split(lang.examine_GUI_title_vis);
@@ -294,6 +309,10 @@ public class SEventsListener implements Listener {
                     case "§6§lInsultos ":
 
                         break;
+                    case "§6§lAcoso ":
+                        break;
+                    case "§6§lPedir al Staff ":
+                        break;
                 }
             }
         }
@@ -309,6 +328,14 @@ public class SEventsListener implements Listener {
                 }
                 if (item.getItemMeta().getDisplayName().contains("§6§lInsultos al staff.")) {
                     PunishGUI.generateSubInventory(launcher, target, "§6§lInsultos ");
+                    return;
+                }
+                if (item.getItemMeta().getDisplayName().contains("§6§lHostigamiento o acoso hacia otro jugador.")) {
+                    PunishGUI.generateSubInventory(launcher, target, "§6§lAcoso ");
+                    return;
+                }
+                if (item.getItemMeta().getDisplayName().contains("§6§lPedir rango u objetos al staff.")) {
+                    PunishGUI.generateSubInventory(launcher, target, "§6§lPedir al Staff ");
                     return;
                 }
                 if (item.getItemMeta().getDisplayName().contains("§6§lAcumulación de mutes (3)")) {

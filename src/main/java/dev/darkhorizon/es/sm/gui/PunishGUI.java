@@ -35,20 +35,6 @@ public class PunishGUI {
         this.generateInventory(p, target);
     }
 
-    public PunishGUI(Player p, Player target, gui_type e, String title) {
-        switch (e) {
-            case MAIN:
-                this.generateInventory(p, target);
-                break;
-            case SUB:
-                this.generateSubInventory(p, target, title);
-                break;
-            case CUSTOM:
-                break;
-        }
-        this.generateInventory(p, target);
-    }
-
     private void generateInventory(Player p, Player target) {
         Inventory inv = Bukkit.createInventory(p, 6*9, "§e§lSanciones para " + target.getName());
         List<String> lore = new ArrayList<>();
@@ -145,6 +131,25 @@ public class PunishGUI {
                 inv.setItem(1, generateBanItem("§6§l2ª vez - Baneo temporal de 7 días", lore));
                 p.openInventory(inv);
                 break;
+            case "§6§lAcoso ":
+                lore = new ArrayList<>();
+                lore.add("§eClic para sancionar!");
+                inv.setItem(0, generateBanItem("§6§l1ª vez - Aviso (warn)", lore));
+                lore = new ArrayList<>();
+                lore.add("§eClic para sancionar!");
+                inv.setItem(1, generateBanItem("§6§l2ª vez - Baneo temporal de 5 días", lore));
+                p.openInventory(inv);
+                break;
+            case "§6§lPedir al Staff ":
+                lore = new ArrayList<>();
+                lore.add("§eClic para sancionar!");
+                inv.setItem(0, generateBanItem("§6§l1ª vez - Aviso (warn)", lore));
+                lore = new ArrayList<>();
+                lore.add("§eClic para sancionar!");
+                inv.setItem(1, generateBanItem("§6§l2ª vez - Baneo temporal de 3 días", lore));
+                p.openInventory(inv);
+                break;
+
         }
     }
 
