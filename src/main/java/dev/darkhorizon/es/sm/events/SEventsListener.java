@@ -285,39 +285,39 @@ public class SEventsListener implements Listener {
             return;
         } else if (p.getOpenInventory().getTitle().contains("§6§lInsultos staff")) {
             e.setCancelled(true);
-            String[] user = p.getOpenInventory().getTitle().split("§6§lInsultos ");
+            String[] user = p.getOpenInventory().getTitle().split("§6§lInsultos staff ");
             Player target = Bukkit.getPlayer(user[1]);
-            this.manageSubPunish(p, target, item, p.getInventory().getTitle());
+            this.manageSubPunish(p, target, item, "§6§lInsultos staff ");
             return;
         } else if (p.getOpenInventory().getTitle().contains("§6§lAcoso ")) {
             e.setCancelled(true);
             String[] user = p.getOpenInventory().getTitle().split("§6§lAcoso ");
             Player target = Bukkit.getPlayer(user[1]);
-            this.manageSubPunish(p, target, item, p.getInventory().getTitle());
+            this.manageSubPunish(p, target, item, "§6§lAcoso ");
             return;
         } else if (p.getOpenInventory().getTitle().contains("§6§lPedir al Staff ")) {
             e.setCancelled(true);
             String[] user = p.getOpenInventory().getTitle().split("§6§lPedir al Staff ");
             Player target = Bukkit.getPlayer(user[1]);
-            this.manageSubPunish(p, target, item, p.getInventory().getTitle());
+            this.manageSubPunish(p, target, item, "§6§lPedir al Staff ");
             return;
         } else if (p.getOpenInventory().getTitle().contains("§6§lNO SS ")) {
             e.setCancelled(true);
             String[] user = p.getOpenInventory().getTitle().split("§6§lNO SS ");
             Player target = Bukkit.getPlayer(user[1]);
-            this.manageSubPunish(p, target, item, p.getInventory().getTitle());
+            this.manageSubPunish(p, target, item, "§6§lNO SS ");
             return;
         } else if (p.getOpenInventory().getTitle().contains("§6§lAntiAfk ")) {
             e.setCancelled(true);
             String[] user = p.getOpenInventory().getTitle().split("§6§lAntiAfk ");
             Player target = Bukkit.getPlayer(user[1]);
-            this.manageSubPunish(p, target, item, p.getInventory().getTitle());
+            this.manageSubPunish(p, target, item, "§6§lAntiAfk ");
             return;
         } else if (p.getOpenInventory().getTitle().contains("§6§lFreeKill ")) {
             e.setCancelled(true);
             String[] user = p.getOpenInventory().getTitle().split("§6§lFreeKill ");
             Player target = Bukkit.getPlayer(user[1]);
-            this.manageSubPunish(p, target, item, p.getInventory().getTitle());
+            this.manageSubPunish(p, target, item, "§6§lFreeKill ");
             return;
         }
     }
