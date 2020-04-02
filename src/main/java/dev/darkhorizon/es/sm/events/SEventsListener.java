@@ -253,15 +253,27 @@ public class SEventsListener implements Listener {
                 Player target = Bukkit.getPlayer(user[1]);
                 this.manageSubPunish(p, target, item, p.getInventory().getTitle());
                 return;
-            }  else if (p.getOpenInventory().getTitle().contains("§6§lAcoso ")) {
+            } else if (p.getOpenInventory().getTitle().contains("§6§lAcoso ")) {
                 e.setCancelled(true);
                 String[] user = p.getOpenInventory().getTitle().split("§6§lAcoso ");
                 Player target = Bukkit.getPlayer(user[1]);
                 this.manageSubPunish(p, target, item, p.getInventory().getTitle());
                 return;
-            }  else if (p.getOpenInventory().getTitle().contains("§6§lPedir al Staff ")) {
+            } else if (p.getOpenInventory().getTitle().contains("§6§lPedir al Staff ")) {
                 e.setCancelled(true);
                 String[] user = p.getOpenInventory().getTitle().split("§6§lPedir al Staff ");
+                Player target = Bukkit.getPlayer(user[1]);
+                this.manageSubPunish(p, target, item, p.getInventory().getTitle());
+                return;
+            } else if (p.getOpenInventory().getTitle().contains("§6§lNO SS ")) {
+                e.setCancelled(true);
+                String[] user = p.getOpenInventory().getTitle().split("§6§lNO SS ");
+                Player target = Bukkit.getPlayer(user[1]);
+                this.manageSubPunish(p, target, item, p.getInventory().getTitle());
+                return;
+            } else if (p.getOpenInventory().getTitle().contains("§6§lAntiAfk ")) {
+                e.setCancelled(true);
+                String[] user = p.getOpenInventory().getTitle().split("§6§lAntiAfk ");
                 Player target = Bukkit.getPlayer(user[1]);
                 this.manageSubPunish(p, target, item, p.getInventory().getTitle());
                 return;
@@ -321,6 +333,10 @@ public class SEventsListener implements Listener {
                         break;
                     case "§6§lPedir al Staff ":
                         break;
+                    case "§6§lNO SS ":
+                        break;
+                    case "§6§lAntiAfk ":
+                        break;
                 }
             }
         }
@@ -344,6 +360,14 @@ public class SEventsListener implements Listener {
                 }
                 if (item.getItemMeta().getDisplayName().contains("§6§lPedir rango u objetos al staff.")) {
                     PunishGUI.generateSubInventory(launcher, target, "§6§lPedir al Staff ");
+                    return;
+                }
+                if (item.getItemMeta().getDisplayName().contains("§6§lNegarse a SS")) {
+                    PunishGUI.generateSubInventory(launcher, target, "§6§lNO SS ");
+                    return;
+                }
+                if (item.getItemMeta().getDisplayName().contains("§6§lMecanismos AntiAFK (solo aplicable a usuarios sin rango)")) {
+                    PunishGUI.generateSubInventory(launcher, target, "§6§lAntiAfk ");
                     return;
                 }
                 if (item.getItemMeta().getDisplayName().contains("§6§lAcumulación de mutes (3)")) {

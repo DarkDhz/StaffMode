@@ -132,6 +132,7 @@ public class PunishGUI {
                 p.openInventory(inv);
                 break;
             case "§6§lAcoso ":
+            case "§6§lAntiAfk ":
                 lore = new ArrayList<>();
                 lore.add("§eClic para sancionar!");
                 inv.setItem(0, generateBanItem("§6§l1ª vez - Aviso (warn)", lore));
@@ -147,6 +148,15 @@ public class PunishGUI {
                 lore = new ArrayList<>();
                 lore.add("§eClic para sancionar!");
                 inv.setItem(1, generateBanItem("§6§l2ª vez - Baneo temporal de 3 días", lore));
+                p.openInventory(inv);
+                break;
+            case "§6§lNO SS ":
+                lore = new ArrayList<>();
+                lore.add("§eClic para sancionar!");
+                inv.setItem(0, generateBanItem("§6§lSanción con rango", lore));
+                lore = new ArrayList<>();
+                lore.add("§eClic para sancionar!");
+                inv.setItem(1, generateBanItem("§6§lSanción sin rango", lore));
                 p.openInventory(inv);
                 break;
 
