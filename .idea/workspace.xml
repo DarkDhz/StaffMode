@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="STAFF:jar" />
+      <artifact name="SM:jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67bced4b-a0b0-49bc-bd59-a80a910e5d40" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/SM_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/STAFF_jar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SM_jar/SM.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SM_jar/SM.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/gui/PunishGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/gui/PunishGUI.java" afterDir="false" />
     </list>
@@ -108,6 +112,7 @@
       <workItem from="1585834746095" duration="100000" />
       <workItem from="1585837891122" duration="4070000" />
       <workItem from="1585850393098" duration="4149000" />
+      <workItem from="1585863706473" duration="79000" />
     </task>
     <task id="LOCAL-00001" summary="Init plugin">
       <created>1585507470049</created>
@@ -374,10 +379,10 @@
     </state>
     <state x="567" y="178" key="MultipleFileMergeDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854407067" />
     <state x="638" y="201" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585857119466" />
-    <state x="376" y="41" key="SettingsEditor" timestamp="1585855437353">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="334" y="36" key="SettingsEditor" timestamp="1585862921399">
+      <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="334" y="36" key="SettingsEditor/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585823611809" />
+    <state x="334" y="36" key="SettingsEditor/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585862921399" />
     <state x="376" y="41" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585855437353" />
     <state x="738" y="236" key="VCS.ChangeListViewerDialog" timestamp="1585856460352">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -392,10 +397,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="665" y="240" key="chooseDestDirectoryDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585507999881" />
-    <state x="550" y="286" key="com.intellij.ide.util.TipDialog" timestamp="1585850392098">
+    <state x="550" y="286" key="com.intellij.ide.util.TipDialog" timestamp="1585863722487">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="550" y="286" key="com.intellij.ide.util.TipDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585850392098" />
+    <state x="550" y="286" key="com.intellij.ide.util.TipDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585863722487" />
     <state x="746" y="428" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585860359931">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

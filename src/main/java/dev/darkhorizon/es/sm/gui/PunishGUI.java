@@ -212,46 +212,11 @@ public class PunishGUI {
         List<String> lore;
         switch (title) {
             case "§6§[SS] HackClient ":
-                lore = new ArrayList<>();
-                lore.add("§eClic para ir!");
-                inv.setItem(0, generateBanItem("§6§lSanción con rango", lore));
-                lore = new ArrayList<>();
-                lore.add("§eClic para ir!");
-                inv.setItem(1, generateBanItem("§6§lSanción sin rango", lore));
-                break;
-            case "§6§l[SS] Macros ":
-                lore = new ArrayList<>();
-                lore.add("§eClic para ir!");
-                inv.setItem(0, generateBanItem("§6§lSanción con rango", lore));
-                lore = new ArrayList<>();
-                lore.add("§eClic para ir!");
-                inv.setItem(1, generateBanItem("§6§lSanción sin rango", lore));
-                break;
-            case "§6§l[SS] Mods ":
-                lore = new ArrayList<>();
-                lore.add("§eClic para ir!");
-                inv.setItem(0, generateBanItem("§6§lSanción con rango", lore));
-                lore = new ArrayList<>();
-                lore.add("§eClic para ir!");
-                inv.setItem(1, generateBanItem("§6§lSanción sin rango", lore));
-                break;
-            case "§6§l[A] HackClient ":
-                lore = new ArrayList<>();
-                lore.add("§eClic para ir!");
-                inv.setItem(0, generateBanItem("§6§lSanción con rango", lore));
-                lore = new ArrayList<>();
-                lore.add("§eClic para ir!");
-                inv.setItem(1, generateBanItem("§6§lSanción sin rango", lore));
-                break;
             case "§6§l[A] Macros ":
-                lore = new ArrayList<>();
-                lore.add("§eClic para ir!");
-                inv.setItem(0, generateBanItem("§6§lSanción con rango", lore));
-                lore = new ArrayList<>();
-                lore.add("§eClic para ir!");
-                inv.setItem(1, generateBanItem("§6§lSanción sin rango", lore));
-                break;
             case "§6§l[A] Mods ":
+            case "§6§l[A] HackClient ":
+            case "§6§l[SS] Macros ":
+            case "§6§l[SS] Mods ":
                 lore = new ArrayList<>();
                 lore.add("§eClic para ir!");
                 inv.setItem(0, generateBanItem("§6§lSanción con rango", lore));
@@ -264,7 +229,7 @@ public class PunishGUI {
     }
 
     public static ItemStack generateBanItem(String title, List<String> lore) {
-        ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
+        ItemStack item = new ItemStack(Material.BOOK_AND_QUILL);
         ItemMeta meta = item.getItemMeta();
         meta.setDisplayName(title);
         meta.setLore(lore);

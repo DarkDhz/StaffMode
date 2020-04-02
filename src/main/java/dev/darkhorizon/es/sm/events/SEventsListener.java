@@ -483,7 +483,8 @@ public class SEventsListener implements Listener {
         if (target != null && launcher != null) {
             if (item.getType() == Material.BOOK_AND_QUILL && item.hasItemMeta()) {
                 switch (title) {
-                    case "§6§[SS] HackClient ":
+                    case "§6§l[SS] HackClient ":
+                    case "§6§l[SS] Mods ":
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción con rango")) {
                             launcher.performCommand("warn " + target.getName() + " 30d Modificaciones ilegales [SS]");
                             launcher.closeInventory();
@@ -507,19 +508,8 @@ public class SEventsListener implements Listener {
                             return;
                         }
                         break;
-                    case "§6§l[SS] Mods ":
-                        if (item.getItemMeta().getDisplayName().contains("§6§lSanción con rango")) {
-                            launcher.performCommand("warn " + target.getName() + " 30d Modificaciones ilegales [SS]");
-                            launcher.closeInventory();
-                            return;
-                        }
-                        if (item.getItemMeta().getDisplayName().contains("§6§lSanción sin rango")) {
-                            launcher.performCommand("warn " + target.getName() + " Modificaciones ilegales [SS]");
-                            launcher.closeInventory();
-                            return;
-                        }
-                        break;
                     case "§6§l[A] HackClient ":
+                    case "§6§l[A] Mods ":
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción con rango")) {
                             launcher.performCommand("warn " + target.getName() + " 14d Modificaciones ilegales [A]");
                             launcher.closeInventory();
@@ -543,18 +533,6 @@ public class SEventsListener implements Listener {
                             return;
                         }
                         break;
-                    case "§6§l[A] Mods ":
-                        if (item.getItemMeta().getDisplayName().contains("§6§lSanción con rango")) {
-                            launcher.performCommand("warn " + target.getName() + " 14d Modificaciones ilegales [A]");
-                            launcher.closeInventory();
-                            return;
-                        }
-                        if (item.getItemMeta().getDisplayName().contains("§6§lSanción sin rango")) {
-                            launcher.performCommand("warn " + target.getName() + " 20d Modificaciones ilegales [A]");
-                            launcher.closeInventory();
-                            return;
-                        }
-                        break;
                 }
             }
         }
@@ -562,7 +540,7 @@ public class SEventsListener implements Listener {
 
     private void managePunishMain(Player launcher, Player target, ItemStack item) {
         if (target != null && launcher != null) {
-            if (item.getType() == Material.ENCHANTED_BOOK && item.hasItemMeta()) {
+            if (item.getType() == Material.BOOK_AND_QUILL && item.hasItemMeta()) {
                 if (item.getItemMeta().getDisplayName().contains("§6§lSpam de Ip ajena")) {
                     launcher.performCommand("ban " + target.getName() + " Pasar IP ajena");
                     launcher.closeInventory();
