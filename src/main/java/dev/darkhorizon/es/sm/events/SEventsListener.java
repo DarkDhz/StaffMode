@@ -334,6 +334,7 @@ public class SEventsListener implements Listener {
                         }
                         if (item.getItemMeta().getDisplayName().contains("§6§l2ª vez - Baneo temporal de 7 días")) {
                             launcher.performCommand("ban " + target.getName() + " 6d Insultos al staff");
+                            launcher.closeInventory();
                             return;
                         }
                         break;
@@ -345,6 +346,7 @@ public class SEventsListener implements Listener {
                         }
                         if (item.getItemMeta().getDisplayName().contains("§6§l2ª vez - Baneo temporal de 5 días")) {
                             launcher.performCommand("ban " + target.getName() + " 5d Comportamiento inadecuado");
+                            launcher.closeInventory();
                             return;
                         }
                         break;
@@ -356,6 +358,7 @@ public class SEventsListener implements Listener {
                         }
                         if (item.getItemMeta().getDisplayName().contains("§6§l2ª vez - Baneo temporal de 3 días")) {
                             launcher.performCommand("ban " + target.getName() + " 3d Comportamiento inadecuado");
+                            launcher.closeInventory();
                             return;
                         }
                         break;
@@ -367,6 +370,7 @@ public class SEventsListener implements Listener {
                         }
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción sin rango")) {
                             launcher.performCommand("ban " + target.getName() + " Negarse a SS");
+                            launcher.closeInventory();
                             return;
                         }
                         break;
@@ -377,11 +381,27 @@ public class SEventsListener implements Listener {
                             return;
                         }
                         if (item.getItemMeta().getDisplayName().contains("§6§l2ª vez - Baneo temporal de 5 días")) {
-                            launcher.performCommand("ban " + target.getName() + " 7d Mecanismos AntiAFK");
+                            launcher.performCommand("ban " + target.getName() + " 5d Mecanismos AntiAFK");
+                            launcher.closeInventory();
                             return;
                         }
                         break;
                     case "§6§lFreeKill ":
+                        if (item.getItemMeta().getDisplayName().contains("§6§l1ª vez - Advertencia (warn)")) {
+                            launcher.performCommand("warn " + target.getName() + " Mecanismos AntiAFK");
+                            launcher.closeInventory();
+                            return;
+                        }
+                        if (item.getItemMeta().getDisplayName().contains("§6§l2ª vez - 2 Aviso (warn)")) {
+                            launcher.performCommand("warn " + target.getName() + " Mecanismos AntiAFK");
+                            launcher.closeInventory();
+                            return;
+                        }
+                        if (item.getItemMeta().getDisplayName().contains("§6§l3ª vez - Baneo temporal de 30min")) {
+                            launcher.performCommand("ban " + target.getName() + " 30m FreeKill");
+                            launcher.closeInventory();
+                            return;
+                        }
                         break;
                 }
             }
