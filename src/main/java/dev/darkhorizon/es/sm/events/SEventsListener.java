@@ -318,8 +318,26 @@ public class SEventsListener implements Listener {
                         }
                         break;
                     case "§6§lAcoso ":
+                        if (item.getItemMeta().getDisplayName().contains("§6§l1ª vez - Aviso (warn)")) {
+                            launcher.performCommand("warn " + target.getName() + " Insultos al staff");
+                            launcher.closeInventory();
+                            return;
+                        }
+                        if (item.getItemMeta().getDisplayName().contains("§6§l2ª vez - Baneo temporal de 5 días")) {
+                            launcher.performCommand("ban " + target.getName() + " 7d Comportamiento inadecuado");
+                            return;
+                        }
                         break;
                     case "§6§lPedir al Staff ":
+                        if (item.getItemMeta().getDisplayName().contains("§6§l1ª vez - Aviso (warn)")) {
+                            launcher.performCommand("warn " + target.getName() + " Insultos al staff");
+                            launcher.closeInventory();
+                            return;
+                        }
+                        if (item.getItemMeta().getDisplayName().contains("§6§l2ª vez - Baneo temporal de 3 días")) {
+                            launcher.performCommand("ban " + target.getName() + " 3d Comportamiento inadecuado");
+                            return;
+                        }
                         break;
                 }
             }
