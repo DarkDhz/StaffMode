@@ -388,6 +388,10 @@ public class SEventsListener implements Listener {
         }
     }
 
+    private void manageSubSub(Player launcher, Player target, ItemStack item, String title) {
+
+    }
+
     private void managePunishMain(Player launcher, Player target, ItemStack item) {
         if (target != null && launcher != null) {
             if (item.getType() == Material.ENCHANTED_BOOK && item.hasItemMeta()) {
@@ -397,7 +401,7 @@ public class SEventsListener implements Listener {
                     return;
                 }
                 if (item.getItemMeta().getDisplayName().contains("§6§lInsultos al staff.")) {
-                    PunishGUI.generateSubInventory(launcher, target, "§6§lInsultos ");
+                    PunishGUI.generateSubInventory(launcher, target, "§6§lInsultos staff ");
                     return;
                 }
                 if (item.getItemMeta().getDisplayName().contains("§6§lHostigamiento o acoso hacia otro jugador.")) {
