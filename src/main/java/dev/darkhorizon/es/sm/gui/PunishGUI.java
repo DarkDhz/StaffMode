@@ -171,8 +171,60 @@ public class PunishGUI {
                 inv.setItem(2, generateBanItem("§6§l3ª vez - Baneo temporal de 30min", lore));
                 p.openInventory(inv);
                 break;
+            case "§6§lMOD SS ":
+                lore = new ArrayList<>();
+                lore.add("§eClic para ir!");
+                inv.setItem(0, generateBanItem("§6§lUso de Hack Client", lore));
+                lore = new ArrayList<>();
+                lore.add("§eClic para ir!");
+                inv.setItem(1, generateBanItem("§6§lUso de macros", lore));
+                lore = new ArrayList<>();
+                lore.add("§eClic para ir!");
+                inv.setItem(2, generateBanItem("§6§lUso de mods ilegales", lore));
+                p.openInventory(inv);
+                break;
+            case "§6§lMOD EVIDENTES ":
+                lore = new ArrayList<>();
+                lore.add("§eClic para sancionar!");
+                inv.setItem(0, generateBanItem("§6§lSanción con rango", lore));
+                lore = new ArrayList<>();
+                lore.add("§eClic para sancionar!");
+                inv.setItem(1, generateBanItem("§6§lSanción sin rango", lore));
+                break;
+            case "§6§lMOD ADMITIDAS ":
+                lore = new ArrayList<>();
+                lore.add("§eClic para ir!");
+                inv.setItem(0, generateBanItem("§6§l[A] Uso de Hack Client", lore));
+                lore = new ArrayList<>();
+                lore.add("§eClic para ir!");
+                inv.setItem(1, generateBanItem("§6§l[A] Uso de macros", lore));
+                lore = new ArrayList<>();
+                lore.add("§eClic para ir!");
+                inv.setItem(2, generateBanItem("§6§l[A] Uso de mods ilegales", lore));
+                p.openInventory(inv);
+                break;
 
         }
+    }
+
+    public static void generateSubSub(Player p, Player target, String title) {
+        Inventory inv = Bukkit.createInventory(p, 9, title + target.getName());
+        List<String> lore;
+        switch (title) {
+            case "§6§lHackClient ":
+                break;
+            case "§6§lMacros ":
+                break;
+            case "§6§lMods ":
+                break;
+            case "§6§l[A] HackClient ":
+                break;
+            case "§6§l[A] Macros ":
+                break;
+            case "§6§l[A] Mods ":
+                break;
+        }
+
     }
 
     public static ItemStack generateBanItem(String title, List<String> lore) {
