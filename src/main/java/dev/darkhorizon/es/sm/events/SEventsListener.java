@@ -388,6 +388,10 @@ public class SEventsListener implements Listener {
         }
     }
 
+    private void manageSubSub(Player launcher, Player target, ItemStack item, String title) {
+
+    }
+
     private void managePunishMain(Player launcher, Player target, ItemStack item) {
         if (target != null && launcher != null) {
             if (item.getType() == Material.ENCHANTED_BOOK && item.hasItemMeta()) {

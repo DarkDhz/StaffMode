@@ -107,7 +107,7 @@
       <workItem from="1585834746095" duration="100000" />
       <workItem from="1585837891122" duration="4070000" />
       <workItem from="1585850393098" duration="4196000" />
-      <workItem from="1585855620045" duration="242000" />
+      <workItem from="1585855620045" duration="620000" />
     </task>
     <task id="LOCAL-00001" summary="Init plugin">
       <created>1585507470049</created>
@@ -291,7 +291,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585854612128</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Added UTF-8 chars support">
+      <created>1585855874754</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1585855874754</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,10 +338,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="602" y="309" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585753198129" />
-    <state x="478" y="56" key="CommitChangelistDialog2" timestamp="1585854610527">
+    <state x="478" y="56" key="CommitChangelistDialog2" timestamp="1585855872218">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="478" y="56" key="CommitChangelistDialog2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854610527" />
+    <state x="478" y="56" key="CommitChangelistDialog2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585855872218" />
     <state x="164" y="81" key="DiffContextDialog" timestamp="1585854389909">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -343,18 +350,18 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="384" y="117" key="Maven.ArtifactSearchDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585833457014" />
-    <state x="567" y="178" key="MultipleFileMergeDialog" timestamp="1585854407067">
+    <state x="567" y="178" key="MultipleFileMergeDialog" timestamp="1585855896389">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="567" y="178" key="MultipleFileMergeDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854407067" />
+    <state x="567" y="178" key="MultipleFileMergeDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585855896389" />
     <state x="334" y="36" key="SettingsEditor" timestamp="1585823611809">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="334" y="36" key="SettingsEditor/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585823611809" />
-    <state x="446" y="195" key="Vcs.Push.Dialog.v2" timestamp="1585854618530">
+    <state x="446" y="195" key="Vcs.Push.Dialog.v2" timestamp="1585855916992">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="446" y="195" key="Vcs.Push.Dialog.v2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854618530" />
+    <state x="446" y="195" key="Vcs.Push.Dialog.v2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585855916992" />
     <state x="665" y="240" key="chooseDestDirectoryDialog" timestamp="1585507999881">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -371,10 +378,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="584" y="228" key="extract.method.dialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585579628788" />
-    <state x="582" y="253" key="git4idea.merge.GitPullDialog" timestamp="1585854403296">
+    <state x="582" y="253" key="git4idea.merge.GitPullDialog" timestamp="1585855909687">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="582" y="253" key="git4idea.merge.GitPullDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854403296" />
+    <state x="582" y="253" key="git4idea.merge.GitPullDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585855909687" />
     <state x="510" y="211" width="672" height="677" key="run.anything.popup" timestamp="1585852362293">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
