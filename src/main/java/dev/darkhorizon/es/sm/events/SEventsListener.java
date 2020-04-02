@@ -388,6 +388,10 @@ public class SEventsListener implements Listener {
                     PunishGUI.generateSubInventory(launcher, target, "§6§lAntiAfk ");
                     return;
                 }
+                if (item.getItemMeta().getDisplayName().contains("§6§lFreeKill en MinaPvP o Coliseo")) {
+                    PunishGUI.generateSubInventory(launcher, target, "§6§lFreeKill ");
+                    return;
+                }
                 if (item.getItemMeta().getDisplayName().contains("§6§lAcumulación de mutes (3)")) {
                     launcher.performCommand("ban " + target.getName() + " 3d Acumulación de mutes");
                     return;
