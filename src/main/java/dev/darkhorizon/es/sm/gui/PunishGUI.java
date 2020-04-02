@@ -37,8 +37,12 @@ public class PunishGUI {
 
     private void generateInventory(Player p, Player target) {
         Inventory inv = Bukkit.createInventory(p, 6*9, "SANCIONES PRINCIPAL" + target.getName());
-        inv.setItem(0, this.getSanciones());
-
+        List<String> lore = new ArrayList<>();
+        lore.add("§7Clic para ir!");
+        inv.setItem(0, this.generateBanItem("SANCIONES", lore));
+        lore = new ArrayList<>();
+        lore.add("§7Clic para ir!");
+        inv.setItem(1, this.generateBanItem("ABUELAS", lore));
         p.openInventory(inv);
     }
 
@@ -48,13 +52,10 @@ public class PunishGUI {
         p.openInventory(inv);
     }
 
-    public ItemStack getSanciones() {
+    public ItemStack generateBanItem(String title, List<String> lore) {
         ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
         ItemMeta meta = item.getItemMeta();
-        meta.setDisplayName("SANCIONES");
-        List<String> lore = new ArrayList<>();
-        lore.add("");
-        lore.add("§7Clic para ir!");
+        meta.setDisplayName(title);
         meta.setLore(lore);
         item.setItemMeta(meta);
         return item;

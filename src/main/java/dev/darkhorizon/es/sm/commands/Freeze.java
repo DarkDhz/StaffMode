@@ -40,7 +40,7 @@ public class Freeze implements CommandExecutor {
                 p.sendMessage(lang.offline_player.replaceAll("%player", args[0]));
                 return;
             } else {
-                if (target.isOp()) {
+                if (target.isOp() || target.hasPermission(Perms.main_permission)) {
                     p.sendMessage(lang.invalid_player);
                     return;
                 }

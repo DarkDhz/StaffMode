@@ -42,7 +42,7 @@ public class Examine  implements CommandExecutor {
                 p.sendMessage(lang.offline_player.replaceAll("%player", args[0]));
                 return;
             }
-            if (target.isOp()) {
+            if (target.isOp() || target.hasPermission(Perms.main_permission)) {
                 p.sendMessage(lang.invalid_player.replaceAll("%player", args[0]));
                 return;
             }
