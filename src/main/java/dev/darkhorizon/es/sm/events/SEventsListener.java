@@ -401,7 +401,7 @@ public class SEventsListener implements Listener {
                     return;
                 }
                 if (item.getItemMeta().getDisplayName().contains("§6§lInsultos al staff.")) {
-                    PunishGUI.generateSubInventory(launcher, target, "§6§lInsultos ");
+                    PunishGUI.generateSubInventory(launcher, target, "§6§lInsultos staff ");
                     return;
                 }
                 if (item.getItemMeta().getDisplayName().contains("§6§lHostigamiento o acoso hacia otro jugador.")) {
