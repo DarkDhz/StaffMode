@@ -35,12 +35,25 @@ public class PunishGUI {
         this.generateInventory(p, target);
     }
 
-    private void generateInventory(Player p, Player target) {
+    public PunishGUI(Player p, Player target, gui_type e, String title) {
+        switch (e) {
+            case MAIN:
+                this.generateInventory(p, target);
+                break;
+            case SUB:
+                this.generateSubInventory(p, target, title);
+                break;
+            case CUSTOM:
+                break;
+        }
+        this.generateInventory(p, target);
+    }
 
-        Inventory inv = Bukkit.createInventory(p, 6*9, "§e§lMenú de sanciones de " + target.getName());
+    private void generateInventory(Player p, Player target) {
+        Inventory inv = Bukkit.createInventory(p, 6*9, "§e§lSanciones para " + target.getName());
         List<String> lore = new ArrayList<>();
         lore.add("➟Warn al jugador");
-        inv.setItem(11, this.generateBanItem("§6§lSpam de Ip ajena.", lore));
+        inv.setItem(11, generateBanItem("§6§lSpam de Ip ajena.", lore));
         lore = new ArrayList<>();
         lore.add("nombrar");
         inv.setItem(12, this.generateBanItem("§6§lAcumulación de mutes.", lore));
@@ -119,13 +132,23 @@ public class PunishGUI {
         p.openInventory(inv);
     }
 
-    public void generateSubInventory(Player p, Player target) {
-        Inventory inv = Bukkit.createInventory(p, 3*9, "TITLE" + target.getName());
-
-        p.openInventory(inv);
+    public static void generateSubInventory(Player p, Player target, String title) {
+        Inventory inv = Bukkit.createInventory(p, 9, title + target.getName());
+        List<String> lore;
+        switch (title) {
+            case "§6§lInsultos ":
+                lore = new ArrayList<>();
+                lore.add("§eClic para sancionar!");
+                inv.setItem(0, generateBanItem("§6§l1ª vez - Aviso (warn)", lore));
+                lore = new ArrayList<>();
+                lore.add("§eClic para sancionar!");
+                inv.setItem(1, generateBanItem("§6§l2ª vez - Baneo temporal de 7 días", lore));
+                p.openInventory(inv);
+                break;
+        }
     }
 
-    public ItemStack generateBanItem(String title, List<String> lore) {
+    public static ItemStack generateBanItem(String title, List<String> lore) {
         ItemStack item = new ItemStack(Material.ENCHANTED_BOOK);
         ItemMeta meta = item.getItemMeta();
         meta.setDisplayName(title);

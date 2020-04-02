@@ -240,14 +240,19 @@ public class SEventsListener implements Listener {
                 }
             }
 
-            if (p.getOpenInventory().getTitle().contains("§e§lMenú de sanciones de ")) {
+            if (p.getOpenInventory().getTitle().contains("§e§lSanciones para ")) {
                 e.setCancelled(true);
-                String[] user = p.getOpenInventory().getTitle().split("Menú de sanciones de");
+                String[] user = p.getOpenInventory().getTitle().split("§e§lSanciones para ");
                 Player target = Bukkit.getPlayer(user[1]);
                 this.managePunishMain(p, target, item);
-                e.setCancelled(true);
                 return;
-            }
+            } else if (p.getOpenInventory().getTitle().contains("§6§lInsultos ")) {
+                e.setCancelled(true);
+                String[] user = p.getOpenInventory().getTitle().split("§6§lInsultos ");
+                Player target = Bukkit.getPlayer(user[1]);
+                this.manageSubPunish(p, target, item, p.getInventory().getTitle());
+                return;
+            } 
 
             if (p.getOpenInventory().getTitle().contains(lang.examine_GUI_title_vis)) {
                 String[] user = p.getOpenInventory().getTitle().split(lang.examine_GUI_title_vis);
@@ -282,11 +287,28 @@ public class SEventsListener implements Listener {
         }
     }
 
+    private void manageSubPunish(Player launcher, Player target, ItemStack item, String title) {
+        if (target != null && launcher != null) {
+            if (item.getType() == Material.ENCHANTED_BOOK && item.hasItemMeta()) {
+                switch (title) {
+                    case "§6§lInsultos ":
+
+                        break;
+                }
+            }
+        }
+    }
+
     private void managePunishMain(Player launcher, Player target, ItemStack item) {
         if (target != null && launcher != null) {
             if (item.getType() == Material.ENCHANTED_BOOK && item.hasItemMeta()) {
                 if (item.getItemMeta().getDisplayName().contains("§6§lSpam de Ip ajena.")) {
                     launcher.performCommand("ban " + target.getName() + " Pasar IP ajena");
+                    launcher.closeInventory();
+                    return;
+                }
+                if (item.getItemMeta().getDisplayName().contains("§6§lInsultos al staff.")) {
+                    PunishGUI.generateSubInventory(launcher, target, "§6§lInsultos ");
                     return;
                 }
             }
