@@ -246,7 +246,7 @@ public class SEventsListener implements Listener {
                 Player target = Bukkit.getPlayer(user[1]);
                 this.managePunishMain(p, target, item);
                 return;
-            } else if (p.getOpenInventory().getTitle().contains("§6§lInsultos ")) {
+            } else if (p.getOpenInventory().getTitle().contains("§6§lInsultos staff")) {
                 e.setCancelled(true);
                 String[] user = p.getOpenInventory().getTitle().split("§6§lInsultos ");
                 Player target = Bukkit.getPlayer(user[1]);
@@ -291,8 +291,16 @@ public class SEventsListener implements Listener {
         if (target != null && launcher != null) {
             if (item.getType() == Material.ENCHANTED_BOOK && item.hasItemMeta()) {
                 switch (title) {
-                    case "§6§lInsultos ":
-
+                    case "§6§lInsultos staff ":
+                        if (item.getItemMeta().getDisplayName().contains("§6§l1ª vez - Aviso (warn)")) {
+                            launcher.performCommand("warn " + target.getName() + " Insultos al staff");
+                            launcher.closeInventory();
+                            return;
+                        }
+                        if (item.getItemMeta().getDisplayName().contains("§6§l2ª vez - Baneo temporal de 7 días")) {
+                            launcher.performCommand("ban " + target.getName() + " 6d Insultos al staff");
+                            return;
+                        }
                         break;
                 }
             }
