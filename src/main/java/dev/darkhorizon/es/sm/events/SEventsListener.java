@@ -302,13 +302,61 @@ public class SEventsListener implements Listener {
     private void managePunishMain(Player launcher, Player target, ItemStack item) {
         if (target != null && launcher != null) {
             if (item.getType() == Material.ENCHANTED_BOOK && item.hasItemMeta()) {
-                if (item.getItemMeta().getDisplayName().contains("§6§lSpam de Ip ajena.")) {
+                if (item.getItemMeta().getDisplayName().contains("§6§lSpam de Ip ajena")) {
                     launcher.performCommand("ban " + target.getName() + " Pasar IP ajena");
                     launcher.closeInventory();
                     return;
                 }
                 if (item.getItemMeta().getDisplayName().contains("§6§lInsultos al staff.")) {
                     PunishGUI.generateSubInventory(launcher, target, "§6§lInsultos ");
+                    return;
+                }
+                if (item.getItemMeta().getDisplayName().contains("§6§lAcumulación de mutes (3)")) {
+                    launcher.performCommand("ban " + target.getName() + " 3d Acumulación de mutes");
+                    return;
+                }
+                if (item.getItemMeta().getDisplayName().contains("§6§lSpam / Flood")) {
+                    launcher.performCommand("warn " + target.getName() + " Spam / Flood");
+                    return;
+                }
+                if (item.getItemMeta().getDisplayName().contains("§6§lAcumulación de Baneos por acumulación de Mutes (2)")) {
+                    launcher.performCommand("ban " + target.getName() + " 10d Acumulación de baneos");
+                    return;
+                }
+                if (item.getItemMeta().getDisplayName().contains("§6§lComercialización de objetos con beneficios fuera de la network.")) {
+                    launcher.performCommand("ban " + target.getName() + " Comercialización (Fuera de la network)");
+                    return;
+                }
+                if (item.getItemMeta().getDisplayName().contains("§6§lIntento de venta de una cuenta.")) {
+                    launcher.performCommand("ban " + target.getName() + " 3d Intento de comercialización");
+                    return;
+                }
+                if (item.getItemMeta().getDisplayName().contains("§6§lVenta de una cuenta")) {
+                    launcher.performCommand("ban " + target.getName() + " Venta de cuenta");
+                    return;
+                }
+                if (item.getItemMeta().getDisplayName().contains("§6§lEvadir sanción")) {
+                    launcher.performCommand("ban " + target.getName() + " 3d Evasión de Sanción");
+                    return;
+                }
+                if (item.getItemMeta().getDisplayName().contains("§6§lMulticuentas")) {
+                    launcher.performCommand("ipban " + target.getName() + " 14d Multicuentas");
+                    return;
+                }
+                if (item.getItemMeta().getDisplayName().contains("§6§lMentir al staff")) {
+                    launcher.performCommand("ban " + target.getName() + " 4d Mentir al Staff");
+                    return;
+                }
+                if (item.getItemMeta().getDisplayName().contains("§6§lGrifeo en proteciones ajenas")) {
+                    launcher.performCommand("ban " + target.getName() + " 10d Grifeo (Survival)");
+                    return;
+                }
+                if (item.getItemMeta().getDisplayName().contains("§6§lEstafa.")) {
+                    launcher.performCommand("ban " + target.getName() + " 10d Estafa (Survival)");
+                    return;
+                }
+                if (item.getItemMeta().getDisplayName().contains("§6§lTpaKill")) {
+                    launcher.performCommand("ban " + target.getName() + " 7d TpaKill (Survival)");
                     return;
                 }
             }
