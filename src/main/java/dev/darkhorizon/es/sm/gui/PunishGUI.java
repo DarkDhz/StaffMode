@@ -162,10 +162,10 @@ public class PunishGUI {
             case "§6§lFreeKill ":
                 lore = new ArrayList<>();
                 lore.add("§eClic para sancionar!");
-                inv.setItem(0, generateBanItem("§6§l1ª vez - Advertencia Escrita", lore));
+                inv.setItem(0, generateBanItem("§6§l1ª vez - Advertencia (warn)", lore));
                 lore = new ArrayList<>();
                 lore.add("§eClic para sancionar!");
-                inv.setItem(1, generateBanItem("§6§l2ª vez - Aviso (warn)", lore));
+                inv.setItem(1, generateBanItem("§6§l2ª vez - 2 Aviso (warn)", lore));
                 lore = new ArrayList<>();
                 lore.add("§eClic para sancionar!");
                 inv.setItem(2, generateBanItem("§6§l3ª vez - Baneo temporal de 30min", lore));
