@@ -67,7 +67,7 @@ public class Items {
         }
 
         ItemMeta meta = item.getItemMeta();
-        meta.setLore(lang.generateVanishLore());
+        meta.setLore(lang.vanish_lore);
         String title = lang.vanish_title;
 
         if (state) {
@@ -83,7 +83,7 @@ public class Items {
     private ItemStack getExamine() {
         ItemStack item = lang.examine_item;
         ItemMeta meta = item.getItemMeta();
-        meta.setLore(lang.generateExamineLore());
+        meta.setLore(lang.examine_lore);
         meta.setDisplayName(lang.examine_title);
         item.setItemMeta(meta);
         return item;
@@ -101,7 +101,7 @@ public class Items {
     private ItemStack getRandom() {
         ItemStack item = lang.random_item;
         ItemMeta meta = item.getItemMeta();
-        meta.setLore(lang.generateRandomLore());
+        meta.setLore(lang.random_lore);
         meta.setDisplayName(lang.random_title);
         item.setItemMeta(meta);
         return item;
@@ -112,7 +112,7 @@ public class Items {
         SkullMeta sm = (SkullMeta) item.getItemMeta();
         sm.setOwner(p.getName());
         sm.setDisplayName(lang.slist_title);
-        sm.setLore(lang.generateRandomLore());
+        sm.setLore(lang.slist_lore);
         item.setItemMeta(sm);
         return item;
     }
@@ -140,13 +140,8 @@ public class Items {
             fly = lang.user_info_enabled;
         }
 
-        String loc = "X: " + target.getLocation().getBlockX() + " Y: " + target.getLocation().getBlockY()
-                + " Z: " + target.getLocation().getBlockZ();
-
         meta.setDisplayName(lang.user_info_title.replaceAll("%player", target.getName()));
-
-
-        meta.setLore(lang.generateUserInfoLore(god, fly, "" + target.getHealth(), loc, target.getWorld().getName()));
+        meta.setLore(lang.generateUserInfoLore(god, fly, "" + target.getHealth(), target.getLocation(), target.getWorld().getName()));
         item.setItemMeta(meta);
         return item;
     }

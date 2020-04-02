@@ -2,6 +2,7 @@ package dev.darkhorizon.es.sm;
 
 import com.earth2me.essentials.Essentials;
 import dev.darkhorizon.es.sm.commands.*;
+import dev.darkhorizon.es.sm.config.FileManger;
 import dev.darkhorizon.es.sm.data.Data;
 import dev.darkhorizon.es.sm.events.SEventsListener;
 import org.bukkit.Bukkit;
@@ -14,12 +15,11 @@ public class Main extends JavaPlugin {
 
     public Essentials ess = null;
 
-    private FileConfiguration config = getConfig();
 
     @Override
     public void onEnable() {
         super.onEnable();
-        this.initConfig();
+        FileManger.initFiles();
         this.initVariables();
         this.initCommands();
         this.initEvents();
@@ -43,10 +43,6 @@ public class Main extends JavaPlugin {
 
     }
 
-    private void initConfig() {
-        this.config.options().copyDefaults(true);
-        saveConfig();
-    }
 
     private void initVariables() {
         ess = (Essentials) getServer().getPluginManager().getPlugin("Essentials");

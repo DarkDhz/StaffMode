@@ -31,14 +31,14 @@ public class Punish implements CommandExecutor {
         if (args.length == 1) {
             Player target = Bukkit.getPlayer(args[0]);
             if (target == null) {
-                p.sendMessage(lang.offline_player.replaceAll("5player", args[0]));
+                p.sendMessage(lang.offline_player.replaceAll("%player", args[0]));
                 return;
             } else {
                 PunishGUI gui = new PunishGUI(p, target, PunishGUI.gui_type.MAIN);
             }
 
         } else {
-            p.sendMessage("USAGE");
+            p.sendMessage(lang.punish_usage);
         }
 
     }

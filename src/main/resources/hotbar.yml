@@ -1,0 +1,33 @@
+hotbar:
+  freeze:
+    slot: 0
+    item: 79
+    title: "&9&lCONGELAR"
+    lore:
+      - "&7¡Clic para congelador al jugador!"
+  examine:
+    slot: 6
+    item: 54
+    title: "&6&lEXAMINAR"
+    lore:
+      - "&7¡Clic para examinar al jugador!"
+  vanish:
+    slot: 4
+    title: "&b&lVANISH &8(%state&8)"
+    item_enabled: 374
+    state_enabled: "&6&lACTIVADO"
+    item_disabled: 373
+    state_disabled: "&c&lDESACTIVADO"
+    lore:
+      - "&7¡Clic para modificar el vanish!"
+  stafflist:
+    slot: 8
+    title: "&1&lLISTA DE STAFF"
+    lore:
+      - "&7¡Clic para ver al staff!"
+  random:
+    slot: 1
+    item: 345
+    title: "&7&lRANDOM TP"
+    lore:
+      - "&7¡Clic para teletransportarte aleatoriamente!"

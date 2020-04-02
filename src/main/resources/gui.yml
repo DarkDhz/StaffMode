@@ -1,0 +1,5 @@
+gui:
+  examine:
+    view_title: "Visualizando: "
+    edit_title: "Editando: "
+    items:

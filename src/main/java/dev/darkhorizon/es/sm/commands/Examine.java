@@ -1,6 +1,7 @@
 package dev.darkhorizon.es.sm.commands;
 
 import dev.darkhorizon.es.sm.Main;
+import dev.darkhorizon.es.sm.config.FileManger;
 import dev.darkhorizon.es.sm.config.Lang;
 import dev.darkhorizon.es.sm.config.Perms;
 import dev.darkhorizon.es.sm.data.Data;
@@ -38,7 +39,7 @@ public class Examine  implements CommandExecutor {
         if (args.length == 1) {
             Player target = Bukkit.getPlayer(args[0]);
             if (target == null) {
-                p.sendMessage(lang.offline_player.replaceAll("5player", args[0]));
+                p.sendMessage(lang.offline_player.replaceAll("%player", args[0]));
                 return;
             }
             if (Data.frozen.contains(target.getName())) {

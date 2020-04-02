@@ -290,6 +290,9 @@ public class SEventsListener implements Listener {
                 e.setCancelled(true);
             }
         }
+        if (Data.frozen.contains(e.getPlayer().getName())) {
+            e.setCancelled(true);
+        }
     }
 
     @EventHandler

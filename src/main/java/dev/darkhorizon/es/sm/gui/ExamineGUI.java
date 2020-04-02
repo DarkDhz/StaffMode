@@ -22,9 +22,9 @@ public class ExamineGUI {
     private void generateInventory(Player p, Player target, boolean edit) {
         Inventory inv = null;
         if (edit) {
-            inv = Bukkit.createInventory(p, lang.examine_GUI_title_size*9, lang.examine_GUI_title_edit + "" + target.getName());
+            inv = Bukkit.createInventory(p, 6*9, lang.examine_GUI_title_edit + "" + target.getName());
         } else {
-            inv = Bukkit.createInventory(p, lang.examine_GUI_title_size*9, lang.examine_GUI_title_vis + "" + target.getName());
+            inv = Bukkit.createInventory(p, 6*9, lang.examine_GUI_title_vis + "" + target.getName());
         }
 
         ItemStack[] items = target.getInventory().getContents();
@@ -37,7 +37,6 @@ public class ExamineGUI {
         for (int i = 0; i <= armor.length - 1; i++) {
             inv.setItem(45 + i, armor[i]);
         }
-        System.out.println(Data.freeze_helmet.get(target.getName()));
         if (Data.frozen.contains(target.getName())) {
             inv.setItem(45, Data.freeze_helmet.get(target.getName()));
         }

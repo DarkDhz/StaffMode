@@ -3,6 +3,8 @@ package dev.darkhorizon.es.sm.utils;
 import com.earth2me.essentials.IUser;
 import dev.darkhorizon.es.sm.Main;
 import dev.darkhorizon.es.sm.config.Lang;
+import org.bukkit.Location;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
@@ -25,8 +27,15 @@ public class Utils {
         }
     }
 
-    public static String userReplace( String cadena, String god, String fly, String h, String loc, String w) {
-        return cadena.replaceAll("%god", god).replaceAll("%fly", fly).replaceAll("%health", h).replaceAll("%loc", loc).replaceAll("%world", w);
+    public static String userReplace(String cadena, String god, String fly, String h, Location loc, String w) {
+        return cadena.replaceAll("%god", god)
+                .replaceAll("%fly", fly)
+                .replaceAll("%health", h)
+                .replaceAll("%loc", loc.toString())
+                .replaceAll("%x", "" + loc.getBlockX())
+                .replaceAll("%y", "" + loc.getBlockY())
+                .replaceAll("%z", "" + loc.getBlockZ())
+                .replaceAll("%world", w);
     }
 
     public static String slistItemReplace(String cadena, Player p) {
@@ -37,13 +46,13 @@ public class Utils {
                 .replaceAll("%world", p.getWorld().getName());
     }
 
-    public static String simpleMessageReplace(String path, String prefix) {
-        return plugin.getConfig().getString(path).replaceAll("&", "§").replaceAll("%prefix", prefix);
+    public static String simpleMessageReplace(String path, String prefix, FileConfiguration file) {
+        return file.getString(path).replaceAll("&", "§").replaceAll("%prefix", prefix);
     }
 
-    public static List<String> simpleListMessageReplace(String path, String prefix) {
+    public static List<String> simpleListMessageReplace(String path, String prefix, FileConfiguration file) {
         List<String> toReturn = new ArrayList<>();
-        for (String s : plugin.getConfig().getStringList(path)) {
+        for (String s : file.getStringList(path)) {
             toReturn.add(s.replaceAll("&", "§").replaceAll("%prefix", prefix));
         }
         return toReturn;
