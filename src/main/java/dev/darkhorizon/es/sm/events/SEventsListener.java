@@ -529,8 +529,8 @@ public class SEventsListener implements Listener {
             }
             if (item.getType() == Material.BOOK_AND_QUILL && item.hasItemMeta()) {
                 switch (title) {
-                    case "§6§lHackClient en [SS] ":
-                    case "§6§lMods en [SS] ":
+                    case "§6§lSS HackClient ":
+                    case "§6§lSS Mods ":
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción con rango")) {
                             launcher.performCommand("ban " + target.getName() + " 30d Modificaciones ilegales [SS]");
                             launcher.closeInventory();
@@ -542,7 +542,7 @@ public class SEventsListener implements Listener {
                             return;
                         }
                         break;
-                    case "§6§lMacros en [SS] ":
+                    case "§6§lSS Macros ":
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción con rango")) {
                             launcher.performCommand("ban " + target.getName() + " 14d Modificaciones ilegales [SS]");
                             launcher.closeInventory();
@@ -554,8 +554,8 @@ public class SEventsListener implements Listener {
                             return;
                         }
                         break;
-                    case "§6§lHackClient [A] ":
-                    case "§6§lMods [A] ":
+                    case "§6§lA HackClient":
+                    case "§6§lA Mods ":
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción con rango")) {
                             launcher.performCommand("ban " + target.getName() + " 14d Modificaciones ilegales [A]");
                             launcher.closeInventory();
@@ -567,7 +567,7 @@ public class SEventsListener implements Listener {
                             return;
                         }
                         break;
-                    case "§6§lMacros [A] ":
+                    case "§6§lA Macros ":
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción con rango")) {
                             launcher.performCommand("ban " + target.getName() + " 7d Modificaciones ilegales [A]");
                             launcher.closeInventory();
