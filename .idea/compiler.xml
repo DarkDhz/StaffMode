@@ -7,7 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="StaffMode" />
-        <module name="SM" />s
+        <module name="SM" />
       </profile>
     </annotationProcessing>
   </component>

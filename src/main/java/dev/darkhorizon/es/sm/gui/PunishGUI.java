@@ -151,6 +151,7 @@ public class PunishGUI {
                 p.openInventory(inv);
                 break;
             case "§6§lNO SS ":
+            case "§6§lMOD EVIDENTES ":
                 lore = new ArrayList<>();
                 lore.add("§eClic para sancionar!");
                 inv.setItem(0, generateBanItem("§6§lSanción con rango", lore));
@@ -174,33 +175,25 @@ public class PunishGUI {
             case "§6§lMOD SS ":
                 lore = new ArrayList<>();
                 lore.add("§eClic para ir!");
-                inv.setItem(0, generateBanItem("§6§lUso de Hack Client", lore));
+                inv.setItem(0, generateBanItem("§6§l(SS) Uso de Hack Client", lore));
                 lore = new ArrayList<>();
                 lore.add("§eClic para ir!");
-                inv.setItem(1, generateBanItem("§6§lUso de macros", lore));
+                inv.setItem(1, generateBanItem("§6§l(SS) Uso de macros", lore));
                 lore = new ArrayList<>();
                 lore.add("§eClic para ir!");
-                inv.setItem(2, generateBanItem("§6§lUso de mods ilegales", lore));
+                inv.setItem(2, generateBanItem("§6§l(SS) Uso de mods ilegales", lore));
                 p.openInventory(inv);
-                break;
-            case "§6§lMOD EVIDENTES ":
-                lore = new ArrayList<>();
-                lore.add("§eClic para sancionar!");
-                inv.setItem(0, generateBanItem("§6§lSanción con rango", lore));
-                lore = new ArrayList<>();
-                lore.add("§eClic para sancionar!");
-                inv.setItem(1, generateBanItem("§6§lSanción sin rango", lore));
                 break;
             case "§6§lMOD ADMITIDAS ":
                 lore = new ArrayList<>();
                 lore.add("§eClic para ir!");
-                inv.setItem(0, generateBanItem("§6§l[A] Uso de Hack Client", lore));
+                inv.setItem(0, generateBanItem("§6§l(A) Uso de Hack Client", lore));
                 lore = new ArrayList<>();
                 lore.add("§eClic para ir!");
-                inv.setItem(1, generateBanItem("§6§l[A] Uso de macros", lore));
+                inv.setItem(1, generateBanItem("§6§l(A) Uso de macros", lore));
                 lore = new ArrayList<>();
                 lore.add("§eClic para ir!");
-                inv.setItem(2, generateBanItem("§6§l[A] Uso de mods ilegales", lore));
+                inv.setItem(2, generateBanItem("§6§l(A) Uso de mods ilegales", lore));
                 p.openInventory(inv);
                 break;
 
@@ -211,18 +204,19 @@ public class PunishGUI {
         Inventory inv = Bukkit.createInventory(p, 9, title + target.getName());
         List<String> lore;
         switch (title) {
-            case "§6§[SS] HackClient ":
-            case "§6§l[A] Macros ":
-            case "§6§l[A] Mods ":
-            case "§6§l[A] HackClient ":
-            case "§6§l[SS] Macros ":
-            case "§6§l[SS] Mods ":
+            case "§6§lSS HackClient ":
+            case "§6§lA Macros ":
+            case "§6§lA Mods ":
+            case "§6§lA HackClient ":
+            case "§6§lSS Macros ":
+            case "§6§lSS Mods ":
                 lore = new ArrayList<>();
                 lore.add("§eClic para ir!");
                 inv.setItem(0, generateBanItem("§6§lSanción con rango", lore));
                 lore = new ArrayList<>();
                 lore.add("§eClic para ir!");
                 inv.setItem(1, generateBanItem("§6§lSanción sin rango", lore));
+                p.openInventory(inv);
                 break;
         }
 

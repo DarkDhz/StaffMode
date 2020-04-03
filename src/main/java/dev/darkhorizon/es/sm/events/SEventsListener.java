@@ -29,6 +29,8 @@ import org.bukkit.event.player.*;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
+import java.util.Arrays;
+
 public class SEventsListener implements Listener {
     private final Main plugin = Main.getPlugin(Main.class);
     private final Items items = Items.getInstance();
@@ -324,31 +326,67 @@ public class SEventsListener implements Listener {
             e.setCancelled(true);
             String[] user = p.getOpenInventory().getTitle().split("§6§lMOD SS ");
             Player target = Bukkit.getPlayer(user[1]);
-            this.manageSubPunish(p, target, item, "§6§lFreeKill ");
-            return;
-        } else if (p.getOpenInventory().getTitle().contains("§6§lHackClient ")) {
-            e.setCancelled(true);
-            String[] user = p.getOpenInventory().getTitle().split("§6§lHackClient ");
-            Player target = Bukkit.getPlayer(user[1]);
-            this.manageSubSub(p, target, item, "§6§lHackClient ");
-            return;
-        } else if (p.getOpenInventory().getTitle().contains("§6§lMacros ")) {
-            e.setCancelled(true);
-            String[] user = p.getOpenInventory().getTitle().split("§6§lMacros ");
-            Player target = Bukkit.getPlayer(user[1]);
-            this.manageSubSub(p, target, item, "§6§lMacros ");
-            return;
-        } else if (p.getOpenInventory().getTitle().contains("§6§lMods ")) {
-            e.setCancelled(true);
-            String[] user = p.getOpenInventory().getTitle().split("§6§lMods ");
-            Player target = Bukkit.getPlayer(user[1]);
-            this.manageSubSub(p, target, item, "§6§lMods ");
+            this.manageSubPunish(p, target, item, "§6§lMOD SS ");
             return;
         } else if (p.getOpenInventory().getTitle().contains("§6§lMOD EVIDENTES ")) {
             e.setCancelled(true);
             String[] user = p.getOpenInventory().getTitle().split("§6§lMOD EVIDENTES ");
             Player target = Bukkit.getPlayer(user[1]);
             this.manageSubPunish(p, target, item, "§6§lMOD EVIDENTES ");
+            return;
+        } else if (p.getOpenInventory().getTitle().contains("§6§lMOD ADMITIDAS ")) {
+            e.setCancelled(true);
+            String[] user = p.getOpenInventory().getTitle().split("§6§lMOD ADMITIDAS ");
+            Player target = Bukkit.getPlayer(user[1]);
+            this.manageSubPunish(p, target, item, "§6§lMOD ADMITIDAS ");
+            return;
+        } else if (p.getOpenInventory().getTitle().contains("§6§lSS Mods ")) {
+            e.setCancelled(true);
+            System.out.println("DEBUG");
+            String[] user = p.getOpenInventory().getTitle().split("§6§lSS Mods ");
+            System.out.println(user[1]);
+            Player target = Bukkit.getPlayer(user[1]);
+            this.manageSubSub(p, target, item, "§6§lSS Mods ");
+            return;
+        } else if (p.getOpenInventory().getTitle().contains("§6§lSS Macros ")) {
+            e.setCancelled(true);
+            System.out.println("DEBUG");
+            String[] user = p.getOpenInventory().getTitle().split("§6§lSS Macros ");
+            System.out.println(user[1]);
+            Player target = Bukkit.getPlayer(user[1]);
+            this.manageSubSub(p, target, item, "§6§lSS Macros ");
+            return;
+        } else if (p.getOpenInventory().getTitle().contains("§6§lSS HackClient ")) {
+            e.setCancelled(true);
+            System.out.println("DEBUG");
+            String[] user = p.getOpenInventory().getTitle().split("§6§lSS HackClient ");
+            System.out.println(user[1]);
+            Player target = Bukkit.getPlayer(user[1]);
+            this.manageSubSub(p, target, item, "§6§lSS HackClient ");
+            return;
+        } else if (p.getOpenInventory().getTitle().contains("§6§lA Mods ")) {
+            e.setCancelled(true);
+            System.out.println("DEBUG");
+            String[] user = p.getOpenInventory().getTitle().split("§6§lA Mods ");
+            System.out.println(user[1]);
+            Player target = Bukkit.getPlayer(user[1]);
+            this.manageSubSub(p, target, item, "§6§lA Mods ");
+            return;
+        } else if (p.getOpenInventory().getTitle().contains("§6§lA Macros ")) {
+            e.setCancelled(true);
+            System.out.println("DEBUG");
+            String[] user = p.getOpenInventory().getTitle().split("§6§lA Macros ");
+            System.out.println(user[1]);
+            Player target = Bukkit.getPlayer(user[1]);
+            this.manageSubSub(p, target, item, "§6§lA Macros ");
+            return;
+        } else if (p.getOpenInventory().getTitle().contains("§6§lA HackClient ")) {
+            e.setCancelled(true);
+            System.out.println("DEBUG");
+            String[] user = p.getOpenInventory().getTitle().split("§6§lA HackClient ");
+            System.out.println(user[1]);
+            Player target = Bukkit.getPlayer(user[1]);
+            this.manageSubSub(p, target, item, "§6§lA HackClient ");
             return;
         }
     }
@@ -435,41 +473,41 @@ public class SEventsListener implements Listener {
                         }
                         break;
                     case "§6§lMOD SS ":
-                        if (item.getItemMeta().getDisplayName().contains("§6§lUso de Hack Client")) {
-                            PunishGUI.generateSubSub(launcher, target, "§6§lHackClient ");
+                        if (item.getItemMeta().getDisplayName().contains("§6§l(SS) Uso de Hack Client")) {
+                            PunishGUI.generateSubSub(launcher, target, "§6§lSS HackClient ");
                             return;
                         }
-                        if (item.getItemMeta().getDisplayName().contains("§6§lUso de macros")) {
-                            PunishGUI.generateSubSub(launcher, target, "§6§lMacros ");
+                        if (item.getItemMeta().getDisplayName().contains("§6§l(SS) Uso de macros")) {
+                            PunishGUI.generateSubSub(launcher, target, "§6§lSS Macros ");
                             return;
                         }
-                        if (item.getItemMeta().getDisplayName().contains("§6§lUso de mods ilegales")) {
-                            PunishGUI.generateSubSub(launcher, target, "§6§lMods ");
+                        if (item.getItemMeta().getDisplayName().contains("§6§l(SS) Uso de mods ilegales")) {
+                            PunishGUI.generateSubSub(launcher, target, "§6§lSS Mods ");
                             return;
                         }
                         break;
                     case "§6§lMOD ADMITIDAS ":
-                        if (item.getItemMeta().getDisplayName().contains("§6§l[A] Uso de Hack Client")) {
-                            PunishGUI.generateSubSub(launcher, target, "§6§l[A] HackClient ");
+                        if (item.getItemMeta().getDisplayName().contains("§6§l(A) Uso de Hack Client")) {
+                            PunishGUI.generateSubSub(launcher, target, "§6§lA HackClient ");
                             return;
                         }
-                        if (item.getItemMeta().getDisplayName().contains("§6§l[A] Uso de macros")) {
-                            PunishGUI.generateSubSub(launcher, target, "§6§l[A] Macros ");
+                        if (item.getItemMeta().getDisplayName().contains("§6§l(A) Uso de macros")) {
+                            PunishGUI.generateSubSub(launcher, target, "§6§lA Macros ");
                             return;
                         }
-                        if (item.getItemMeta().getDisplayName().contains("§6§l[A] Uso de mods ilegales")) {
-                            PunishGUI.generateSubSub(launcher, target, "§6§l[A] Mods ");
+                        if (item.getItemMeta().getDisplayName().contains("§6§l(A) Uso de mods ilegales")) {
+                            PunishGUI.generateSubSub(launcher, target, "§6§lA Mods ");
                             return;
                         }
                         break;
                     case "§6§lMOD EVIDENTES ":
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción con rango")) {
-                            launcher.performCommand("warn " + target.getName() + " 30d Modificaciones ilegales [E]");
+                            launcher.performCommand("ban " + target.getName() + " 30d Modificaciones ilegales (E]");
                             launcher.closeInventory();
                             return;
                         }
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción sin rango")) {
-                            launcher.performCommand("warn " + target.getName() + " Modificaciones ilegales [E]");
+                            launcher.performCommand("ban " + target.getName() + " Modificaciones ilegales (E]");
                             launcher.closeInventory();
                             return;
                         }
@@ -483,8 +521,9 @@ public class SEventsListener implements Listener {
         if (target != null && launcher != null) {
             if (item.getType() == Material.BOOK_AND_QUILL && item.hasItemMeta()) {
                 switch (title) {
-                    case "§6§l[SS] HackClient ":
-                    case "§6§l[SS] Mods ":
+                    case "§6§lSS HackClient ":
+                    case "§6§lSS Mods ":
+                        System.out.println("DEBUG");
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción con rango")) {
                             launcher.performCommand("warn " + target.getName() + " 30d Modificaciones ilegales [SS]");
                             launcher.closeInventory();
@@ -496,7 +535,7 @@ public class SEventsListener implements Listener {
                             return;
                         }
                         break;
-                    case "§6§l[SS] Macros ":
+                    case "§6§lSS Macros ":
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción con rango")) {
                             launcher.performCommand("warn " + target.getName() + " 14d Modificaciones ilegales [SS]");
                             launcher.closeInventory();
@@ -508,20 +547,20 @@ public class SEventsListener implements Listener {
                             return;
                         }
                         break;
-                    case "§6§l[A] HackClient ":
-                    case "§6§l[A] Mods ":
+                    case "§6§lA HackClient ":
+                    case "§6§lA Mods ":
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción con rango")) {
                             launcher.performCommand("warn " + target.getName() + " 14d Modificaciones ilegales [A]");
                             launcher.closeInventory();
                             return;
                         }
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción sin rango")) {
-                            launcher.performCommand("warn " + target.getName() + " 20d Modificaciones ilegales [A]");
+                            launcher.performCommand("warn " + target.getName() + " 20d Modificaciones ilegales (A]");
                             launcher.closeInventory();
                             return;
                         }
                         break;
-                    case "§6§l[A] Macros ":
+                    case "§6§lA Macros ":
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción con rango")) {
                             launcher.performCommand("warn " + target.getName() + " 7d Modificaciones ilegales [A]");
                             launcher.closeInventory();
@@ -578,11 +617,10 @@ public class SEventsListener implements Listener {
                     PunishGUI.generateSubInventory(launcher, target, "§6§lMOD EVIDENTES ");
                     return;
                 }
-                if (item.getItemMeta().getDisplayName().contains("§6§lMODIFICACIONES ILEGALES EVIDENTES")) {
+                if (item.getItemMeta().getDisplayName().contains("§6§lMODIFICACIONES ILEGALES ADMITIDAS")) {
                     PunishGUI.generateSubInventory(launcher, target, "§6§lMOD ADMITIDAS ");
                     return;
                 }
-
                 if (item.getItemMeta().getDisplayName().contains("§6§lAcumulación de mutes (3)")) {
                     launcher.performCommand("ban " + target.getName() + " 3d Acumulación de mutes");
                     return;
