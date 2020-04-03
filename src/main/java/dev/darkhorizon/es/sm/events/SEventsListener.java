@@ -392,8 +392,14 @@ public class SEventsListener implements Listener {
     }
 
     private void manageSubPunish(Player launcher, Player target, ItemStack item, String title) {
+
         if (target != null && launcher != null) {
+            if (item.getType() == Material.ARROW) {
+                PunishGUI gui = new PunishGUI(launcher, target, PunishGUI.gui_type.MAIN);
+                return;
+            }
             if (item.getType() == Material.BOOK_AND_QUILL && item.hasItemMeta()) {
+
                 switch (title) {
                     case "§6§lInsultos staff ":
                         if (item.getItemMeta().getDisplayName().contains("§6§l1ª vez - Aviso (warn)")) {
@@ -519,11 +525,14 @@ public class SEventsListener implements Listener {
 
     private void manageSubSub(Player launcher, Player target, ItemStack item, String title) {
         if (target != null && launcher != null) {
+            if (item.getType() == Material.ARROW) {
+                PunishGUI gui = new PunishGUI(launcher, target, PunishGUI.gui_type.MAIN);
+                return;
+            }
             if (item.getType() == Material.BOOK_AND_QUILL && item.hasItemMeta()) {
                 switch (title) {
                     case "§6§lSS HackClient ":
                     case "§6§lSS Mods ":
-                        System.out.println("DEBUG");
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción con rango")) {
                             launcher.performCommand("warn " + target.getName() + " 30d Modificaciones ilegales [SS]");
                             launcher.closeInventory();
