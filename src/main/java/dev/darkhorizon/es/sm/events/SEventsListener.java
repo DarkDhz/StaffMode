@@ -502,12 +502,12 @@ public class SEventsListener implements Listener {
                         break;
                     case "§6§lMOD EVIDENTES ":
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción con rango")) {
-                            launcher.performCommand("ban " + target.getName() + " 30d Modificaciones ilegales (E]");
+                            launcher.performCommand("ban " + target.getName() + " 30d Modificaciones ilegales [E]");
                             launcher.closeInventory();
                             return;
                         }
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción sin rango")) {
-                            launcher.performCommand("ban " + target.getName() + " Modificaciones ilegales (E]");
+                            launcher.performCommand("ban " + target.getName() + " Modificaciones ilegales [E]");
                             launcher.closeInventory();
                             return;
                         }
@@ -521,53 +521,53 @@ public class SEventsListener implements Listener {
         if (target != null && launcher != null) {
             if (item.getType() == Material.BOOK_AND_QUILL && item.hasItemMeta()) {
                 switch (title) {
-                    case "§6§lSS HackClient ":
-                    case "§6§lSS Mods ":
+                    case "§6§lHackClient en [SS] ":
+                    case "§6§lMods en [SS] ":
                         System.out.println("DEBUG");
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción con rango")) {
-                            launcher.performCommand("warn " + target.getName() + " 30d Modificaciones ilegales [SS]");
+                            launcher.performCommand("ban " + target.getName() + " 30d Modificaciones ilegales [SS]");
                             launcher.closeInventory();
                             return;
                         }
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción sin rango")) {
-                            launcher.performCommand("warn " + target.getName() + " Modificaciones ilegales [SS]");
+                            launcher.performCommand("ban " + target.getName() + " Modificaciones ilegales [SS]");
                             launcher.closeInventory();
                             return;
                         }
                         break;
-                    case "§6§lSS Macros ":
+                    case "§6§lMacros en [SS] ":
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción con rango")) {
-                            launcher.performCommand("warn " + target.getName() + " 14d Modificaciones ilegales [SS]");
+                            launcher.performCommand("ban " + target.getName() + " 14d Modificaciones ilegales [SS]");
                             launcher.closeInventory();
                             return;
                         }
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción sin rango")) {
-                            launcher.performCommand("warn " + target.getName() + " 30d Modificaciones ilegales [SS]");
+                            launcher.performCommand("ban " + target.getName() + " 30d Modificaciones ilegales [SS]");
                             launcher.closeInventory();
                             return;
                         }
                         break;
-                    case "§6§lA HackClient ":
-                    case "§6§lA Mods ":
+                    case "§6§lHackClient [A] ":
+                    case "§6§lMods [A] ":
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción con rango")) {
-                            launcher.performCommand("warn " + target.getName() + " 14d Modificaciones ilegales [A]");
+                            launcher.performCommand("ban " + target.getName() + " 14d Modificaciones ilegales [A]");
                             launcher.closeInventory();
                             return;
                         }
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción sin rango")) {
-                            launcher.performCommand("warn " + target.getName() + " 20d Modificaciones ilegales (A]");
+                            launcher.performCommand("ban " + target.getName() + " 20d Modificaciones ilegales [A]");
                             launcher.closeInventory();
                             return;
                         }
                         break;
-                    case "§6§lA Macros ":
+                    case "§6§lMacros [A] ":
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción con rango")) {
-                            launcher.performCommand("warn " + target.getName() + " 7d Modificaciones ilegales [A]");
+                            launcher.performCommand("ban " + target.getName() + " 7d Modificaciones ilegales [A]");
                             launcher.closeInventory();
                             return;
                         }
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción sin rango")) {
-                            launcher.performCommand("warn " + target.getName() + " 14d Modificaciones ilegales [A]");
+                            launcher.performCommand("ban " + target.getName() + " 14d Modificaciones ilegales [A]");
                             launcher.closeInventory();
                             return;
                         }

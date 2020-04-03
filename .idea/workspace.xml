@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="SM:jar" />
+      <artifact name="StaffMode:jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67bced4b-a0b0-49bc-bd59-a80a910e5d40" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/gui/PunishGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/gui/PunishGUI.java" afterDir="false" />
@@ -110,8 +109,6 @@
       <workItem from="1585837891122" duration="4070000" />
       <workItem from="1585850393098" duration="4149000" />
       <workItem from="1585863706473" duration="79000" />
-      <workItem from="1585902694610" duration="180000" />
-      <workItem from="1585902996679" duration="2583000" />
     </task>
     <task id="LOCAL-00001" summary="Init plugin">
       <created>1585507470049</created>
@@ -316,12 +313,12 @@
       <option name="project" value="LOCAL" />
       <updated>1585857582195</updated>
     </task>
-    <task id="LOCAL-00030" summary="New compiler.xml">
-      <created>1585902038949</created>
+    <task id="LOCAL-00030" summary="Added UTF-8 chars support">
+      <created>1585867192319</created>
       <option name="number" value="00030" />
       <option name="presentableId" value="LOCAL-00030" />
       <option name="project" value="LOCAL" />
-      <updated>1585902038950</updated>
+      <updated>1585867192319</updated>
     </task>
     <option name="localTasksCounter" value="31" />
     <servers />
@@ -344,8 +341,7 @@
     <MESSAGE value="Added ice item on revision" />
     <MESSAGE value="Added configs files" />
     <MESSAGE value="Added UTF-8 chars support" />
-    <MESSAGE value="New compiler.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="New compiler.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added UTF-8 chars support" />
   </component>
   <component name="WindowStateProjectService">
     <state x="659" y="171" key="#com.intellij.ide.util.MemberChooser" timestamp="1585744452267">
@@ -364,15 +360,15 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="602" y="309" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585753198129" />
-    <state x="478" y="56" key="CommitChangelistDialog2" timestamp="1585902038129">
+    <state x="538" y="63" key="CommitChangelistDialog2" timestamp="1585867191656">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="478" y="56" key="CommitChangelistDialog2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854398187" />
+    <state x="538" y="63" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585867191656" />
+    <state x="164" y="81" key="DiffContextDialog" timestamp="1585854389909">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="478" y="56" key="CommitChangelistDialog2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585902038129" />
-    <state x="538" y="63" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585857581489" />
-    <state x="164" y="81" width="1365" height="762" key="DiffContextDialog" timestamp="1585901608113">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="164" y="81" width="1365" height="762" key="DiffContextDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585901608113" />
+    <state x="164" y="81" key="DiffContextDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854389909" />
     <state x="384" y="117" key="Maven.ArtifactSearchDialog" timestamp="1585833457014">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -386,33 +382,34 @@
     </state>
     <state x="567" y="178" key="MultipleFileMergeDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854407067" />
     <state x="638" y="201" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585857119466" />
-    <state x="334" y="36" key="SettingsEditor" timestamp="1585901771828">
-      <screen x="0" y="0" width="1707" height="920" />
+    <state x="376" y="41" key="SettingsEditor" timestamp="1585867146578">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="334" y="36" key="SettingsEditor/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585901771828" />
+    <state x="334" y="36" key="SettingsEditor/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585862921399" />
     <state x="376" y="41" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585867146578" />
     <state x="738" y="236" key="VCS.ChangeListViewerDialog" timestamp="1585856460352">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="738" y="236" key="VCS.ChangeListViewerDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585856460352" />
-    <state x="446" y="195" key="Vcs.Push.Dialog.v2" timestamp="1585902044263">
-      <screen x="0" y="0" width="1707" height="920" />
+    <state x="502" y="220" key="Vcs.Push.Dialog.v2" timestamp="1585867200603">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="446" y="195" key="Vcs.Push.Dialog.v2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585902044263" />
-    <state x="502" y="220" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585857592547" />
+    <state x="446" y="195" key="Vcs.Push.Dialog.v2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854416451" />
+    <state x="502" y="220" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585867200603" />
     <state x="665" y="240" key="chooseDestDirectoryDialog" timestamp="1585507999881">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="665" y="240" key="chooseDestDirectoryDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585507999881" />
-    <state x="550" y="286" key="com.intellij.ide.util.TipDialog" timestamp="1585902996125">
-      <screen x="0" y="0" width="1707" height="920" />
+    <state x="619" y="323" key="com.intellij.ide.util.TipDialog" timestamp="1585908640754">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="550" y="286" key="com.intellij.ide.util.TipDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585902996125" />
-    <state x="746" y="428" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585865223572">
+    <state x="550" y="286" key="com.intellij.ide.util.TipDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585863722487" />
+    <state x="619" y="323" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585908640754" />
+    <state x="746" y="428" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585908660651">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="663" y="379" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585823420583" />
-    <state x="746" y="428" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585865223572" />
+    <state x="746" y="428" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585908660651" />
     <state x="584" y="228" key="extract.method.dialog" timestamp="1585579628788">
       <screen x="0" y="0" width="1707" height="920" />
     </state>

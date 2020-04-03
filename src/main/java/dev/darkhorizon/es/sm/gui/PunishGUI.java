@@ -175,25 +175,25 @@ public class PunishGUI {
             case "§6§lMOD SS ":
                 lore = new ArrayList<>();
                 lore.add("§eClic para ir!");
-                inv.setItem(0, generateBanItem("§6§l(SS) Uso de Hack Client", lore));
+                inv.setItem(0, generateBanItem("§6§lUso de Hack Client en (SS)", lore));
                 lore = new ArrayList<>();
                 lore.add("§eClic para ir!");
-                inv.setItem(1, generateBanItem("§6§l(SS) Uso de macros", lore));
+                inv.setItem(1, generateBanItem("§6§lUso de macros en (SS)", lore));
                 lore = new ArrayList<>();
                 lore.add("§eClic para ir!");
-                inv.setItem(2, generateBanItem("§6§l(SS) Uso de mods ilegales", lore));
+                inv.setItem(2, generateBanItem("§6§lUso de mods ilegales en (SS)", lore));
                 p.openInventory(inv);
                 break;
             case "§6§lMOD ADMITIDAS ":
                 lore = new ArrayList<>();
                 lore.add("§eClic para ir!");
-                inv.setItem(0, generateBanItem("§6§l(A) Uso de Hack Client", lore));
+                inv.setItem(0, generateBanItem("§6§lUso de Hack Client (A)", lore));
                 lore = new ArrayList<>();
                 lore.add("§eClic para ir!");
-                inv.setItem(1, generateBanItem("§6§l(A) Uso de macros", lore));
+                inv.setItem(1, generateBanItem("§6§lUso de macros (A)", lore));
                 lore = new ArrayList<>();
                 lore.add("§eClic para ir!");
-                inv.setItem(2, generateBanItem("§6§l(A) Uso de mods ilegales", lore));
+                inv.setItem(2, generateBanItem("§6§lUso de mods ilegales (A)", lore));
                 p.openInventory(inv);
                 break;
 
@@ -204,12 +204,12 @@ public class PunishGUI {
         Inventory inv = Bukkit.createInventory(p, 9, title + target.getName());
         List<String> lore;
         switch (title) {
-            case "§6§lSS HackClient ":
-            case "§6§lA Macros ":
-            case "§6§lA Mods ":
-            case "§6§lA HackClient ":
-            case "§6§lSS Macros ":
-            case "§6§lSS Mods ":
+            case "§6§lHackClient en [SS] ":
+            case "§6§lMacros [A] ":
+            case "§6§lMods [A] ":
+            case "§6§lHackClient [A] ":
+            case "§6§lMacros en [SS] ":
+            case "§6§lMods en [SS] ":
                 lore = new ArrayList<>();
                 lore.add("§eClic para ir!");
                 inv.setItem(0, generateBanItem("§6§lSanción con rango", lore));
