@@ -9,6 +9,7 @@ import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.enchantments.EnchantmentTarget;
 import org.bukkit.entity.Player;
+import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
@@ -119,7 +120,20 @@ public class PunishGUI {
         lore = new ArrayList<>();
         lore.add("§eClic para ir!");
         inv.setItem(43, this.generateBanItem("§6§lMODIFICACIONES ILEGALES ADMITIDAS", lore, true));
-        p.openInventory(inv);
+        p.openInventory(replaceEmpty(inv));
+    }
+
+    private static Inventory replaceEmpty(Inventory inv) {
+        for (int i = 0; i < inv.getSize(); i++) {
+            if (inv.getItem(i) == null)  {
+                ItemStack item = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 15);
+                ItemMeta meta = item.getItemMeta();
+                meta.setDisplayName("§cSeparador...");
+                item.setItemMeta(meta);
+                inv.setItem(i, item);
+            }
+        }
+        return inv;
     }
 
     public static void generateSubInventory(Player p, Player target, String title) {
@@ -133,7 +147,6 @@ public class PunishGUI {
                 lore = new ArrayList<>();
                 lore.add("§eClic para sancionar!");
                 inv.setItem(1, generateBanItem("§6§l2ª vez - Baneo temporal de 7 días", lore, false));
-                p.openInventory(inv);
                 break;
             case "§6§lAcoso ":
             case "§6§lAntiAfk ":
@@ -143,7 +156,6 @@ public class PunishGUI {
                 lore = new ArrayList<>();
                 lore.add("§eClic para sancionar!");
                 inv.setItem(1, generateBanItem("§6§l2ª vez - Baneo temporal de 5 días", lore, false));
-                p.openInventory(inv);
                 break;
             case "§6§lPedir al Staff ":
                 lore = new ArrayList<>();
@@ -152,7 +164,6 @@ public class PunishGUI {
                 lore = new ArrayList<>();
                 lore.add("§eClic para sancionar!");
                 inv.setItem(1, generateBanItem("§6§l2ª vez - Baneo temporal de 3 días", lore, false));
-                p.openInventory(inv);
                 break;
             case "§6§lNO SS ":
             case "§6§lMOD EVIDENTES ":
@@ -162,7 +173,6 @@ public class PunishGUI {
                 lore = new ArrayList<>();
                 lore.add("§eClic para sancionar!");
                 inv.setItem(1, generateBanItem("§6§lSanción sin rango", lore, false));
-                p.openInventory(inv);
                 break;
             case "§6§lFreeKill ":
                 lore = new ArrayList<>();
@@ -174,7 +184,6 @@ public class PunishGUI {
                 lore = new ArrayList<>();
                 lore.add("§eClic para sancionar!");
                 inv.setItem(2, generateBanItem("§6§l3ª vez - Baneo temporal de 30min", lore, false));
-                p.openInventory(inv);
                 break;
             case "§6§lMOD SS ":
                 lore = new ArrayList<>();
@@ -186,7 +195,6 @@ public class PunishGUI {
                 lore = new ArrayList<>();
                 lore.add("§eClic para ir!");
                 inv.setItem(2, generateBanItem("§6§l(SS) Uso de mods ilegales", lore, false));
-                p.openInventory(inv);
                 break;
             case "§6§lMOD ADMITIDAS ":
                 lore = new ArrayList<>();
@@ -198,10 +206,10 @@ public class PunishGUI {
                 lore = new ArrayList<>();
                 lore.add("§eClic para ir!");
                 inv.setItem(2, generateBanItem("§6§l(A) Uso de mods ilegales", lore, false));
-                p.openInventory(inv);
                 break;
 
         }
+        p.openInventory(replaceEmpty(inv));
     }
 
     public static void generateSubSub(Player p, Player target, String title) {
@@ -220,9 +228,9 @@ public class PunishGUI {
                 lore = new ArrayList<>();
                 lore.add("§eClic para ir!");
                 inv.setItem(1, generateBanItem("§6§lSanción sin rango", lore, false));
-                p.openInventory(inv);
                 break;
         }
+        p.openInventory(replaceEmpty(inv));
 
     }
 

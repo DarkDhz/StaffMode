@@ -110,7 +110,7 @@
       <workItem from="1585863706473" duration="79000" />
       <workItem from="1585902694610" duration="180000" />
       <workItem from="1585902996679" duration="2690000" />
-      <workItem from="1585909728367" duration="509000" />
+      <workItem from="1585909728367" duration="2072000" />
     </task>
     <task id="LOCAL-00001" summary="Init plugin">
       <created>1585507470049</created>
@@ -329,7 +329,21 @@
       <option name="project" value="LOCAL" />
       <updated>1585905592218</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Added glow">
+      <created>1585910467677</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1585910467677</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Added glow">
+      <created>1585911097284</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1585911097284</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,7 +365,8 @@
     <MESSAGE value="Added configs files" />
     <MESSAGE value="Added UTF-8 chars support" />
     <MESSAGE value="New compiler.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="New compiler.xml" />
+    <MESSAGE value="Added glow" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added glow" />
   </component>
   <component name="WindowStateProjectService">
     <state x="659" y="171" key="#com.intellij.ide.util.MemberChooser" timestamp="1585744452267">
@@ -370,15 +385,15 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="602" y="309" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585753198129" />
-    <state x="478" y="56" key="CommitChangelistDialog2" timestamp="1585905590395">
+    <state x="478" y="56" key="CommitChangelistDialog2" timestamp="1585911896508">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="478" y="56" key="CommitChangelistDialog2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585905590395" />
+    <state x="478" y="56" key="CommitChangelistDialog2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585911896508" />
     <state x="538" y="63" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585857581489" />
-    <state x="164" y="81" width="1365" height="762" key="DiffContextDialog" timestamp="1585901608113">
+    <state x="164" y="81" width="1365" height="762" key="DiffContextDialog" timestamp="1585911879644">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="164" y="81" width="1365" height="762" key="DiffContextDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585901608113" />
+    <state x="164" y="81" width="1365" height="762" key="DiffContextDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585911879644" />
     <state x="384" y="117" key="Maven.ArtifactSearchDialog" timestamp="1585910258483">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -401,10 +416,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="738" y="236" key="VCS.ChangeListViewerDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585856460352" />
-    <state x="446" y="195" key="Vcs.Push.Dialog.v2" timestamp="1585905599078">
+    <state x="446" y="195" key="Vcs.Push.Dialog.v2" timestamp="1585911100383">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="446" y="195" key="Vcs.Push.Dialog.v2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585905599078" />
+    <state x="446" y="195" key="Vcs.Push.Dialog.v2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585911100383" />
     <state x="502" y="220" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585857592547" />
     <state x="665" y="240" key="chooseDestDirectoryDialog" timestamp="1585507999881">
       <screen x="0" y="0" width="1707" height="920" />
