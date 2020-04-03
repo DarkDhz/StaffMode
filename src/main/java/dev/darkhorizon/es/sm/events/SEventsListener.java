@@ -477,29 +477,29 @@ public class SEventsListener implements Listener {
                         }
                         break;
                     case "§6§lMOD SS ":
-                        if (item.getItemMeta().getDisplayName().contains("§6§l(SS) Uso de Hack Client")) {
+                        if (item.getItemMeta().getDisplayName().contains("§6§lUso de Hack Client [SS]")) {
                             PunishGUI.generateSubSub(launcher, target, "§6§lSS HackClient ");
                             return;
                         }
-                        if (item.getItemMeta().getDisplayName().contains("§6§l(SS) Uso de macros")) {
+                        if (item.getItemMeta().getDisplayName().contains("§6§lUso de macros [SS]")) {
                             PunishGUI.generateSubSub(launcher, target, "§6§lSS Macros ");
                             return;
                         }
-                        if (item.getItemMeta().getDisplayName().contains("§6§l(SS) Uso de mods ilegales")) {
+                        if (item.getItemMeta().getDisplayName().contains("§6§lUso de mods ilegales [SS]")) {
                             PunishGUI.generateSubSub(launcher, target, "§6§lSS Mods ");
                             return;
                         }
                         break;
                     case "§6§lMOD ADMITIDAS ":
-                        if (item.getItemMeta().getDisplayName().contains("§6§l(A) Uso de Hack Client")) {
+                        if (item.getItemMeta().getDisplayName().contains("§6§lUso de Hack Client [A]")) {
                             PunishGUI.generateSubSub(launcher, target, "§6§lA HackClient ");
                             return;
                         }
-                        if (item.getItemMeta().getDisplayName().contains("§6§l(A) Uso de macros")) {
+                        if (item.getItemMeta().getDisplayName().contains("§6§lUso de macros [A]")) {
                             PunishGUI.generateSubSub(launcher, target, "§6§lA Macros ");
                             return;
                         }
-                        if (item.getItemMeta().getDisplayName().contains("§6§l(A) Uso de mods ilegales")) {
+                        if (item.getItemMeta().getDisplayName().contains("§6§lUso de mods ilegales [A]")) {
                             PunishGUI.generateSubSub(launcher, target, "§6§lA Mods ");
                             return;
                         }
@@ -531,7 +531,6 @@ public class SEventsListener implements Listener {
                 switch (title) {
                     case "§6§lHackClient en [SS] ":
                     case "§6§lMods en [SS] ":
-                        System.out.println("DEBUG");
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción con rango")) {
                             launcher.performCommand("ban " + target.getName() + " 30d Modificaciones ilegales [SS]");
                             launcher.closeInventory();

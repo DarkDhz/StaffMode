@@ -188,24 +188,24 @@ public class PunishGUI {
             case "§6§lMOD SS ":
                 lore = new ArrayList<>();
                 lore.add("§eClic para ir!");
-                inv.setItem(0, generateBanItem("§6§l(SS) Uso de Hack Client", lore, false));
+                inv.setItem(0, generateBanItem("§6§lUso de Hack Client [SS]", lore, false));
                 lore = new ArrayList<>();
                 lore.add("§eClic para ir!");
-                inv.setItem(1, generateBanItem("§6§l(SS) Uso de macros", lore, false));
+                inv.setItem(1, generateBanItem("§6§lUso de macros [SS]", lore, false));
                 lore = new ArrayList<>();
                 lore.add("§eClic para ir!");
-                inv.setItem(2, generateBanItem("§6§l(SS) Uso de mods ilegales", lore, false));
+                inv.setItem(2, generateBanItem("§6§lUso de mods ilegales [SS]", lore, false));
                 break;
             case "§6§lMOD ADMITIDAS ":
                 lore = new ArrayList<>();
                 lore.add("§eClic para ir!");
-                inv.setItem(0, generateBanItem("§6§l(A) Uso de Hack Client", lore, false));
+                inv.setItem(0, generateBanItem("§6§lUso de Hack Client [A]", lore, false));
                 lore = new ArrayList<>();
                 lore.add("§eClic para ir!");
-                inv.setItem(1, generateBanItem("§6§l(A) Uso de macros", lore, false));
+                inv.setItem(1, generateBanItem("§6§lUso de macros [A]", lore, false));
                 lore = new ArrayList<>();
                 lore.add("§eClic para ir!");
-                inv.setItem(2, generateBanItem("§6§l(A) Uso de mods ilegales", lore, false));
+                inv.setItem(2, generateBanItem("§6§lUso de mods ilegales [A]", lore, false));
                 break;
 
         }
