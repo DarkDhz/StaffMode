@@ -6,11 +6,15 @@ import dev.darkhorizon.es.sm.items.Items;
 import jdk.nashorn.internal.runtime.arrays.ArrayLikeIterator;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.enchantments.Enchantment;
+import org.bukkit.enchantments.EnchantmentTarget;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,82 +43,82 @@ public class PunishGUI {
         Inventory inv = Bukkit.createInventory(p, 6*9, "§e§lSanciones para " + target.getName());
         List<String> lore = new ArrayList<>();
         lore.add("➟Warn al jugador");
-        inv.setItem(11, generateBanItem("§6§lSpam de Ip ajena.", lore));
+        inv.setItem(11, generateBanItem("§6§lSpam de Ip ajena.", lore, true));
         lore = new ArrayList<>();
         lore.add("nombrar");
-        inv.setItem(12, this.generateBanItem("§6§lAcumulación de mutes (3).", lore));
+        inv.setItem(12, this.generateBanItem("§6§lAcumulación de mutes (3).", lore, true));
         lore = new ArrayList<>();
         lore.add("§eClic para ir!");
-        inv.setItem(13, this.generateBanItem("§6§lSpam / Flood", lore));
+        inv.setItem(13, this.generateBanItem("§6§lSpam / Flood", lore, true));
         lore = new ArrayList<>();
         lore.add("nombrar");
-        inv.setItem(14, this.generateBanItem("§6§lAcumulación de Baneos por acumulación de Mutes (2)", lore));
+        inv.setItem(14, this.generateBanItem("§6§lAcumulación de Baneos por acumulación de Mutes (2)", lore, true));
         lore = new ArrayList<>();
         lore.add("§eClic para ir!");
-        inv.setItem(15, this.generateBanItem("§6§lComercialización de objetos con beneficios fuera de la network.", lore));
+        inv.setItem(15, this.generateBanItem("§6§lComercialización de objetos con beneficios fuera de la network.", lore, true));
         lore = new ArrayList<>();
         lore.add("nombrar");
-        inv.setItem(19, this.generateBanItem("§6§lInsultos al staff.", lore));
+        inv.setItem(19, this.generateBanItem("§6§lInsultos al staff.", lore, true));
         lore = new ArrayList<>();
         lore.add("§eClic para ir!");
-        inv.setItem(20, this.generateBanItem("§6§lHostigamiento o acoso hacia otro jugador.", lore));
+        inv.setItem(20, this.generateBanItem("§6§lHostigamiento o acoso hacia otro jugador.", lore, true));
         lore = new ArrayList<>();
         lore.add("§eClic para ir!");
-        inv.setItem(21, this.generateBanItem("§6§lInsultos hacia otro jugador.", lore));
+        inv.setItem(21, this.generateBanItem("§6§lInsultos hacia otro jugador.", lore, true));
         lore = new ArrayList<>();
         lore.add("§eClic para ir!");
-        inv.setItem(22, this.generateBanItem("§6§lPedir rango u objetos al staff.", lore));
+        inv.setItem(22, this.generateBanItem("§6§lPedir rango u objetos al staff.", lore, true));
         lore = new ArrayList<>();
         lore.add("§eClic para ir!");
-        inv.setItem(23, this.generateBanItem("§6§lIntento de venta de una cuenta.", lore));
+        inv.setItem(23, this.generateBanItem("§6§lIntento de venta de una cuenta.", lore, true));
         lore = new ArrayList<>();
         lore.add("§eClic para ir!");
-        inv.setItem(24, this.generateBanItem("§6§lVenta de una cuenta", lore));
+        inv.setItem(24, this.generateBanItem("§6§lVenta de una cuenta", lore, true));
         lore = new ArrayList<>();
         lore.add("§eClic para sancionar!");
-        inv.setItem(25, this.generateBanItem("§6§lEvadir sanción", lore));
+        inv.setItem(25, this.generateBanItem("§6§lEvadir sanción", lore, true));
         lore = new ArrayList<>();
         lore.add("§eClic para sancionar!");
-        inv.setItem(28, this.generateBanItem("§6§lMulticuentas", lore));
+        inv.setItem(28, this.generateBanItem("§6§lMulticuentas", lore, true));
         lore = new ArrayList<>();
         lore.add("§eClic para sancionar!");
-        inv.setItem(29, this.generateBanItem("§6§lMentir al staff", lore));
+        inv.setItem(29, this.generateBanItem("§6§lMentir al staff", lore, true));
         lore = new ArrayList<>();
         lore.add("§eClic para sancionar!");
-        inv.setItem(30, this.generateBanItem("§6§lNegarse a SS", lore));
+        inv.setItem(30, this.generateBanItem("§6§lNegarse a SS", lore, true));
         lore = new ArrayList<>();
         lore.add("§eClic para sancionar!");
-        inv.setItem(31, this.generateBanItem("§6§lVenta de objetos con nombres inadecuados en /ah.", lore));
+        inv.setItem(31, this.generateBanItem("§6§lVenta de objetos con nombres inadecuados en /ah.", lore, true));
         lore = new ArrayList<>();
         lore.add("§eClic para sancionar!");
-        inv.setItem(32, this.generateBanItem("§6§lEstafa a otro usuario.", lore));
+        inv.setItem(32, this.generateBanItem("§6§lEstafa a otro usuario.", lore, true));
         lore = new ArrayList<>();
         lore.add("§eClic para sancionar!");
-        inv.setItem(33, this.generateBanItem("§6§lGrifeo en proteciones ajenas.", lore));
+        inv.setItem(33, this.generateBanItem("§6§lGrifeo en proteciones ajenas.", lore, true));
         lore = new ArrayList<>();
         lore.add("§eClic para sancionar!");
-        inv.setItem(34, this.generateBanItem("§6§lMecanismos AntiAFK (solo aplicable a usuarios sin rango)", lore));
+        inv.setItem(34, this.generateBanItem("§6§lMecanismos AntiAFK (solo aplicable a usuarios sin rango)", lore, true));
         lore = new ArrayList<>();
         lore.add("§eClic para sancionar!");
-        inv.setItem(37, this.generateBanItem("§6§lEstafa por /ah", lore));
+        inv.setItem(37, this.generateBanItem("§6§lEstafa por /ah", lore, true));
         lore = new ArrayList<>();
         lore.add("§eClic para sancionar!");
-        inv.setItem(38, this.generateBanItem("§6§lEstafa.", lore));
+        inv.setItem(38, this.generateBanItem("§6§lEstafa.", lore, true));
         lore = new ArrayList<>();
         lore.add("§eClic para sancionar!");
-        inv.setItem(39, this.generateBanItem("§6§lTpaKill", lore));
+        inv.setItem(39, this.generateBanItem("§6§lTpaKill", lore, true));
         lore = new ArrayList<>();
         lore.add("§eClic para sancionar!");
-        inv.setItem(40, this.generateBanItem("§6§lFreeKill en MinaPvP o Coliseo", lore));
+        inv.setItem(40, this.generateBanItem("§6§lFreeKill en MinaPvP o Coliseo", lore, true));
         lore = new ArrayList<>();
         lore.add("§eClic para ir!");
-        inv.setItem(41, this.generateBanItem("§6§lMODIFICACIONES ILEGALES EN SS", lore));
+        inv.setItem(41, this.generateBanItem("§6§lMODIFICACIONES ILEGALES EN SS", lore, true));
         lore = new ArrayList<>();
         lore.add("§eClic para ir!");
-        inv.setItem(42, this.generateBanItem("§6§lMODIFICACIONES ILEGALES EVIDENTES", lore));
+        inv.setItem(42, this.generateBanItem("§6§lMODIFICACIONES ILEGALES EVIDENTES", lore, true));
         lore = new ArrayList<>();
         lore.add("§eClic para ir!");
-        inv.setItem(43, this.generateBanItem("§6§lMODIFICACIONES ILEGALES ADMITIDAS", lore));
+        inv.setItem(43, this.generateBanItem("§6§lMODIFICACIONES ILEGALES ADMITIDAS", lore, true));
         p.openInventory(inv);
     }
 
@@ -125,75 +129,75 @@ public class PunishGUI {
             case "§6§lInsultos staff ":
                 lore = new ArrayList<>();
                 lore.add("§eClic para sancionar!");
-                inv.setItem(0, generateBanItem("§6§l1ª vez - Aviso (warn)", lore));
+                inv.setItem(0, generateBanItem("§6§l1ª vez - Aviso (warn)", lore, false));
                 lore = new ArrayList<>();
                 lore.add("§eClic para sancionar!");
-                inv.setItem(1, generateBanItem("§6§l2ª vez - Baneo temporal de 7 días", lore));
+                inv.setItem(1, generateBanItem("§6§l2ª vez - Baneo temporal de 7 días", lore, false));
                 p.openInventory(inv);
                 break;
             case "§6§lAcoso ":
             case "§6§lAntiAfk ":
                 lore = new ArrayList<>();
                 lore.add("§eClic para sancionar!");
-                inv.setItem(0, generateBanItem("§6§l1ª vez - Aviso (warn)", lore));
+                inv.setItem(0, generateBanItem("§6§l1ª vez - Aviso (warn)", lore, false));
                 lore = new ArrayList<>();
                 lore.add("§eClic para sancionar!");
-                inv.setItem(1, generateBanItem("§6§l2ª vez - Baneo temporal de 5 días", lore));
+                inv.setItem(1, generateBanItem("§6§l2ª vez - Baneo temporal de 5 días", lore, false));
                 p.openInventory(inv);
                 break;
             case "§6§lPedir al Staff ":
                 lore = new ArrayList<>();
                 lore.add("§eClic para sancionar!");
-                inv.setItem(0, generateBanItem("§6§l1ª vez - Aviso (warn)", lore));
+                inv.setItem(0, generateBanItem("§6§l1ª vez - Aviso (warn)", lore, false));
                 lore = new ArrayList<>();
                 lore.add("§eClic para sancionar!");
-                inv.setItem(1, generateBanItem("§6§l2ª vez - Baneo temporal de 3 días", lore));
+                inv.setItem(1, generateBanItem("§6§l2ª vez - Baneo temporal de 3 días", lore, false));
                 p.openInventory(inv);
                 break;
             case "§6§lNO SS ":
             case "§6§lMOD EVIDENTES ":
                 lore = new ArrayList<>();
                 lore.add("§eClic para sancionar!");
-                inv.setItem(0, generateBanItem("§6§lSanción con rango", lore));
+                inv.setItem(0, generateBanItem("§6§lSanción con rango", lore, false));
                 lore = new ArrayList<>();
                 lore.add("§eClic para sancionar!");
-                inv.setItem(1, generateBanItem("§6§lSanción sin rango", lore));
+                inv.setItem(1, generateBanItem("§6§lSanción sin rango", lore, false));
                 p.openInventory(inv);
                 break;
             case "§6§lFreeKill ":
                 lore = new ArrayList<>();
                 lore.add("§eClic para sancionar!");
-                inv.setItem(0, generateBanItem("§6§l1ª vez - Advertencia (warn)", lore));
+                inv.setItem(0, generateBanItem("§6§l1ª vez - Advertencia (warn)", lore, false));
                 lore = new ArrayList<>();
                 lore.add("§eClic para sancionar!");
-                inv.setItem(1, generateBanItem("§6§l2ª vez - 2 Aviso (warn)", lore));
+                inv.setItem(1, generateBanItem("§6§l2ª vez - 2 Aviso (warn)", lore, false));
                 lore = new ArrayList<>();
                 lore.add("§eClic para sancionar!");
-                inv.setItem(2, generateBanItem("§6§l3ª vez - Baneo temporal de 30min", lore));
+                inv.setItem(2, generateBanItem("§6§l3ª vez - Baneo temporal de 30min", lore, false));
                 p.openInventory(inv);
                 break;
             case "§6§lMOD SS ":
                 lore = new ArrayList<>();
                 lore.add("§eClic para ir!");
-                inv.setItem(0, generateBanItem("§6§lUso de Hack Client en (SS)", lore));
+                inv.setItem(0, generateBanItem("§6§l(SS) Uso de Hack Client", lore, false));
                 lore = new ArrayList<>();
                 lore.add("§eClic para ir!");
-                inv.setItem(1, generateBanItem("§6§lUso de macros en (SS)", lore));
+                inv.setItem(1, generateBanItem("§6§l(SS) Uso de macros", lore, false));
                 lore = new ArrayList<>();
                 lore.add("§eClic para ir!");
-                inv.setItem(2, generateBanItem("§6§lUso de mods ilegales en (SS)", lore));
+                inv.setItem(2, generateBanItem("§6§l(SS) Uso de mods ilegales", lore, false));
                 p.openInventory(inv);
                 break;
             case "§6§lMOD ADMITIDAS ":
                 lore = new ArrayList<>();
                 lore.add("§eClic para ir!");
-                inv.setItem(0, generateBanItem("§6§lUso de Hack Client (A)", lore));
+                inv.setItem(0, generateBanItem("§6§l(A) Uso de Hack Client", lore, false));
                 lore = new ArrayList<>();
                 lore.add("§eClic para ir!");
-                inv.setItem(1, generateBanItem("§6§lUso de macros (A)", lore));
+                inv.setItem(1, generateBanItem("§6§l(A) Uso de macros", lore, false));
                 lore = new ArrayList<>();
                 lore.add("§eClic para ir!");
-                inv.setItem(2, generateBanItem("§6§lUso de mods ilegales (A)", lore));
+                inv.setItem(2, generateBanItem("§6§l(A) Uso de mods ilegales", lore, false));
                 p.openInventory(inv);
                 break;
 
@@ -204,31 +208,37 @@ public class PunishGUI {
         Inventory inv = Bukkit.createInventory(p, 9, title + target.getName());
         List<String> lore;
         switch (title) {
-            case "§6§lHackClient en [SS] ":
-            case "§6§lMacros [A] ":
-            case "§6§lMods [A] ":
-            case "§6§lHackClient [A] ":
-            case "§6§lMacros en [SS] ":
-            case "§6§lMods en [SS] ":
+            case "§6§lSS HackClient ":
+            case "§6§lA Macros ":
+            case "§6§lA Mods ":
+            case "§6§lA HackClient ":
+            case "§6§lSS Macros ":
+            case "§6§lSS Mods ":
                 lore = new ArrayList<>();
                 lore.add("§eClic para ir!");
-                inv.setItem(0, generateBanItem("§6§lSanción con rango", lore));
+                inv.setItem(0, generateBanItem("§6§lSanción con rango", lore, false));
                 lore = new ArrayList<>();
                 lore.add("§eClic para ir!");
-                inv.setItem(1, generateBanItem("§6§lSanción sin rango", lore));
+                inv.setItem(1, generateBanItem("§6§lSanción sin rango", lore, false));
                 p.openInventory(inv);
                 break;
         }
 
     }
 
-    public static ItemStack generateBanItem(String title, List<String> lore) {
+    public static ItemStack generateBanItem(String title, List<String> lore, boolean glow) {
         ItemStack item = new ItemStack(Material.BOOK_AND_QUILL);
         ItemMeta meta = item.getItemMeta();
         meta.setDisplayName(title);
         meta.setLore(lore);
+
+        if (glow) {
+            meta.addEnchant(Enchantment.DURABILITY, 0, true);
+            meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        }
         item.setItemMeta(meta);
         return item;
     }
+
 
 }
