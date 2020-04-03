@@ -669,6 +669,10 @@ public class SEventsListener implements Listener {
                     launcher.performCommand("ban " + target.getName() + " 7d TpaKill (Survival)");
                     return;
                 }
+                if (item.getItemMeta().getDisplayName().contains("§6§lEstafa a otro usuario.")) {
+                    launcher.performCommand("ban " + target.getName() + " 10d Estafa (Survival)");
+                    return;
+                }
             }
         }
     }
