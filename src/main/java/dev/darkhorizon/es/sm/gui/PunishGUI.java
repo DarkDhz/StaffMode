@@ -209,6 +209,7 @@ public class PunishGUI {
                 break;
 
         }
+        inv.setItem(8, generateArrow());
         p.openInventory(replaceEmpty(inv));
     }
 
@@ -230,6 +231,7 @@ public class PunishGUI {
                 inv.setItem(1, generateBanItem("§6§lSanción sin rango", lore, false));
                 break;
         }
+        inv.setItem(8, generateArrow());
         p.openInventory(replaceEmpty(inv));
 
     }
@@ -244,6 +246,17 @@ public class PunishGUI {
             meta.addEnchant(Enchantment.DURABILITY, 0, true);
             meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         }
+        item.setItemMeta(meta);
+        return item;
+    }
+
+    public static ItemStack generateArrow() {
+        ItemStack item = new ItemStack(Material.ARROW);
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName("§cVolver");
+        List<String> lore = new ArrayList<>();
+        lore.add("§eClic para ir atrás");
+        meta.setLore(lore);
         item.setItemMeta(meta);
         return item;
     }
