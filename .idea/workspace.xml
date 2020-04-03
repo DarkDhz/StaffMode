@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="StaffMode:jar" />
+      <artifact name="SM:jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67bced4b-a0b0-49bc-bd59-a80a910e5d40" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -394,15 +395,17 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="602" y="309" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585753198129" />
-    <state x="538" y="63" key="CommitChangelistDialog2" timestamp="1585922895138">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="478" y="56" key="CommitChangelistDialog2" timestamp="1585923761630">
+      <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="478" y="56" key="CommitChangelistDialog2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854398187" />
+    <state x="478" y="56" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1585923761630" />
     <state x="538" y="63" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585922895138" />
-    <state x="164" y="81" key="DiffContextDialog" timestamp="1585854389909">
+    <state x="164" y="81" width="1365" height="762" key="DiffContextDialog" timestamp="1585923277118">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="164" y="81" key="DiffContextDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854389909" />
+    <state x="164" y="81" width="1365" height="762" key="DiffContextDialog/0.0.1707.920@0.0.1707.920" timestamp="1585923277118" />
     <state x="384" y="117" key="Maven.ArtifactSearchDialog" timestamp="1585833457014">
       <screen x="0" y="0" width="1707" height="920" />
     </state>

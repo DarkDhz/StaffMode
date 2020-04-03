@@ -343,42 +343,36 @@ public class SEventsListener implements Listener {
         } else if (p.getOpenInventory().getTitle().contains("§6§lSS Mods ")) {
             e.setCancelled(true);
             String[] user = p.getOpenInventory().getTitle().split("§6§lSS Mods ");
-            System.out.println(user[1]);
             Player target = Bukkit.getPlayer(user[1]);
             this.manageSubSub(p, target, item, "§6§lSS Mods ");
             return;
         } else if (p.getOpenInventory().getTitle().contains("§6§lSS Macros ")) {
             e.setCancelled(true);
             String[] user = p.getOpenInventory().getTitle().split("§6§lSS Macros ");
-            System.out.println(user[1]);
             Player target = Bukkit.getPlayer(user[1]);
             this.manageSubSub(p, target, item, "§6§lSS Macros ");
             return;
         } else if (p.getOpenInventory().getTitle().contains("§6§lSS HackClient ")) {
             e.setCancelled(true);
             String[] user = p.getOpenInventory().getTitle().split("§6§lSS HackClient ");
-            System.out.println(user[1]);
             Player target = Bukkit.getPlayer(user[1]);
             this.manageSubSub(p, target, item, "§6§lSS HackClient ");
             return;
         } else if (p.getOpenInventory().getTitle().contains("§6§lA Mods ")) {
             e.setCancelled(true);
             String[] user = p.getOpenInventory().getTitle().split("§6§lA Mods ");
-            System.out.println(user[1]);
             Player target = Bukkit.getPlayer(user[1]);
             this.manageSubSub(p, target, item, "§6§lA Mods ");
             return;
         } else if (p.getOpenInventory().getTitle().contains("§6§lA Macros ")) {
             e.setCancelled(true);
             String[] user = p.getOpenInventory().getTitle().split("§6§lA Macros ");
-            System.out.println(user[1]);
             Player target = Bukkit.getPlayer(user[1]);
             this.manageSubSub(p, target, item, "§6§lA Macros ");
             return;
         } else if (p.getOpenInventory().getTitle().contains("§6§lA HackClient ")) {
             e.setCancelled(true);
             String[] user = p.getOpenInventory().getTitle().split("§6§lA HackClient ");
-            System.out.println(user[1]);
             Player target = Bukkit.getPlayer(user[1]);
             this.manageSubSub(p, target, item, "§6§lA HackClient ");
             return;
