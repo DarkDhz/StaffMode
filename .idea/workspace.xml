@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="SM:jar" />
+      <artifact name="StaffMode:jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67bced4b-a0b0-49bc-bd59-a80a910e5d40" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -340,7 +339,21 @@
       <option name="project" value="LOCAL" />
       <updated>1585918123955</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="ElLocoMen">
+      <created>1585918869871</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1585918869871</updated>
+    </task>
+    <task id="LOCAL-00035" summary="ElLocoMen">
+      <created>1585922895886</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1585922895886</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,16 +394,15 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="602" y="309" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585753198129" />
-    <state x="538" y="63" key="CommitChangelistDialog2" timestamp="1585918123084">
+    <state x="538" y="63" key="CommitChangelistDialog2" timestamp="1585922895138">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="478" y="56" key="CommitChangelistDialog2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854398187" />
-    <state x="538" y="63" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585918123084" />
-    <state x="164" y="81" key="DiffContextDialog" timestamp="1585923228865">
+    <state x="538" y="63" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585922895138" />
+    <state x="164" y="81" key="DiffContextDialog" timestamp="1585854389909">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="164" y="81" key="DiffContextDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854389909" />
-    <state x="164" y="81" key="DiffContextDialog/0.0.1707.920@0.0.1707.920" timestamp="1585923228865" />
     <state x="384" y="117" key="Maven.ArtifactSearchDialog" timestamp="1585833457014">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -413,20 +425,19 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="738" y="236" key="VCS.ChangeListViewerDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585856460352" />
-    <state x="502" y="220" key="Vcs.Push.Dialog.v2" timestamp="1585918173827">
+    <state x="502" y="220" key="Vcs.Push.Dialog.v2" timestamp="1585922899249">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="446" y="195" key="Vcs.Push.Dialog.v2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854416451" />
-    <state x="502" y="220" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585918173827" />
+    <state x="502" y="220" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585922899249" />
     <state x="665" y="240" key="chooseDestDirectoryDialog" timestamp="1585507999881">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="665" y="240" key="chooseDestDirectoryDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585507999881" />
-    <state x="550" y="286" key="com.intellij.ide.util.TipDialog" timestamp="1585923205856">
-      <screen x="0" y="0" width="1707" height="920" />
+    <state x="619" y="323" key="com.intellij.ide.util.TipDialog" timestamp="1585918015595">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="550" y="286" key="com.intellij.ide.util.TipDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585863722487" />
-    <state x="550" y="286" key="com.intellij.ide.util.TipDialog/0.0.1707.920@0.0.1707.920" timestamp="1585923205856" />
     <state x="619" y="323" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585918015595" />
     <state x="746" y="428" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585918449373">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -437,11 +448,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="584" y="228" key="extract.method.dialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585579628788" />
-    <state x="582" y="253" key="git4idea.merge.GitPullDialog" timestamp="1585923216333">
-      <screen x="0" y="0" width="1707" height="920" />
+    <state x="655" y="286" key="git4idea.merge.GitPullDialog" timestamp="1585918456469">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="582" y="253" key="git4idea.merge.GitPullDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854403296" />
-    <state x="582" y="253" key="git4idea.merge.GitPullDialog/0.0.1707.920@0.0.1707.920" timestamp="1585923216333" />
     <state x="655" y="286" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585918456469" />
     <state x="342" y="140" key="new project wizard" timestamp="1585866962647">
       <screen x="0" y="0" width="1920" height="1040" />
