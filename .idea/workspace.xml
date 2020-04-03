@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="SM:jar" />
+      <artifact name="StaffMode:jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67bced4b-a0b0-49bc-bd59-a80a910e5d40" name="Default Changelist" comment="">
+    <list default="true" id="67bced4b-a0b0-49bc-bd59-a80a910e5d40" name="Default Changelist" comment="ElLocoMen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/gui/PunishGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/gui/PunishGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,9 +109,6 @@
       <workItem from="1585837891122" duration="4070000" />
       <workItem from="1585850393098" duration="4149000" />
       <workItem from="1585863706473" duration="79000" />
-      <workItem from="1585902694610" duration="180000" />
-      <workItem from="1585902996679" duration="2690000" />
-      <workItem from="1585909728367" duration="2072000" />
     </task>
     <task id="LOCAL-00001" summary="Init plugin">
       <created>1585507470049</created>
@@ -315,35 +313,28 @@
       <option name="project" value="LOCAL" />
       <updated>1585857582195</updated>
     </task>
-    <task id="LOCAL-00030" summary="New compiler.xml">
-      <created>1585902038949</created>
+    <task id="LOCAL-00030" summary="Added UTF-8 chars support">
+      <created>1585867192319</created>
       <option name="number" value="00030" />
       <option name="presentableId" value="LOCAL-00030" />
       <option name="project" value="LOCAL" />
-      <updated>1585902038950</updated>
+      <updated>1585867192319</updated>
     </task>
-    <task id="LOCAL-00031" summary="New compiler.xml">
-      <created>1585905592218</created>
+    <task id="LOCAL-00031" summary="Added UTF-8 chars support">
+      <created>1585910686043</created>
       <option name="number" value="00031" />
       <option name="presentableId" value="LOCAL-00031" />
       <option name="project" value="LOCAL" />
-      <updated>1585905592218</updated>
+      <updated>1585910686043</updated>
     </task>
-    <task id="LOCAL-00032" summary="Added glow">
-      <created>1585910467677</created>
+    <task id="LOCAL-00032" summary="ElLocoMen">
+      <created>1585910721030</created>
       <option name="number" value="00032" />
       <option name="presentableId" value="LOCAL-00032" />
       <option name="project" value="LOCAL" />
-      <updated>1585910467677</updated>
+      <updated>1585910721031</updated>
     </task>
-    <task id="LOCAL-00033" summary="Added glow">
-      <created>1585911097284</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1585911097284</updated>
-    </task>
-    <option name="localTasksCounter" value="34" />
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -364,9 +355,8 @@
     <MESSAGE value="Added ice item on revision" />
     <MESSAGE value="Added configs files" />
     <MESSAGE value="Added UTF-8 chars support" />
-    <MESSAGE value="New compiler.xml" />
-    <MESSAGE value="Added glow" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added glow" />
+    <MESSAGE value="ElLocoMen" />
+    <option name="LAST_COMMIT_MESSAGE" value="ElLocoMen" />
   </component>
   <component name="WindowStateProjectService">
     <state x="659" y="171" key="#com.intellij.ide.util.MemberChooser" timestamp="1585744452267">
@@ -385,63 +375,65 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="602" y="309" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585753198129" />
-    <state x="478" y="56" key="CommitChangelistDialog2" timestamp="1585911896508">
+    <state x="538" y="63" key="CommitChangelistDialog2" timestamp="1585918103850">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="478" y="56" key="CommitChangelistDialog2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854398187" />
+    <state x="538" y="63" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585918103850" />
+    <state x="164" y="81" key="DiffContextDialog" timestamp="1585854389909">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="478" y="56" key="CommitChangelistDialog2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585911896508" />
-    <state x="538" y="63" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585857581489" />
-    <state x="164" y="81" width="1365" height="762" key="DiffContextDialog" timestamp="1585911879644">
+    <state x="164" y="81" key="DiffContextDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854389909" />
+    <state x="384" y="117" key="Maven.ArtifactSearchDialog" timestamp="1585833457014">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="164" y="81" width="1365" height="762" key="DiffContextDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585911879644" />
-    <state x="384" y="117" key="Maven.ArtifactSearchDialog" timestamp="1585910258483">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="384" y="117" key="Maven.ArtifactSearchDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585910258483" />
+    <state x="384" y="117" key="Maven.ArtifactSearchDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585833457014" />
     <state x="150" y="51" key="MergeDialog" timestamp="1585856475110">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="150" y="51" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585856475110" />
-    <state x="638" y="201" key="MultipleFileMergeDialog" timestamp="1585857119466">
+    <state x="638" y="201" key="MultipleFileMergeDialog" timestamp="1585918111460">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="567" y="178" key="MultipleFileMergeDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854407067" />
-    <state x="638" y="201" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585857119466" />
-    <state x="334" y="36" key="SettingsEditor" timestamp="1585901771828">
-      <screen x="0" y="0" width="1707" height="920" />
+    <state x="638" y="201" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585918111460" />
+    <state x="376" y="41" key="SettingsEditor" timestamp="1585867146578">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="334" y="36" key="SettingsEditor/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585901771828" />
+    <state x="334" y="36" key="SettingsEditor/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585862921399" />
     <state x="376" y="41" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585867146578" />
     <state x="738" y="236" key="VCS.ChangeListViewerDialog" timestamp="1585856460352">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="738" y="236" key="VCS.ChangeListViewerDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585856460352" />
-    <state x="446" y="195" key="Vcs.Push.Dialog.v2" timestamp="1585911100383">
-      <screen x="0" y="0" width="1707" height="920" />
+    <state x="502" y="220" key="Vcs.Push.Dialog.v2" timestamp="1585867200603">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="446" y="195" key="Vcs.Push.Dialog.v2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585911100383" />
-    <state x="502" y="220" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585857592547" />
+    <state x="446" y="195" key="Vcs.Push.Dialog.v2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854416451" />
+    <state x="502" y="220" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585867200603" />
     <state x="665" y="240" key="chooseDestDirectoryDialog" timestamp="1585507999881">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="665" y="240" key="chooseDestDirectoryDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585507999881" />
-    <state x="550" y="286" key="com.intellij.ide.util.TipDialog" timestamp="1585909728029">
-      <screen x="0" y="0" width="1707" height="920" />
+    <state x="619" y="323" key="com.intellij.ide.util.TipDialog" timestamp="1585918015595">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="550" y="286" key="com.intellij.ide.util.TipDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585909728029" />
-    <state x="746" y="428" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585865223572">
+    <state x="550" y="286" key="com.intellij.ide.util.TipDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585863722487" />
+    <state x="619" y="323" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585918015595" />
+    <state x="746" y="428" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585918106259">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="663" y="379" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585823420583" />
-    <state x="746" y="428" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585865223572" />
+    <state x="746" y="428" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585918106259" />
     <state x="584" y="228" key="extract.method.dialog" timestamp="1585579628788">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="584" y="228" key="extract.method.dialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585579628788" />
-    <state x="582" y="253" key="git4idea.merge.GitPullDialog" timestamp="1585854403296">
-      <screen x="0" y="0" width="1707" height="920" />
+    <state x="655" y="286" key="git4idea.merge.GitPullDialog" timestamp="1585918035677">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="582" y="253" key="git4idea.merge.GitPullDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854403296" />
+    <state x="655" y="286" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585918035677" />
     <state x="342" y="140" key="new project wizard" timestamp="1585866962647">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -450,9 +442,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="510" y="211" width="672" height="677" key="run.anything.popup/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585852362293" />
-    <state x="514" y="196" width="672" height="678" key="search.everywhere.popup" timestamp="1585581487172">
-      <screen x="0" y="0" width="1707" height="920" />
+    <state x="578" y="222" width="756" height="767" key="search.everywhere.popup" timestamp="1585910901043">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="514" y="196" width="672" height="678" key="search.everywhere.popup/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585581487172" />
+    <state x="578" y="222" width="756" height="767" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585910901043" />
   </component>
 </project>
