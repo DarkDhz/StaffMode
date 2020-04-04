@@ -542,7 +542,7 @@ public class SEventsListener implements Listener {
                             return;
                         }
                         break;
-                    case "§6§lA HackClient":
+                    case "§6§lA HackClient ":
                     case "§6§lA Mods ":
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción con rango")) {
                             launcher.performCommand("ban " + target.getName() + " 14d Modificaciones ilegales [A]");
