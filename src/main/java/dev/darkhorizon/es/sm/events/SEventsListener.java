@@ -425,7 +425,7 @@ public class SEventsListener implements Listener {
                         break;
                     case "§6§lNO SS ":
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción con rango")) {
-                            launcher.performCommand("warn " + target.getName() + " 30d Negarse a SS");
+                            launcher.performCommand("ban " + target.getName() + " 30d Negarse a SS");
                             launcher.closeInventory();
                             return;
                         }
