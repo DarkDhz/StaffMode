@@ -38,7 +38,7 @@ public class Examine  implements CommandExecutor {
         }
         if (args.length == 1) {
             if (args[0].equalsIgnoreCase(p.getName())) {
-                p.sendMessage("");
+                p.sendMessage(lang.invalid_player);
                 return;
             }
             Player target = Bukkit.getPlayer(args[0]);

@@ -35,6 +35,10 @@ public class Freeze implements CommandExecutor {
             return;
         }
         if (args.length == 1) {
+            if (args[0].equalsIgnoreCase(p.getName())) {
+                p.sendMessage(lang.invalid_player);
+                return;
+            }
             Player target = Bukkit.getPlayer(args[0]);
             if (target == null) {
                 p.sendMessage(lang.offline_player.replaceAll("%player", args[0]));
