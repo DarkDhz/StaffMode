@@ -4,6 +4,7 @@ messages:
     no_perm: "%prefix No tienes permisos para ejecutar este comando."
     offline_player: "%prefix El usuario %player no se encuentra conectado!"
     invalid_player: "%prefix Este jugador es invalido o OP."
+    no_exist_player: "%prefix Este jugador no existe."
   commands:
     examine:
       usage: "%prefix /examine <player>"

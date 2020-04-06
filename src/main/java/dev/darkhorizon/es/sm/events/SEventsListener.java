@@ -283,103 +283,88 @@ public class SEventsListener implements Listener {
         if (p.getOpenInventory().getTitle().contains("§e§lSanciones para ")) {
             e.setCancelled(true);
             String[] user = p.getOpenInventory().getTitle().split("§e§lSanciones para ");
-            Player target = Bukkit.getPlayer(user[1]);
-            this.managePunishMain(p, target, item);
+            //Player target = Bukkit.getPlayer(user[1]);
+            this.managePunishMain(p, user[1], item);
             return;
         } else if (p.getOpenInventory().getTitle().contains("§6§lInsultos staff")) {
             e.setCancelled(true);
             String[] user = p.getOpenInventory().getTitle().split("§6§lInsultos staff ");
-            Player target = Bukkit.getPlayer(user[1]);
-            this.manageSubPunish(p, target, item, "§6§lInsultos staff ");
+            this.manageSubPunish(p, user[1], item, "§6§lInsultos staff ");
             return;
         } else if (p.getOpenInventory().getTitle().contains("§6§lAcoso ")) {
             e.setCancelled(true);
             String[] user = p.getOpenInventory().getTitle().split("§6§lAcoso ");
-            Player target = Bukkit.getPlayer(user[1]);
-            this.manageSubPunish(p, target, item, "§6§lAcoso ");
+            this.manageSubPunish(p, user[1], item, "§6§lAcoso ");
             return;
         } else if (p.getOpenInventory().getTitle().contains("§6§lPedir al Staff ")) {
             e.setCancelled(true);
             String[] user = p.getOpenInventory().getTitle().split("§6§lPedir al Staff ");
-            Player target = Bukkit.getPlayer(user[1]);
-            this.manageSubPunish(p, target, item, "§6§lPedir al Staff ");
+            this.manageSubPunish(p, user[1], item, "§6§lPedir al Staff ");
             return;
         } else if (p.getOpenInventory().getTitle().contains("§6§lNO SS ")) {
             e.setCancelled(true);
             String[] user = p.getOpenInventory().getTitle().split("§6§lNO SS ");
-            Player target = Bukkit.getPlayer(user[1]);
-            this.manageSubPunish(p, target, item, "§6§lNO SS ");
+            this.manageSubPunish(p, user[1], item, "§6§lNO SS ");
             return;
         } else if (p.getOpenInventory().getTitle().contains("§6§lAntiAfk ")) {
             e.setCancelled(true);
             String[] user = p.getOpenInventory().getTitle().split("§6§lAntiAfk ");
-            Player target = Bukkit.getPlayer(user[1]);
-            this.manageSubPunish(p, target, item, "§6§lAntiAfk ");
+            this.manageSubPunish(p, user[1], item, "§6§lAntiAfk ");
             return;
         } else if (p.getOpenInventory().getTitle().contains("§6§lFreeKill ")) {
             e.setCancelled(true);
             String[] user = p.getOpenInventory().getTitle().split("§6§lFreeKill ");
-            Player target = Bukkit.getPlayer(user[1]);
-            this.manageSubPunish(p, target, item, "§6§lFreeKill ");
+            this.manageSubPunish(p, user[1], item, "§6§lFreeKill ");
             return;
         } else if (p.getOpenInventory().getTitle().contains("§6§lMOD SS ")) {
             e.setCancelled(true);
             String[] user = p.getOpenInventory().getTitle().split("§6§lMOD SS ");
-            Player target = Bukkit.getPlayer(user[1]);
-            this.manageSubPunish(p, target, item, "§6§lMOD SS ");
+            this.manageSubPunish(p, user[1], item, "§6§lMOD SS ");
             return;
         } else if (p.getOpenInventory().getTitle().contains("§6§lMOD EVIDENTES ")) {
             e.setCancelled(true);
             String[] user = p.getOpenInventory().getTitle().split("§6§lMOD EVIDENTES ");
-            Player target = Bukkit.getPlayer(user[1]);
-            this.manageSubPunish(p, target, item, "§6§lMOD EVIDENTES ");
+            this.manageSubPunish(p, user[1], item, "§6§lMOD EVIDENTES ");
             return;
         } else if (p.getOpenInventory().getTitle().contains("§6§lMOD ADMITIDAS ")) {
             e.setCancelled(true);
             String[] user = p.getOpenInventory().getTitle().split("§6§lMOD ADMITIDAS ");
-            Player target = Bukkit.getPlayer(user[1]);
-            this.manageSubPunish(p, target, item, "§6§lMOD ADMITIDAS ");
+            this.manageSubPunish(p, user[1], item, "§6§lMOD ADMITIDAS ");
             return;
         } else if (p.getOpenInventory().getTitle().contains("§6§lSS Mods ")) {
             e.setCancelled(true);
             String[] user = p.getOpenInventory().getTitle().split("§6§lSS Mods ");
-            Player target = Bukkit.getPlayer(user[1]);
-            this.manageSubSub(p, target, item, "§6§lSS Mods ");
+            this.manageSubSub(p, user[1], item, "§6§lSS Mods ");
             return;
         } else if (p.getOpenInventory().getTitle().contains("§6§lSS Macros ")) {
             e.setCancelled(true);
             String[] user = p.getOpenInventory().getTitle().split("§6§lSS Macros ");
-            Player target = Bukkit.getPlayer(user[1]);
-            this.manageSubSub(p, target, item, "§6§lSS Macros ");
+            this.manageSubSub(p, user[1], item, "§6§lSS Macros ");
             return;
         } else if (p.getOpenInventory().getTitle().contains("§6§lSS HackClient ")) {
             e.setCancelled(true);
             String[] user = p.getOpenInventory().getTitle().split("§6§lSS HackClient ");
-            Player target = Bukkit.getPlayer(user[1]);
-            this.manageSubSub(p, target, item, "§6§lSS HackClient ");
+            this.manageSubSub(p, user[1], item, "§6§lSS HackClient ");
             return;
         } else if (p.getOpenInventory().getTitle().contains("§6§lA Mods ")) {
             e.setCancelled(true);
             String[] user = p.getOpenInventory().getTitle().split("§6§lA Mods ");
-            Player target = Bukkit.getPlayer(user[1]);
-            this.manageSubSub(p, target, item, "§6§lA Mods ");
+            this.manageSubSub(p, user[1], item, "§6§lA Mods ");
             return;
         } else if (p.getOpenInventory().getTitle().contains("§6§lA Macros ")) {
             e.setCancelled(true);
             String[] user = p.getOpenInventory().getTitle().split("§6§lA Macros ");
-            Player target = Bukkit.getPlayer(user[1]);
-            this.manageSubSub(p, target, item, "§6§lA Macros ");
+            this.manageSubSub(p, user[1], item, "§6§lA Macros ");
             return;
         } else if (p.getOpenInventory().getTitle().contains("§6§lA HackClient ")) {
             e.setCancelled(true);
             String[] user = p.getOpenInventory().getTitle().split("§6§lA HackClient ");
-            Player target = Bukkit.getPlayer(user[1]);
-            this.manageSubSub(p, target, item, "§6§lA HackClient ");
+            this.manageSubSub(p, user[1], item, "§6§lA HackClient ");
             return;
         }
     }
 
-    private void manageSubPunish(Player launcher, Player target, ItemStack item, String title) {
+    private void manageSubPunish(Player launcher, String target, ItemStack item, String title) {
         if (target != null && launcher != null) {
             if (item.getType() == Material.ARROW) {
                 PunishGUI gui = new PunishGUI(launcher, target, PunishGUI.gui_type.MAIN);
@@ -389,77 +374,77 @@ public class SEventsListener implements Listener {
                 switch (title) {
                     case "§6§lInsultos staff ":
                         if (item.getItemMeta().getDisplayName().contains("§6§l1ª vez - Aviso (warn)")) {
-                            launcher.performCommand("warn " + target.getName() + " Insultos al staff");
+                            launcher.performCommand("warn " + target + " Insultos al staff");
                             launcher.closeInventory();
                             return;
                         }
                         if (item.getItemMeta().getDisplayName().contains("§6§l2ª vez - Baneo temporal de 7 días")) {
-                            launcher.performCommand("ban " + target.getName() + " 6d Insultos al staff");
+                            launcher.performCommand("ban " + target + " 6d Insultos al staff");
                             launcher.closeInventory();
                             return;
                         }
                         break;
                     case "§6§lAcoso ":
                         if (item.getItemMeta().getDisplayName().contains("§6§l1ª vez - Aviso (warn)")) {
-                            launcher.performCommand("warn " + target.getName() + " Insultos al staff");
+                            launcher.performCommand("warn " + target + " Insultos al staff");
                             launcher.closeInventory();
                             return;
                         }
                         if (item.getItemMeta().getDisplayName().contains("§6§l2ª vez - Baneo temporal de 5 días")) {
-                            launcher.performCommand("ban " + target.getName() + " 5d Comportamiento inadecuado");
+                            launcher.performCommand("ban " + target + " 5d Comportamiento inadecuado");
                             launcher.closeInventory();
                             return;
                         }
                         break;
                     case "§6§lPedir al Staff ":
                         if (item.getItemMeta().getDisplayName().contains("§6§l1ª vez - Aviso (warn)")) {
-                            launcher.performCommand("warn " + target.getName() + " Insultos al staff");
+                            launcher.performCommand("warn " + target + " Insultos al staff");
                             launcher.closeInventory();
                             return;
                         }
                         if (item.getItemMeta().getDisplayName().contains("§6§l2ª vez - Baneo temporal de 3 días")) {
-                            launcher.performCommand("ban " + target.getName() + " 3d Comportamiento inadecuado");
+                            launcher.performCommand("ban " + target + " 3d Comportamiento inadecuado");
                             launcher.closeInventory();
                             return;
                         }
                         break;
                     case "§6§lNO SS ":
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción con rango")) {
-                            launcher.performCommand("ban " + target.getName() + " 30d Negarse a SS");
+                            launcher.performCommand("ban " + target + " 30d Negarse a SS");
                             launcher.closeInventory();
                             return;
                         }
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción sin rango")) {
-                            launcher.performCommand("ban " + target.getName() + " Negarse a SS");
+                            launcher.performCommand("ban " + target + " Negarse a SS");
                             launcher.closeInventory();
                             return;
                         }
                         break;
                     case "§6§lAntiAfk ":
                         if (item.getItemMeta().getDisplayName().contains("§6§l1ª vez - Aviso (warn)")) {
-                            launcher.performCommand("warn " + target.getName() + " Mecanismos AntiAFK");
+                            launcher.performCommand("warn " + target + " Mecanismos AntiAFK");
                             launcher.closeInventory();
                             return;
                         }
                         if (item.getItemMeta().getDisplayName().contains("§6§l2ª vez - Baneo temporal de 5 días")) {
-                            launcher.performCommand("ban " + target.getName() + " 5d Mecanismos AntiAFK");
+                            launcher.performCommand("ban " + target + " 5d Mecanismos AntiAFK");
                             launcher.closeInventory();
                             return;
                         }
                         break;
                     case "§6§lFreeKill ":
                         if (item.getItemMeta().getDisplayName().contains("§6§l1ª vez - Advertencia (warn)")) {
-                            launcher.performCommand("warn " + target.getName() + " Mecanismos AntiAFK");
+                            launcher.performCommand("warn " + target + " Mecanismos AntiAFK");
                             launcher.closeInventory();
                             return;
                         }
                         if (item.getItemMeta().getDisplayName().contains("§6§l2ª vez - 2 Aviso (warn)")) {
-                            launcher.performCommand("warn " + target.getName() + " Mecanismos AntiAFK");
+                            launcher.performCommand("warn " + target + " Mecanismos AntiAFK");
                             launcher.closeInventory();
                             return;
                         }
                         if (item.getItemMeta().getDisplayName().contains("§6§l3ª vez - Baneo temporal de 30min")) {
-                            launcher.performCommand("ban " + target.getName() + " 30m FreeKill");
+                            launcher.performCommand("ban " + target + " 30m FreeKill");
                             launcher.closeInventory();
                             return;
                         }
@@ -494,12 +479,12 @@ public class SEventsListener implements Listener {
                         break;
                     case "§6§lMOD EVIDENTES ":
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción con rango")) {
-                            launcher.performCommand("ban " + target.getName() + " 30d Modificaciones ilegales [E]");
+                            launcher.performCommand("ban " + target + " 30d Modificaciones ilegales [E]");
                             launcher.closeInventory();
                             return;
                         }
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción sin rango")) {
-                            launcher.performCommand("ban " + target.getName() + " Modificaciones ilegales [E]");
+                            launcher.performCommand("ban " + target + " Modificaciones ilegales [E]");
                             launcher.closeInventory();
                             return;
                         }
@@ -509,7 +494,7 @@ public class SEventsListener implements Listener {
         }
     }
 
-    private void manageSubSub(Player launcher, Player target, ItemStack item, String title) {
+    private void manageSubSub(Player launcher, String target, ItemStack item, String title) {
         if (target != null && launcher != null) {
             if (item.getType() == Material.ARROW) {
                 PunishGUI gui = new PunishGUI(launcher, target, PunishGUI.gui_type.MAIN);
@@ -520,24 +505,24 @@ public class SEventsListener implements Listener {
                     case "§6§lSS HackClient ":
                     case "§6§lSS Mods ":
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción con rango")) {
-                            launcher.performCommand("ban " + target.getName() + " 30d Modificaciones ilegales [SS]");
+                            launcher.performCommand("ban " + target + " 30d Modificaciones ilegales [SS]");
                             launcher.closeInventory();
                             return;
                         }
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción sin rango")) {
-                            launcher.performCommand("ban " + target.getName() + " Modificaciones ilegales [SS]");
+                            launcher.performCommand("ban " + target + " Modificaciones ilegales [SS]");
                             launcher.closeInventory();
                             return;
                         }
                         break;
                     case "§6§lSS Macros ":
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción con rango")) {
-                            launcher.performCommand("ban " + target.getName() + " 14d Modificaciones ilegales [SS]");
+                            launcher.performCommand("ban " + target + " 14d Modificaciones ilegales [SS]");
                             launcher.closeInventory();
                             return;
                         }
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción sin rango")) {
-                            launcher.performCommand("ban " + target.getName() + " 30d Modificaciones ilegales [SS]");
+                            launcher.performCommand("ban " + target + " 30d Modificaciones ilegales [SS]");
                             launcher.closeInventory();
                             return;
                         }
@@ -545,24 +530,24 @@ public class SEventsListener implements Listener {
                     case "§6§lA HackClient ":
                     case "§6§lA Mods ":
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción con rango")) {
-                            launcher.performCommand("ban " + target.getName() + " 14d Modificaciones ilegales [A]");
+                            launcher.performCommand("ban " + target + " 14d Modificaciones ilegales [A]");
                             launcher.closeInventory();
                             return;
                         }
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción sin rango")) {
-                            launcher.performCommand("ban " + target.getName() + " 20d Modificaciones ilegales [A]");
+                            launcher.performCommand("ban " + target + " 20d Modificaciones ilegales [A]");
                             launcher.closeInventory();
                             return;
                         }
                         break;
                     case "§6§lA Macros ":
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción con rango")) {
-                            launcher.performCommand("ban " + target.getName() + " 7d Modificaciones ilegales [A]");
+                            launcher.performCommand("ban " + target + " 7d Modificaciones ilegales [A]");
                             launcher.closeInventory();
                             return;
                         }
                         if (item.getItemMeta().getDisplayName().contains("§6§lSanción sin rango")) {
-                            launcher.performCommand("ban " + target.getName() + " 14d Modificaciones ilegales [A]");
+                            launcher.performCommand("ban " + target + " 14d Modificaciones ilegales [A]");
                             launcher.closeInventory();
                             return;
                         }
@@ -572,11 +557,11 @@ public class SEventsListener implements Listener {
         }
     }
 
-    private void managePunishMain(Player launcher, Player target, ItemStack item) {
+    private void managePunishMain(Player launcher, String target, ItemStack item) {
         if (target != null && launcher != null) {
             if (item.getType() == Material.BOOK_AND_QUILL && item.hasItemMeta()) {
                 if (item.getItemMeta().getDisplayName().contains("§6§lSpam de Ip ajena")) {
-                    launcher.performCommand("ban " + target.getName() + " Pasar IP ajena");
+                    launcher.performCommand("ban " + target + " Pasar IP ajena");
                     launcher.closeInventory();
                     return;
                 }
@@ -617,55 +602,55 @@ public class SEventsListener implements Listener {
                     return;
                 }
                 if (item.getItemMeta().getDisplayName().contains("§6§lAcumulación de mutes (3)")) {
-                    launcher.performCommand("ban " + target.getName() + " 3d Acumulación de mutes");
+                    launcher.performCommand("ban " + target + " 3d Acumulación de mutes");
                     return;
                 }
                 if (item.getItemMeta().getDisplayName().contains("§6§lSpam / Flood")) {
-                    launcher.performCommand("warn " + target.getName() + " Spam / Flood");
+                    launcher.performCommand("warn " + target + " Spam / Flood");
                     return;
                 }
                 if (item.getItemMeta().getDisplayName().contains("§6§lAcumulación de Baneos por acumulación de Mutes (2)")) {
-                    launcher.performCommand("ban " + target.getName() + " 10d Acumulación de baneos");
+                    launcher.performCommand("ban " + target + " 10d Acumulación de baneos");
                     return;
                 }
                 if (item.getItemMeta().getDisplayName().contains("§6§lComercialización de objetos con beneficios fuera de la network.")) {
-                    launcher.performCommand("ban " + target.getName() + " Comercialización (Fuera de la network)");
+                    launcher.performCommand("ban " + target + " Comercialización (Fuera de la network)");
                     return;
                 }
                 if (item.getItemMeta().getDisplayName().contains("§6§lIntento de venta de una cuenta.")) {
-                    launcher.performCommand("ban " + target.getName() + " 3d Intento de comercialización");
+                    launcher.performCommand("ban " + target + " 3d Intento de comercialización");
                     return;
                 }
                 if (item.getItemMeta().getDisplayName().contains("§6§lVenta de una cuenta")) {
-                    launcher.performCommand("ban " + target.getName() + " Venta de cuenta");
+                    launcher.performCommand("ban " + target + " Venta de cuenta");
                     return;
                 }
                 if (item.getItemMeta().getDisplayName().contains("§6§lEvadir sanción")) {
-                    launcher.performCommand("ban " + target.getName() + " 3d Evasión de Sanción");
+                    launcher.performCommand("ban " + target + " 3d Evasión de Sanción");
                     return;
                 }
                 if (item.getItemMeta().getDisplayName().contains("§6§lMulticuentas")) {
-                    launcher.performCommand("ipban " + target.getName() + " 14d Multicuentas");
+                    launcher.performCommand("ipban " + target + " 14d Multicuentas");
                     return;
                 }
                 if (item.getItemMeta().getDisplayName().contains("§6§lMentir al staff")) {
-                    launcher.performCommand("ban " + target.getName() + " 4d Mentir al Staff");
+                    launcher.performCommand("ban " + target + " 4d Mentir al Staff");
                     return;
                 }
                 if (item.getItemMeta().getDisplayName().contains("§6§lGrifeo en proteciones ajenas")) {
-                    launcher.performCommand("ban " + target.getName() + " 10d Grifeo (Survival)");
+                    launcher.performCommand("ban " + target + " 10d Grifeo (Survival)");
                     return;
                 }
                 if (item.getItemMeta().getDisplayName().contains("§6§lEstafa.")) {
-                    launcher.performCommand("ban " + target.getName() + " 10d Estafa (Survival)");
+                    launcher.performCommand("ban " + target + " 10d Estafa (Survival)");
                     return;
                 }
                 if (item.getItemMeta().getDisplayName().contains("§6§lTpaKill")) {
-                    launcher.performCommand("ban " + target.getName() + " 7d TpaKill (Survival)");
+                    launcher.performCommand("ban " + target + " 7d TpaKill (Survival)");
                     return;
                 }
                 if (item.getItemMeta().getDisplayName().contains("§6§lEstafa a otro usuario.")) {
-                    launcher.performCommand("ban " + target.getName() + " 10d Estafa (Survival)");
+                    launcher.performCommand("ban " + target + " 10d Estafa (Survival)");
                     return;
                 }
             }

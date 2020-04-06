@@ -46,6 +46,7 @@ public class Lang {
     public String no_prem = Utils.simpleMessageReplace("messages.global.no_perm", prefix, fm.getLang());
     public String offline_player = Utils.simpleMessageReplace("messages.global.offline_player", prefix, fm.getLang());
     public String invalid_player = Utils.simpleMessageReplace("messages.global.invalid_player", prefix, fm.getLang());
+    public String no_exist = Utils.simpleMessageReplace("messages.global.no_exist_player", prefix, fm.getLang());
 
     // Events Related
 

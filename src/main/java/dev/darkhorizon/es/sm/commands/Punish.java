@@ -5,6 +5,7 @@ import dev.darkhorizon.es.sm.config.Lang;
 import dev.darkhorizon.es.sm.config.Perms;
 import dev.darkhorizon.es.sm.gui.PunishGUI;
 import org.bukkit.Bukkit;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -33,12 +34,12 @@ public class Punish implements CommandExecutor {
                 p.sendMessage(lang.invalid_player);
                 return;
             }
-            Player target = Bukkit.getPlayer(args[0]);
+            OfflinePlayer target = Bukkit.getOfflinePlayer(args[0]);
             if (target == null) {
-                p.sendMessage(lang.offline_player.replaceAll("%player", args[0]));
+                p.sendMessage(lang.no_exist.replaceAll("%player", args[0]));
                 return;
             } else {
-                PunishGUI gui = new PunishGUI(p, target, PunishGUI.gui_type.MAIN);
+                PunishGUI gui = new PunishGUI(p, target.getName(), PunishGUI.gui_type.MAIN);
             }
 
         } else {

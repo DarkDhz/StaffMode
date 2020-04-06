@@ -27,7 +27,7 @@ public class PunishGUI {
 
     public enum gui_type {MAIN, SUB, CUSTOM}
 
-    public PunishGUI(Player p, Player target, gui_type e) {
+    public PunishGUI(Player p, String target, gui_type e) {
         switch (e) {
             case MAIN:
                 this.generateInventory(p, target);
@@ -40,8 +40,8 @@ public class PunishGUI {
         this.generateInventory(p, target);
     }
 
-    private void generateInventory(Player p, Player target) {
-        Inventory inv = Bukkit.createInventory(p, 6*9, "§e§lSanciones para " + target.getName());
+    private void generateInventory(Player p, String target) {
+        Inventory inv = Bukkit.createInventory(p, 6*9, "§e§lSanciones para " + target);
         List<String> lore = new ArrayList<>();
         lore.add("➟Warn al jugador");
         inv.setItem(19, generateBanItem("§6§lSpam de Ip ajena.", lore, false));
@@ -136,8 +136,8 @@ public class PunishGUI {
         return inv;
     }
 
-    public static void generateSubInventory(Player p, Player target, String title) {
-        Inventory inv = Bukkit.createInventory(p, 9, title + target.getName());
+    public static void generateSubInventory(Player p, String target, String title) {
+        Inventory inv = Bukkit.createInventory(p, 9, title + target);
         List<String> lore;
         switch (title) {
             case "§6§lInsultos staff ":
@@ -213,8 +213,8 @@ public class PunishGUI {
         p.openInventory(replaceEmpty(inv));
     }
 
-    public static void generateSubSub(Player p, Player target, String title) {
-        Inventory inv = Bukkit.createInventory(p, 9, title + target.getName());
+    public static void generateSubSub(Player p, String target, String title) {
+        Inventory inv = Bukkit.createInventory(p, 9, title + target);
         List<String> lore;
         switch (title) {
             case "§6§lSS HackClient ":
