@@ -7,7 +7,7 @@ public class Perms {
     public static String freeze_permission = "virtual.staff.freeze";
 
     public static String tp_permission = main_permission;
-    public static String punish_permission = main_permission;
+    public static String punish_permission = "virtual.staff.punish";
     public static String slist_permission = main_permission;
     public static String examine_permission = main_permission;
     public static String examine_edit_permission = "virtual.staff.examine.edit";
