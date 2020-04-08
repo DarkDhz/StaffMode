@@ -1,6 +1,7 @@
 name: StaffMode
 version: 1.0
 main: dev.darkhorizon.es.sm.Main
+depend: [Essentials]
 commands:
   staff:
     description: Staff Mode command
