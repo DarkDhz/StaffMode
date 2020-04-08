@@ -379,14 +379,14 @@ public class SEventsListener implements Listener {
                             return;
                         }
                         if (item.getItemMeta().getDisplayName().contains("§6§l2ª vez - Baneo temporal de 7 días")) {
-                            launcher.performCommand("ban " + target + " 6d Insultos al staff");
+                            launcher.performCommand("ban " + target + " 7d Insultos al staff");
                             launcher.closeInventory();
                             return;
                         }
                         break;
                     case "§6§lAcoso ":
                         if (item.getItemMeta().getDisplayName().contains("§6§l1ª vez - Aviso (warn)")) {
-                            launcher.performCommand("warn " + target + " Insultos al staff");
+                            launcher.performCommand("warn " + target + " Comportamiento inadecuado");
                             launcher.closeInventory();
                             return;
                         }
