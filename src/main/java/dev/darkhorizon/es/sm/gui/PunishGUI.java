@@ -236,6 +236,7 @@ public class PunishGUI {
 
     }
 
+
     public static ItemStack generateBanItem(String title, List<String> lore, boolean glow) {
         ItemStack item = new ItemStack(Material.BOOK_AND_QUILL);
         ItemMeta meta = item.getItemMeta();
