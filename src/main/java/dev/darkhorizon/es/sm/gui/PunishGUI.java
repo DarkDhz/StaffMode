@@ -53,7 +53,7 @@ public class PunishGUI {
         inv.setItem(20, this.generateBanItem("§6§lSpam / Flood", lore, false));
         lore = new ArrayList<>();
         lore.add("§e» Clic para sancionar");
-        inv.setItem(22, this.generateBanItem("§6§lAcumulación de Baneos por acumulación de Mutes (2)", lore, false));
+        inv.setItem(22, this.generateBanItem("§6§lAcumulación de Baneos por Mutes (2)", lore, false));
         lore = new ArrayList<>();
         lore.add("§e» Clic para sancionar");
         inv.setItem(23, this.generateBanItem("§6§lComercialización fuera de la network.", lore, false));
@@ -62,7 +62,7 @@ public class PunishGUI {
         inv.setItem(24, this.generateBanItem("§6§lInsultos al staff.", lore, false));
         lore = new ArrayList<>();
         lore.add("§e» Clic para ir!");
-        inv.setItem(25, this.generateBanItem("§6§lHostigamiento o acoso hacia otro jugador.", lore, false));
+        inv.setItem(25, this.generateBanItem("§6§lAcoso hacia otro jugador.", lore, false));
         lore = new ArrayList<>();
         lore.add("§e» Clic para ir!");
         inv.setItem(28, this.generateBanItem("§6§lInsultos hacia otro jugador.", lore, false));

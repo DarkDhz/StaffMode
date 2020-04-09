@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="SM:jar" />
+      <artifact name="StaffMode:jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67bced4b-a0b0-49bc-bd59-a80a910e5d40" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/gui/PunishGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/gui/PunishGUI.java" afterDir="false" />
     </list>
@@ -109,7 +108,6 @@
       <workItem from="1585837891122" duration="4070000" />
       <workItem from="1585850393098" duration="4149000" />
       <workItem from="1585863706473" duration="79000" />
-      <workItem from="1586450081286" duration="529000" />
     </task>
     <task id="LOCAL-00001" summary="Init plugin">
       <created>1585507470049</created>
@@ -378,11 +376,11 @@
       <updated>1586189404214</updated>
     </task>
     <task id="LOCAL-00039" summary="ElLocoMen">
-      <created>1586380542677</created>
+      <created>1586377556610</created>
       <option name="number" value="00039" />
       <option name="presentableId" value="LOCAL-00039" />
       <option name="project" value="LOCAL" />
-      <updated>1586380542677</updated>
+      <updated>1586377556610</updated>
     </task>
     <option name="localTasksCounter" value="40" />
     <servers />
@@ -409,97 +407,13 @@
     <option name="LAST_COMMIT_MESSAGE" value="ElLocoMen" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="659" y="171" key="#com.intellij.ide.util.MemberChooser" timestamp="1585744452267">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="659" y="171" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585744452267" />
-    <state x="651" y="321" width="404" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1585584870260">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="651" y="321" width="404" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585584870260" />
-    <state x="584" y="209" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585563668065">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="584" y="209" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585563668065" />
-    <state x="602" y="309" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1585753198129">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="602" y="309" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585753198129" />
-    <state x="478" y="56" key="CommitChangelistDialog2" timestamp="1586380534489">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="478" y="56" key="CommitChangelistDialog2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854398187" />
-    <state x="478" y="56" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1586380534489" />
-    <state x="538" y="63" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586189403282" />
-    <state x="184" y="92" key="DiffContextDialog" timestamp="1585923892200">
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1586443003387">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="164" y="81" key="DiffContextDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854389909" />
-    <state x="184" y="92" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585923892200" />
-    <state x="384" y="117" key="Maven.ArtifactSearchDialog" timestamp="1585833457014">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="384" y="117" key="Maven.ArtifactSearchDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585833457014" />
-    <state x="150" y="51" key="MergeDialog" timestamp="1585856475110">
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586443003387" />
+    <state x="683" y="311" key="git4idea.merge.GitPullDialog" timestamp="1586380627755">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="150" y="51" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585856475110" />
-    <state x="638" y="201" key="MultipleFileMergeDialog" timestamp="1585918111460">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="567" y="178" key="MultipleFileMergeDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854407067" />
-    <state x="638" y="201" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585918111460" />
-    <state x="376" y="41" key="SettingsEditor" timestamp="1586088931363">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="334" y="36" key="SettingsEditor/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585862921399" />
-    <state x="376" y="41" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586088931363" />
-    <state x="738" y="236" key="VCS.ChangeListViewerDialog" timestamp="1585856460352">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="738" y="236" key="VCS.ChangeListViewerDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585856460352" />
-    <state x="446" y="195" key="Vcs.Push.Dialog.v2" timestamp="1586380559026">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="446" y="195" key="Vcs.Push.Dialog.v2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854416451" />
-    <state x="446" y="195" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1586380559026" />
-    <state x="502" y="220" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586096068630" />
-    <state x="665" y="240" key="chooseDestDirectoryDialog" timestamp="1585507999881">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="665" y="240" key="chooseDestDirectoryDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585507999881" />
-    <state x="550" y="286" key="com.intellij.ide.util.TipDialog" timestamp="1586450080962">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="550" y="286" key="com.intellij.ide.util.TipDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585863722487" />
-    <state x="550" y="286" key="com.intellij.ide.util.TipDialog/0.0.1707.920@0.0.1707.920" timestamp="1586450080962" />
-    <state x="619" y="323" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586368662822" />
-    <state x="746" y="428" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586189421526">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="663" y="379" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585823420583" />
-    <state x="746" y="428" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586189421526" />
-    <state x="584" y="228" key="extract.method.dialog" timestamp="1585579628788">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="584" y="228" key="extract.method.dialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585579628788" />
-    <state x="655" y="286" key="git4idea.merge.GitPullDialog" timestamp="1586368676086">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="582" y="253" key="git4idea.merge.GitPullDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854403296" />
-    <state x="655" y="286" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586368676086" />
-    <state x="342" y="140" key="new project wizard" timestamp="1585866962647">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="342" y="140" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1585866962647" />
-    <state x="510" y="211" width="672" height="677" key="run.anything.popup" timestamp="1585852362293">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="510" y="211" width="672" height="677" key="run.anything.popup/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585852362293" />
-    <state x="578" y="222" width="756" height="767" key="search.everywhere.popup" timestamp="1585910901043">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="514" y="196" width="672" height="678" key="search.everywhere.popup/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585581487172" />
-    <state x="578" y="222" width="756" height="767" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585910901043" />
+    <state x="683" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586380627755" />
   </component>
 </project>
