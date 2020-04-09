@@ -176,6 +176,9 @@ public class SEventsListener implements Listener {
             if (hitted.isOp()) {
                 return;
             }
+            if (!(e.getEntity() instanceof Player)) {
+                return;
+            }
             if (Data.frozen.contains(hitted.getName())) {
                 hitted.sendMessage(lang.frozen_pvp_msg);
                 e.setCancelled(true);

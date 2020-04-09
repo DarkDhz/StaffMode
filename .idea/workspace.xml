@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="StaffMode:jar" />
+      <artifact name="SM:jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67bced4b-a0b0-49bc-bd59-a80a910e5d40" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/gui/PunishGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/gui/PunishGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +108,7 @@
       <workItem from="1585837891122" duration="4070000" />
       <workItem from="1585850393098" duration="4149000" />
       <workItem from="1585863706473" duration="79000" />
+      <workItem from="1586456544805" duration="103000" />
     </task>
     <task id="LOCAL-00001" summary="Init plugin">
       <created>1585507470049</created>
@@ -407,13 +408,19 @@
     <option name="LAST_COMMIT_MESSAGE" value="ElLocoMen" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1586443003387">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="446" y="194" key="Vcs.Push.Dialog.v2" timestamp="1586451808359">
+      <screen x="0" y="0" width="1707" height="920" />
     </state>
+    <state x="446" y="194" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1586451808359" />
+    <state x="583" y="304" key="com.intellij.ide.util.TipDialog" timestamp="1586456544575">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="583" y="304" key="com.intellij.ide.util.TipDialog/0.0.1707.920@0.0.1707.920" timestamp="1586456544575" />
     <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586443003387" />
-    <state x="683" y="311" key="git4idea.merge.GitPullDialog" timestamp="1586380627755">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="607" y="275" key="git4idea.merge.GitPullDialog" timestamp="1586451827652">
+      <screen x="0" y="0" width="1707" height="920" />
     </state>
+    <state x="607" y="275" key="git4idea.merge.GitPullDialog/0.0.1707.920@0.0.1707.920" timestamp="1586451827652" />
     <state x="683" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586380627755" />
   </component>
 </project>
