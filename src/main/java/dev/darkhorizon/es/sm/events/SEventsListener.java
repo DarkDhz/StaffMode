@@ -650,7 +650,7 @@ public class SEventsListener implements Listener {
                     PunishGUI.generateSubInventory(launcher, target, "§6§lInsultos staff ");
                     return;
                 }
-                if (item.getItemMeta().getDisplayName().contains("§6§lHostigamiento o acoso hacia otro jugador.")) {
+                if (item.getItemMeta().getDisplayName().contains("§6§lAcoso hacia otro jugador.")) {
                     PunishGUI.generateSubInventory(launcher, target, "§6§lAcoso ");
                     return;
                 }
@@ -696,7 +696,7 @@ public class SEventsListener implements Listener {
                     launcher.closeInventory();
                     return;
                 }
-                if (item.getItemMeta().getDisplayName().contains("§6§lAcumulación de Baneos por acumulación de Mutes (2)")) {
+                if (item.getItemMeta().getDisplayName().contains("§6§lAcumulación de Baneos por Mutes (2)")) {
                     launcher.performCommand("ban " + target + " 10d Acumulación de baneos");
                     launcher.closeInventory();
                     return;
