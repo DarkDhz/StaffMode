@@ -37,6 +37,13 @@ public class SEventsListener implements Listener {
     private Lang lang = Lang.getInstance();
 
     @EventHandler
+    public void onJoin(PlayerJoinEvent e) {
+        if (e.getPlayer().hasPermission("virtual.staff.basic") || !e.getPlayer().isOp()) {
+            e.getPlayer().performCommand("staff");
+        }
+    }
+
+    @EventHandler
     public void onVanishChange(VanishStatusChangeEvent e) {
         Player p = Bukkit.getPlayer(e.getAffected().getName());
         if (p == null) {
@@ -371,7 +378,14 @@ public class SEventsListener implements Listener {
             String[] user = p.getOpenInventory().getTitle().split("§6§lEstafa Ah ");
             this.manageSubPunish(p, user[1], item, "§6§lEstafa Ah ");
             return;
+        } else if (p.getOpenInventory().getTitle().contains("§6§lBugs ")) {
+            e.setCancelled(true);
+            String[] user = p.getOpenInventory().getTitle().split("§6§lBugs ");
+            this.manageSubPunish(p, user[1], item, "§6§lBugs ");
+            return;
         }
+
+
 
 
 
@@ -385,6 +399,28 @@ public class SEventsListener implements Listener {
             }
             if (item.getType() == Material.BOOK_AND_QUILL && item.hasItemMeta()) {
                 switch (title) {
+                    case "§6§lBugs ":
+                        if (item.getItemMeta().getDisplayName().contains("§6§lBug Leve - Baneo temporal de 1 dia")) {
+                            launcher.performCommand("ban " + target + " 1d Bug de gravedad leve");
+                            launcher.closeInventory();
+                            return;
+                        }
+                        if (item.getItemMeta().getDisplayName().contains("§6§lBug medio - Baneo temporal de 2 días")) {
+                            launcher.performCommand("ban " + target + " 2d Bug gravedad media");
+                            launcher.closeInventory();
+                            return;
+                        }
+                        if (item.getItemMeta().getDisplayName().contains("§6§lBug alto - Baneo temporal de 3 días")) {
+                            launcher.performCommand("ban " + target + " 3d Bug de gravedad alta");
+                            launcher.closeInventory();
+                            return;
+                        }
+                        if (item.getItemMeta().getDisplayName().contains("§6§lBug grave - Baneo Permanente")) {
+                            launcher.performCommand("ban " + target + " Bug muy grave");
+                            launcher.closeInventory();
+                            return;
+                        }
+                        break;
                     case "§6§lEstafa Ah ":
                         if (item.getItemMeta().getDisplayName().contains("§6§l1ª vez - Aviso (warn)")) {
                             launcher.performCommand("warn " + target + " Estafa por /ah");
@@ -646,6 +682,10 @@ public class SEventsListener implements Listener {
                     PunishGUI.generateSubInventory(launcher, target, "§6§lMOD ADMITIDAS ");
                     return;
                 }
+                if (item.getItemMeta().getDisplayName().contains("§6§lUso de Bugs")) {
+                    PunishGUI.generateSubInventory(launcher, target, "§6§lBugs ");
+                    return;
+                }
                 if (item.getItemMeta().getDisplayName().contains("§6§lAcumulación de mutes (3).")) {
                     launcher.performCommand("ban " + target + " 3d Acumulación de mutes");
                     launcher.closeInventory();
@@ -673,11 +713,6 @@ public class SEventsListener implements Listener {
                 }
                 if (item.getItemMeta().getDisplayName().contains("§6§lVenta de una cuenta")) {
                     launcher.performCommand("ban " + target + " Venta de cuenta");
-                    launcher.closeInventory();
-                    return;
-                }
-                if (item.getItemMeta().getDisplayName().contains("§6§lEvadir sanción")) {
-                    launcher.performCommand("ban " + target + " 3d Evasión de Sanción");
                     launcher.closeInventory();
                     return;
                 }

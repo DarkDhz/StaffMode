@@ -77,7 +77,7 @@ public class PunishGUI {
         inv.setItem(15, this.generateBanItem("§6§lVenta de una cuenta", lore, true));
         lore = new ArrayList<>();
         lore.add("§e» Clic para sancionar");
-        inv.setItem(30, this.generateBanItem("§6§lEvadir sanción", lore, false));
+        inv.setItem(30, this.generateBanItem("§6§lUso de Bugs", lore, false));
         lore = new ArrayList<>();
         lore.add("§e» Clic para sancionar");
         inv.setItem(31, this.generateBanItem("§6§lMulticuentas", lore, false));
@@ -140,6 +140,20 @@ public class PunishGUI {
         Inventory inv = Bukkit.createInventory(p, 9, title + target);
         List<String> lore;
         switch (title) {
+            case "§6§lBugs ":
+                lore = new ArrayList<>();
+                lore.add("§eClic para sancionar!");
+                inv.setItem(0, generateBanItem("§6§lBug Leve - Baneo temporal de 1 dia", lore, false));
+                lore = new ArrayList<>();
+                lore.add("§eClic para sancionar!");
+                inv.setItem(1, generateBanItem("§6§lBug medio - Baneo temporal de 2 días", lore, false));
+                lore = new ArrayList<>();
+                lore.add("§eClic para sancionar!");
+                inv.setItem(2, generateBanItem("§6§lBug alto - Baneo temporal de 3 días", lore, false));
+                lore = new ArrayList<>();
+                lore.add("§eClic para sancionar!");
+                inv.setItem(3, generateBanItem("§6§lBug grave - Baneo Permanente", lore, false));
+                break;
             case "§6§lEstafa Ah ":
                 lore = new ArrayList<>();
                 lore.add("§eClic para sancionar!");
