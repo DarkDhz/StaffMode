@@ -82,6 +82,7 @@ public class Lang {
    
     // /punish related
     public String punish_usage = Utils.simpleMessageReplace("messages.commands.punish.usage", prefix, fm.getLang());
+    public String punish_already = Utils.simpleMessageReplace("messages.commands.punish.already_open", prefix, fm.getLang());;
 
 
     // HOTBAR

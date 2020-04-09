@@ -8,8 +8,11 @@
   <component name="ChangeListManager">
     <list default="true" id="67bced4b-a0b0-49bc-bd59-a80a910e5d40" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/commands/Punish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/commands/Punish.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/config/Lang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/config/Lang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/data/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/data/Data.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/gui/PunishGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/gui/PunishGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/lang.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/lang.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +112,8 @@
       <workItem from="1585837891122" duration="4070000" />
       <workItem from="1585850393098" duration="4149000" />
       <workItem from="1585863706473" duration="79000" />
-      <workItem from="1586450081286" duration="529000" />
+      <workItem from="1586450081286" duration="1114000" />
+      <workItem from="1586451382280" duration="379000" />
     </task>
     <task id="LOCAL-00001" summary="Init plugin">
       <created>1585507470049</created>
@@ -384,7 +388,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586380542677</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Added new item to punish gui">
+      <created>1586450864389</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1586450864389</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,7 +417,8 @@
     <MESSAGE value="Added configs files" />
     <MESSAGE value="Added UTF-8 chars support" />
     <MESSAGE value="ElLocoMen" />
-    <option name="LAST_COMMIT_MESSAGE" value="ElLocoMen" />
+    <MESSAGE value="Added new item to punish gui" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new item to punish gui" />
   </component>
   <component name="WindowStateProjectService">
     <state x="659" y="171" key="#com.intellij.ide.util.MemberChooser" timestamp="1585744452267">
@@ -425,11 +437,11 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="602" y="309" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585753198129" />
-    <state x="478" y="56" key="CommitChangelistDialog2" timestamp="1586380534489">
+    <state x="478" y="56" key="CommitChangelistDialog2" timestamp="1586450861925">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="478" y="56" key="CommitChangelistDialog2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854398187" />
-    <state x="478" y="56" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1586380534489" />
+    <state x="478" y="56" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1586450861925" />
     <state x="538" y="63" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586189403282" />
     <state x="184" y="92" key="DiffContextDialog" timestamp="1585923892200">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -458,21 +470,21 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="738" y="236" key="VCS.ChangeListViewerDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585856460352" />
-    <state x="446" y="195" key="Vcs.Push.Dialog.v2" timestamp="1586380559026">
+    <state x="446" y="195" key="Vcs.Push.Dialog.v2" timestamp="1586450868076">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="446" y="195" key="Vcs.Push.Dialog.v2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585854416451" />
-    <state x="446" y="195" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1586380559026" />
+    <state x="446" y="195" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1586450868076" />
     <state x="502" y="220" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586096068630" />
     <state x="665" y="240" key="chooseDestDirectoryDialog" timestamp="1585507999881">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="665" y="240" key="chooseDestDirectoryDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585507999881" />
-    <state x="550" y="286" key="com.intellij.ide.util.TipDialog" timestamp="1586450080962">
+    <state x="550" y="286" key="com.intellij.ide.util.TipDialog" timestamp="1586451382341">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="550" y="286" key="com.intellij.ide.util.TipDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1585863722487" />
-    <state x="550" y="286" key="com.intellij.ide.util.TipDialog/0.0.1707.920@0.0.1707.920" timestamp="1586450080962" />
+    <state x="550" y="286" key="com.intellij.ide.util.TipDialog/0.0.1707.920@0.0.1707.920" timestamp="1586451382341" />
     <state x="619" y="323" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586368662822" />
     <state x="746" y="428" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586189421526">
       <screen x="0" y="0" width="1920" height="1040" />

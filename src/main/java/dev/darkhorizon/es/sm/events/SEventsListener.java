@@ -817,6 +817,10 @@ public class SEventsListener implements Listener {
     public void onClose(InventoryCloseEvent e) {
         Inventory inv = e.getInventory();
         Player p = (Player) e.getPlayer();
+        if (p.hasPermission(Perms.punish_permission)) {
+            Data.punish.remove(p.getName());
+            return;
+        }
         if (inv.getTitle().contains(lang.examine_GUI_title_edit)) {
             String[] user = p.getOpenInventory().getTitle().split(lang.examine_GUI_title_edit);
             ItemStack[] contents = inv.getContents();
@@ -834,9 +838,7 @@ public class SEventsListener implements Listener {
             target.getInventory().setChestplate(contents[46]);
             target.getInventory().setLeggings(contents[47]);
             target.getInventory().setBoots(contents[48]);
-
         }
-
     }
 
     @EventHandler

@@ -32,6 +32,7 @@ messages:
         - "&4"
     punish:
       usage: "%prefix /punish <player>"
+      already_open: "%prefix %player ya esta siendo sancionado!"
   events:
     advises:
       drop: "%prefix No puedes dropear items en modo staff"
