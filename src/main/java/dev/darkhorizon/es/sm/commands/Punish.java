@@ -35,10 +35,7 @@ public class Punish implements CommandExecutor {
                 p.sendMessage(lang.invalid_player);
                 return;
             }
-            if (Data.punish.containsValue(args[0])) {
-                p.sendMessage(lang.punish_already.replaceAll("%player", args[0]));
-                return;
-            }
+
             OfflinePlayer target = Bukkit.getOfflinePlayer(args[0]);
             if (target == null) {
                 p.sendMessage(lang.no_exist.replaceAll("%player", args[0]));
@@ -47,7 +44,6 @@ public class Punish implements CommandExecutor {
                 Data.punish.put(p.getName(), target.getName());
                 PunishGUI gui = new PunishGUI(p, target.getName(), PunishGUI.gui_type.MAIN);
             }
-
         } else {
             p.sendMessage(lang.punish_usage);
         }

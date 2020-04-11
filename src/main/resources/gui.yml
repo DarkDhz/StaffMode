@@ -1,16 +1,19 @@
 gui:
   examine:
-    view_title: "Visualizando: "
-    edit_title: "Editando: "
+    view_title: "&9&lVisualizando:&r &7"
+    edit_title: "&d&lEditando:&r &7"
     items:
       user:
-        title: "%player"
-        info_enabled: "ACTIVADO"
-        info_disabled: "DESACTIVADO"
+        title: "&6&l%player"
+        info_enabled: "&6ACTIVADO"
+        info_disabled: "&cDESACTIVADO"
         lore:
           - "&1"
-          - "&7Vida: %health/20"
-          - "&7Location: %x %y %z"
+          - "&7Vida: &a%health&7/&c20"
+          - "&7Location:"
+          - "&7X: &a%x"
+          - "&7Y: &a%y"
+          - "&7Z: &a%z"
           - "&7Mundo: %world"
           - "&7God: %god"
           - "&7Fly: %fly"
@@ -25,12 +28,12 @@ gui:
     title: "STAFFLIST"
     items:
       user:
-        title: "&1&l%player"
+        title: "&6&l%player"
         lore:
           - "&1"
           - "&7Posición:"
-          - "&7X: %x"
-          - "&7Y: %y"
-          - "&7Z: %z"
-          - "&7Mundo: %world"
+          - "&7X: &a%x"
+          - "&7Y: &a%y"
+          - "&7Z: &a%z"
+          - "&7Mundo: &a%world"
           - "&2"

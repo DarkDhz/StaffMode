@@ -22,6 +22,7 @@ import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
+import org.bukkit.event.entity.FoodLevelChangeEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryCloseEvent;
@@ -35,6 +36,14 @@ public class SEventsListener implements Listener {
     private final Main plugin = Main.getPlugin(Main.class);
     private final Items items = Items.getInstance();
     private Lang lang = Lang.getInstance();
+
+
+    @EventHandler
+    public void onHunger(FoodLevelChangeEvent e) {
+        if (((Player) e.getEntity()).hasPermission(Perms.main_permission)) {
+            e.setCancelled(true);
+        }
+    }
 
     @EventHandler
     public void onJoin(PlayerJoinEvent e) {
@@ -185,7 +194,10 @@ public class SEventsListener implements Listener {
                 return;
             }
             if (hitted.hasPermission(Perms.main_permission)) {
-                switch (Perms.can_pvp) {
+                hitted.sendMessage(lang.staff_no_pvp);
+                e.setCancelled(true);
+                return;
+                /*switch (Perms.can_pvp) {
                     case ALL:
                         e.setCancelled(false);
                         break;
@@ -199,7 +211,7 @@ public class SEventsListener implements Listener {
                         hitted.sendMessage(lang.staff_no_pvp);
                         e.setCancelled(true);
                         break;
-                }
+                }*/
             }
         }
     }
