@@ -42,7 +42,7 @@ public class Staff implements CommandExecutor {
 
     private void manageStaffMode(Player p) {
         if (Data.staff_players.contains(p.getName())) {
-
+            Bukkit.getPluginManager().callEvent(new DisableStaffMode(p));
             // Rehab players inventory
             item.rehabInventory(p);
 
@@ -53,6 +53,7 @@ public class Staff implements CommandExecutor {
             Data.staff_inv.remove(p.getName());
             p.sendMessage(lang.diabledStaffMode);
         } else {
+            Bukkit.getPluginManager().callEvent(new EnableStaffMode(p));
             Data.staff_players.add(p.getName());
             Data.staff_inv.put(p.getName(), p.getInventory().getContents());
 

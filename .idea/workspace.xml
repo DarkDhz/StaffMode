@@ -8,6 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="67bced4b-a0b0-49bc-bd59-a80a910e5d40" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/commands/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/commands/Staff.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,25 +28,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
-  <component name="IgnoredFileRootStore">
-    <option name="generatedRoots">
-      <set>
-        <option value="D:\Users\Arnau\Desktop\uni\IdeaProjects\SM\.idea" />
-      </set>
-    </option>
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="1ZoRbFcEMKDzJfKT8Ec4GLUxmp2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -53,28 +39,18 @@
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="sm" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="ToolWindowMessages.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -108,7 +84,22 @@
       <workItem from="1585837891122" duration="4070000" />
       <workItem from="1585850393098" duration="4149000" />
       <workItem from="1585863706473" duration="79000" />
-      <workItem from="1586456544805" duration="103000" />
+      <workItem from="1586456544805" duration="169000" />
+      <workItem from="1586457491770" duration="1286000" />
+      <workItem from="1586468009960" duration="34000" />
+      <workItem from="1586541998939" duration="148000" />
+      <workItem from="1586542237994" duration="175000" />
+      <workItem from="1586546224104" duration="438000" />
+      <workItem from="1586547048333" duration="1351000" />
+      <workItem from="1586551959847" duration="287000" />
+      <workItem from="1586552370578" duration="866000" />
+      <workItem from="1586623783980" duration="60000" />
+      <workItem from="1586625058305" duration="45000" />
+      <workItem from="1586791402200" duration="26000" />
+      <workItem from="1586793254345" duration="44000" />
+      <workItem from="1586862090349" duration="224000" />
+      <workItem from="1587063707272" duration="645000" />
+      <workItem from="1587246586399" duration="38000" />
     </task>
     <task id="LOCAL-00001" summary="Init plugin">
       <created>1585507470049</created>
@@ -383,11 +374,25 @@
       <option name="project" value="LOCAL" />
       <updated>1586377556610</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Now staff can hit entities">
+      <created>1586456676560</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1586456676560</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Now staff can hit entities">
+      <created>1586623831113</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1586623831113</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init plugin" />
@@ -405,22 +410,34 @@
     <MESSAGE value="Added configs files" />
     <MESSAGE value="Added UTF-8 chars support" />
     <MESSAGE value="ElLocoMen" />
-    <option name="LAST_COMMIT_MESSAGE" value="ElLocoMen" />
+    <MESSAGE value="Now staff can hit entities" />
+    <option name="LAST_COMMIT_MESSAGE" value="Now staff can hit entities" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="446" y="194" key="Vcs.Push.Dialog.v2" timestamp="1586451808359">
+    <state x="478" y="55" key="CommitChangelistDialog2" timestamp="1586623829414">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="446" y="194" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1586451808359" />
-    <state x="583" y="304" key="com.intellij.ide.util.TipDialog" timestamp="1586456544575">
+    <state x="478" y="55" key="CommitChangelistDialog2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1586623829414" />
+    <state x="478" y="55" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1586456674480" />
+    <state x="446" y="194" key="Vcs.Push.Dialog.v2" timestamp="1586623834643">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="583" y="304" key="com.intellij.ide.util.TipDialog/0.0.1707.920@0.0.1707.920" timestamp="1586456544575" />
+    <state x="446" y="194" key="Vcs.Push.Dialog.v2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1586623834643" />
+    <state x="446" y="194" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1586456711418" />
+    <state x="583" y="304" key="com.intellij.ide.util.TipDialog" timestamp="1586793254855">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="583" y="304" key="com.intellij.ide.util.TipDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1586793254855" />
+    <state x="583" y="304" key="com.intellij.ide.util.TipDialog/0.0.1707.920@0.0.1707.920" timestamp="1586468010544" />
     <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586443003387" />
     <state x="607" y="275" key="git4idea.merge.GitPullDialog" timestamp="1586451827652">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="607" y="275" key="git4idea.merge.GitPullDialog/0.0.1707.920@0.0.1707.920" timestamp="1586451827652" />
     <state x="683" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586380627755" />
+    <state x="304" y="156" key="new project wizard" timestamp="1586468041041">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="304" y="156" key="new project wizard/0.0.1707.920@0.0.1707.920" timestamp="1586468041041" />
   </component>
 </project>

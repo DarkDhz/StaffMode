@@ -47,7 +47,7 @@ public class SEventsListener implements Listener {
 
     @EventHandler
     public void onJoin(PlayerJoinEvent e) {
-        if (e.getPlayer().hasPermission("virtual.staff.basic") || !e.getPlayer().isOp()) {
+        if (e.getPlayer().hasPermission(Perms.main_permission) || !e.getPlayer().isOp()) {
             e.getPlayer().performCommand("staff");
         }
     }
