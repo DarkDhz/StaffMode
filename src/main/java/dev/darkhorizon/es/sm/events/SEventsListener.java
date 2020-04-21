@@ -2,8 +2,6 @@ package dev.darkhorizon.es.sm.events;
 
 import com.earth2me.essentials.IUser;
 import dev.darkhorizon.es.sm.Main;
-import dev.darkhorizon.es.sm.commands.Punish;
-import dev.darkhorizon.es.sm.commands.Staff;
 import dev.darkhorizon.es.sm.config.Lang;
 import dev.darkhorizon.es.sm.config.Perms;
 import dev.darkhorizon.es.sm.data.Data;
@@ -29,8 +27,6 @@ import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.event.player.*;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
-
-import java.util.Arrays;
 
 public class SEventsListener implements Listener {
     private final Main plugin = Main.getPlugin(Main.class);

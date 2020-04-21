@@ -1,6 +1,5 @@
 package dev.darkhorizon.es.sm.gui;
 
-import dev.darkhorizon.es.sm.Main;
 import dev.darkhorizon.es.sm.config.Lang;
 import dev.darkhorizon.es.sm.config.Perms;
 import dev.darkhorizon.es.sm.items.Items;

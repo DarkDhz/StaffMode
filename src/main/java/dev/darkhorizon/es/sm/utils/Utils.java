@@ -1,8 +1,6 @@
 package dev.darkhorizon.es.sm.utils;
 
-import com.earth2me.essentials.IUser;
 import dev.darkhorizon.es.sm.Main;
-import dev.darkhorizon.es.sm.config.Lang;
 import org.bukkit.Location;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;

@@ -1,17 +1,11 @@
 package dev.darkhorizon.es.sm.config;
 
-import dev.darkhorizon.es.sm.Main;
-import dev.darkhorizon.es.sm.items.Items;
 import dev.darkhorizon.es.sm.utils.Utils;
 import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.inventory.meta.SkullMeta;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Lang {

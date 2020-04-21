@@ -6,7 +6,6 @@ import dev.darkhorizon.es.sm.config.FileManger;
 import dev.darkhorizon.es.sm.data.Data;
 import dev.darkhorizon.es.sm.events.SEventsListener;
 import org.bukkit.Bukkit;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;

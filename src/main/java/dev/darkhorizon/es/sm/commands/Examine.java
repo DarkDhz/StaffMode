@@ -1,18 +1,15 @@
 package dev.darkhorizon.es.sm.commands;
 
 import dev.darkhorizon.es.sm.Main;
-import dev.darkhorizon.es.sm.config.FileManger;
 import dev.darkhorizon.es.sm.config.Lang;
 import dev.darkhorizon.es.sm.config.Perms;
 import dev.darkhorizon.es.sm.data.Data;
 import dev.darkhorizon.es.sm.gui.ExamineGUI;
-import dev.darkhorizon.es.sm.items.Items;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.event.inventory.InventoryType;
 
 public class Examine  implements CommandExecutor {
 

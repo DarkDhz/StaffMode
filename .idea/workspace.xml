@@ -8,8 +8,13 @@
   <component name="ChangeListManager">
     <list default="true" id="67bced4b-a0b0-49bc-bd59-a80a910e5d40" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/commands/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/commands/Staff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/commands/Examine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/commands/Examine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/config/FileManger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/config/FileManger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/config/Lang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/config/Lang.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/gui/PunishGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/gui/PunishGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/gui/StaffListGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/gui/StaffListGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/utils/Utils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +104,9 @@
       <workItem from="1586793254345" duration="44000" />
       <workItem from="1586862090349" duration="224000" />
       <workItem from="1587063707272" duration="645000" />
-      <workItem from="1587246586399" duration="38000" />
+      <workItem from="1587246586399" duration="85000" />
+      <workItem from="1587246703881" duration="78000" />
+      <workItem from="1587492253416" duration="99000" />
     </task>
     <task id="LOCAL-00001" summary="Init plugin">
       <created>1585507470049</created>
@@ -388,7 +395,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586623831113</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Added call event">
+      <created>1587246645827</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1587246645827</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,19 +425,20 @@
     <MESSAGE value="Added UTF-8 chars support" />
     <MESSAGE value="ElLocoMen" />
     <MESSAGE value="Now staff can hit entities" />
-    <option name="LAST_COMMIT_MESSAGE" value="Now staff can hit entities" />
+    <MESSAGE value="Added call event" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added call event" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="478" y="55" key="CommitChangelistDialog2" timestamp="1586623829414">
+    <state x="478" y="55" key="CommitChangelistDialog2" timestamp="1587246644106">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="478" y="55" key="CommitChangelistDialog2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1586623829414" />
-    <state x="478" y="55" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1586456674480" />
-    <state x="446" y="194" key="Vcs.Push.Dialog.v2" timestamp="1586623834643">
+    <state x="478" y="55" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1587246644106" />
+    <state x="446" y="194" key="Vcs.Push.Dialog.v2" timestamp="1587246661690">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="446" y="194" key="Vcs.Push.Dialog.v2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1586623834643" />
-    <state x="446" y="194" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1586456711418" />
+    <state x="446" y="194" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1587246661690" />
     <state x="583" y="304" key="com.intellij.ide.util.TipDialog" timestamp="1586793254855">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
