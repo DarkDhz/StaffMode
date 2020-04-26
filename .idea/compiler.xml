@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="StaffMode" />
         <module name="SM" />
+        <module name="StaffMode2" />
       </profile>
     </annotationProcessing>
   </component>

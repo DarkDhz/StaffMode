@@ -518,12 +518,12 @@ public class SEventsListener implements Listener {
                         break;
                     case "§6§lFreeKill ":
                         if (item.getItemMeta().getDisplayName().contains("§6§l1ª vez - Advertencia (warn)")) {
-                            launcher.performCommand("warn " + target + " Mecanismos AntiAFK");
+                            launcher.performCommand("warn " + target + " FreeKill");
                             launcher.closeInventory();
                             return;
                         }
                         if (item.getItemMeta().getDisplayName().contains("§6§l2ª vez - 2 Aviso (warn)")) {
-                            launcher.performCommand("warn " + target + " Mecanismos AntiAFK");
+                            launcher.performCommand("warn " + target + " FreeKill");
                             launcher.closeInventory();
                             return;
                         }
