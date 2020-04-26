@@ -10,6 +10,7 @@ public class Perms {
     public static String punish_permission = "virtual.staff.punish";
     public static String slist_permission = main_permission;
     public static String examine_permission = main_permission;
+    public static String spec_permission = "virtual.staff.spectate";
     public static String examine_edit_permission = "virtual.staff.examine.edit";
     public static String spawner_advise_permission = main_permission;
 
