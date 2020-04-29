@@ -18,6 +18,9 @@ commands:
     aliases: [slist, staffl]
   playertp:
     usage: <command>
+  spec:
+    usage: <command>
+    aliases: [espectar, spectate]
   punish:
     usage: <command>
     aliases: [bangui, guiban, sancionar]

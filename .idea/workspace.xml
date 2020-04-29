@@ -2,16 +2,19 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="SM:jar" />
+      <artifact name="StaffMode2:jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67bced4b-a0b0-49bc-bd59-a80a910e5d40" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/commands/Spectate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/SM_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/StaffMode_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/config/Perms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/config/Perms.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/darkhorizon/es/sm/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/darkhorizon/es/sm/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/darkhorizon/es/sm/commands/Staff.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/darkhorizon/es/sm/commands/Staff.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/darkhorizon/es/sm/config/Perms.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/darkhorizon/es/sm/config/Perms.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +50,7 @@
     <property name="ToolWindowMessages.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pWarps" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -86,28 +89,6 @@
       <workItem from="1585837891122" duration="4070000" />
       <workItem from="1585850393098" duration="4149000" />
       <workItem from="1585863706473" duration="79000" />
-      <workItem from="1586456544805" duration="169000" />
-      <workItem from="1586457491770" duration="1286000" />
-      <workItem from="1586468009960" duration="34000" />
-      <workItem from="1586541998939" duration="148000" />
-      <workItem from="1586542237994" duration="175000" />
-      <workItem from="1586546224104" duration="438000" />
-      <workItem from="1586547048333" duration="1351000" />
-      <workItem from="1586551959847" duration="287000" />
-      <workItem from="1586552370578" duration="866000" />
-      <workItem from="1586623783980" duration="60000" />
-      <workItem from="1586625058305" duration="45000" />
-      <workItem from="1586791402200" duration="26000" />
-      <workItem from="1586793254345" duration="44000" />
-      <workItem from="1586862090349" duration="224000" />
-      <workItem from="1587063707272" duration="645000" />
-      <workItem from="1587246586399" duration="85000" />
-      <workItem from="1587246703881" duration="78000" />
-      <workItem from="1587492253416" duration="137000" />
-      <workItem from="1587492678371" duration="15000" />
-      <workItem from="1587749697398" duration="79000" />
-      <workItem from="1587928901651" duration="807000" />
-      <workItem from="1587930671502" duration="718000" />
     </task>
     <task id="LOCAL-00001" summary="Init plugin">
       <created>1585507470049</created>
@@ -382,39 +363,18 @@
       <option name="project" value="LOCAL" />
       <updated>1586377556610</updated>
     </task>
-    <task id="LOCAL-00040" summary="Now staff can hit entities">
-      <created>1586456676560</created>
+    <task id="LOCAL-00040" summary="ElLocoMen">
+      <created>1586451771993</created>
       <option name="number" value="00040" />
       <option name="presentableId" value="LOCAL-00040" />
       <option name="project" value="LOCAL" />
-      <updated>1586456676560</updated>
+      <updated>1586451771993</updated>
     </task>
-    <task id="LOCAL-00041" summary="Now staff can hit entities">
-      <created>1586623831113</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1586623831113</updated>
-    </task>
-    <task id="LOCAL-00042" summary="Added call event">
-      <created>1587246645827</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1587246645827</updated>
-    </task>
-    <task id="LOCAL-00043" summary="Removed unused Imports">
-      <created>1587492371623</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1587492371623</updated>
-    </task>
-    <option name="localTasksCounter" value="44" />
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init plugin" />
@@ -432,44 +392,44 @@
     <MESSAGE value="Added configs files" />
     <MESSAGE value="Added UTF-8 chars support" />
     <MESSAGE value="ElLocoMen" />
-    <MESSAGE value="Now staff can hit entities" />
-    <MESSAGE value="Added call event" />
-    <MESSAGE value="Removed unused Imports" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed unused Imports" />
+    <option name="LAST_COMMIT_MESSAGE" value="ElLocoMen" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="659" y="167" key="#com.intellij.ide.util.MemberChooser" timestamp="1587928931288">
-      <screen x="0" y="0" width="1707" height="920" />
+    <state x="756" y="405" width="432" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1586452294225">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="659" y="167" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1587928931288" />
-    <state x="478" y="55" key="CommitChangelistDialog2" timestamp="1587492369972">
-      <screen x="0" y="0" width="1707" height="920" />
+    <state x="756" y="405" width="432" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1586452294225" />
+    <state x="614" y="114" key="CommitChangelistDialog2" timestamp="1586451771149">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="478" y="55" key="CommitChangelistDialog2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1586623829414" />
-    <state x="478" y="55" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1587492369972" />
-    <state x="634" y="216" key="FileChooserDialogImpl" timestamp="1587492691582">
-      <screen x="0" y="0" width="1707" height="920" />
+    <state x="614" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586451771149" />
+    <state x="184" y="86" key="DiffContextDialog" timestamp="1586553432388">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="634" y="216" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1587492691582" />
-    <state x="446" y="194" key="Vcs.Push.Dialog.v2" timestamp="1587492375482">
-      <screen x="0" y="0" width="1707" height="920" />
+    <state x="184" y="86" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586553432388" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1586553464166">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="446" y="194" key="Vcs.Push.Dialog.v2/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1586623834643" />
-    <state x="446" y="194" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1587492375482" />
-    <state x="583" y="304" key="com.intellij.ide.util.TipDialog" timestamp="1586793254855">
-      <screen x="0" y="0" width="1707" height="920" />
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586553464166" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1586451775589">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="583" y="304" key="com.intellij.ide.util.TipDialog/0.0.1707.920/-1920.279.1280.680@0.0.1707.920" timestamp="1586793254855" />
-    <state x="583" y="304" key="com.intellij.ide.util.TipDialog/0.0.1707.920@0.0.1707.920" timestamp="1586468010544" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586443003387" />
-    <state x="607" y="275" key="git4idea.merge.GitPullDialog" timestamp="1586451827652">
-      <screen x="0" y="0" width="1707" height="920" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586451775589" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1587212460910">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="607" y="275" key="git4idea.merge.GitPullDialog/0.0.1707.920@0.0.1707.920" timestamp="1586451827652" />
-    <state x="683" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586380627755" />
-    <state x="304" y="156" key="new project wizard" timestamp="1586468041041">
-      <screen x="0" y="0" width="1707" height="920" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587212460910" />
+    <state x="683" y="311" key="git4idea.merge.GitPullDialog" timestamp="1586553437634">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="304" y="156" key="new project wizard/0.0.1707.920@0.0.1707.920" timestamp="1586468041041" />
+    <state x="683" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586553437634" />
+    <state x="342" y="140" key="new project wizard" timestamp="1586453635614">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="342" y="140" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1586453635614" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1587897144948">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587897144948" />
   </component>
 </project>
