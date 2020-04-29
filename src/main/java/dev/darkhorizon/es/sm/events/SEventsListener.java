@@ -27,6 +27,7 @@ import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.event.player.*;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+import dev.darkhorizon.es.sm.api.json.*;
 
 public class SEventsListener implements Listener {
     private final Main plugin = Main.getPlugin(Main.class);
@@ -45,6 +46,9 @@ public class SEventsListener implements Listener {
     public void onJoin(PlayerJoinEvent e) {
         if (e.getPlayer().hasPermission(Perms.main_permission) || !e.getPlayer().isOp()) {
             e.getPlayer().performCommand("staff");
+        }
+        if (e.getPlayer().hasPermission(Perms.alerts_on_join) || !e.getPlayer().isOp()) {
+            e.getPlayer().performCommand("alerts");
         }
     }
 
@@ -145,6 +149,7 @@ public class SEventsListener implements Listener {
                 msg = msg.replaceAll("%player", p.getName());
                 msg = msg.replaceAll("%type", spawner.getCreatureTypeName());
                 staff.sendMessage(msg);
+                new FancyMessage(msg).tooltip("Clic para ir a la ubicación.").send(staff);
                 staff.sendMessage("");
             }
         }

@@ -13,6 +13,7 @@ public class Perms {
     public static String spec_permission = "virtual.staff.spectate";
     public static String examine_edit_permission = "virtual.staff.examine.edit";
     public static String spawner_advise_permission = main_permission;
+    public static String alerts_on_join = "virtual.staff.alerts";
 
     // EVENTS
     public static boolean can_drop = false;
