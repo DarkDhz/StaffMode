@@ -11,6 +11,7 @@ import net.ess3.api.events.AfkStatusChangeEvent;
 import net.ess3.api.events.VanishStatusChangeEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.World;
 import org.bukkit.block.CreatureSpawner;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -142,17 +143,20 @@ public class SEventsListener implements Listener {
         }
 
         CreatureSpawner spawner = (CreatureSpawner)e.getBlock().getState();
-        for (Player staff : Bukkit.getOnlinePlayers()) {
+        String world = e.getBlock().getWorld().getName();
+
+        int x = e.getBlock().getLocation().getBlockX();
+        int y = e.getBlock().getLocation().getBlockY();
+        int z = e.getBlock().getLocation().getBlockZ();
+        Bukkit.getOnlinePlayers().forEach(staff -> {
             if (staff.hasPermission(Perms.spawner_advise_permission)) {
                 staff.sendMessage("");
-                String msg = lang.staff_spawner_break;
-                msg = msg.replaceAll("%player", p.getName());
-                msg = msg.replaceAll("%type", spawner.getCreatureTypeName());
-                staff.sendMessage(msg);
-                new FancyMessage(msg).tooltip("Clic para ir a la ubicación.").send(staff);
+                String msg = this.lang.staff_spawner_break;
+                msg = msg.replace("%player", p.getName()).replace("%type", spawner.getCreatureTypeName());
+                new FancyMessage(msg).tooltip("Clic para ir a la ubicaci�n.").command("/tp " + world + " " + x + " " + y + " " + z).send(staff);
                 staff.sendMessage("");
             }
-        }
+        });
         if (Data.frozen.contains(e.getPlayer().getName())) {
             e.setCancelled(true);
         }

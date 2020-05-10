@@ -24,3 +24,5 @@ commands:
   punish:
     usage: <command>
     aliases: [bangui, guiban, sancionar]
+  loctp:
+    usage: /<command>
