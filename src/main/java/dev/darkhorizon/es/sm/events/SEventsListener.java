@@ -44,10 +44,10 @@ public class SEventsListener implements Listener {
 
     @EventHandler
     public void onJoin(PlayerJoinEvent e) {
-        if (e.getPlayer().hasPermission(Perms.main_permission) || !e.getPlayer().isOp()) {
+        if (e.getPlayer().hasPermission(Perms.main_permission) && !e.getPlayer().isOp()) {
             e.getPlayer().performCommand("staff");
         }
-        if (e.getPlayer().hasPermission(Perms.alerts_on_join) || !e.getPlayer().isOp()) {
+        if (e.getPlayer().hasPermission(Perms.alerts_on_join) && !e.getPlayer().isOp()) {
             e.getPlayer().performCommand("alerts");
         }
     }
