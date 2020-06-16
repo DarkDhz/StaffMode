@@ -55,7 +55,8 @@ public class Main extends JavaPlugin {
         this.getCommand("playertp").setExecutor(new RandomTP());
         this.getCommand("punish").setExecutor(new Punish());
         this.getCommand("spec").setExecutor(new Spectate());
-        this.getCommand("loctp").setExecutor(new LocTp());
+        this.getCommand("setpunish").setExecutor(new SetPunishLocation());
+
     }
 
     private void initEvents() {

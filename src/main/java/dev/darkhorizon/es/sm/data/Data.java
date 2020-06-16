@@ -12,7 +12,6 @@ public class Data {
     public static HashMap<String, ItemStack[]> staff_inv = new HashMap<String, ItemStack[]>();
     public static HashMap<String, ItemStack> freeze_helmet = new HashMap<>();
     public static HashMap<String, String> punish = new HashMap<>();
-    public static HashMap<String, String> abuela = new HashMap<>();
 
 }
 

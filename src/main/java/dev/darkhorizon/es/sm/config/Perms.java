@@ -8,6 +8,7 @@ public class Perms {
 
     public static String tp_permission = main_permission;
     public static String punish_permission = "virtual.staff.punish";
+    public static String loc_permission = "virtual.staff.editloc";
     public static String slist_permission = main_permission;
     public static String examine_permission = main_permission;
     public static String spec_permission = "virtual.staff.spectate";
