@@ -70,6 +70,7 @@ public class Freeze implements CommandExecutor {
                                 //    target.sendMessage(msg);
                                 //}
                             } else {
+                                p.teleport(Data.punishPostLoc);
                                 target.teleport(Data.punishPostLoc);
                                 cancel();
                             }

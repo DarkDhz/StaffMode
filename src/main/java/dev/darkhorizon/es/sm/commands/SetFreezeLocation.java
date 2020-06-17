@@ -44,7 +44,7 @@ public class SetFreezeLocation implements CommandExecutor {
                     return;
                 }
                 if (args[0].equalsIgnoreCase("post")) {
-                    launcher.sendMessage(lang.prefix + "Has establecido la localizacion de SS en tu posicion.");
+                    launcher.sendMessage(lang.prefix + "Has establecido la localizacion de POST SS en tu posicion.");
                     fm.getConfig().set("postfreeze.world", launcher.getLocation().getWorld().getName());
                     fm.getConfig().set("postfreeze.x", launcher.getLocation().getX());
                     fm.getConfig().set("postfreeze.y", launcher.getLocation().getY());
