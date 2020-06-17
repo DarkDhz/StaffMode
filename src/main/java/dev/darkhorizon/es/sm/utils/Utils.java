@@ -78,4 +78,12 @@ public class Utils {
         return new Location(Bukkit.getWorld(world), x, y , z);
     }
 
+    public static Location getSSPostLocation() {
+        String world = fm.getConfig().getString("postfreeze.world");
+        int x = fm.getConfig().getInt("postfreeze.x");
+        int y = fm.getConfig().getInt("postfreeze.y");
+        int z = fm.getConfig().getInt("postfreeze.z");
+        return new Location(Bukkit.getWorld(world), x, y , z);
+    }
+
 }

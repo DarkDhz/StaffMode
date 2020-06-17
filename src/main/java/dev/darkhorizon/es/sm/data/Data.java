@@ -15,6 +15,7 @@ public class Data {
     public static HashMap<String, ItemStack> freeze_helmet = new HashMap<>();
     public static HashMap<String, String> punish = new HashMap<>();
     public static Location punishLoc = Utils.getSSLocation();
+    public static Location punishPostLoc = Utils.getSSPostLocation();
 
 }
 

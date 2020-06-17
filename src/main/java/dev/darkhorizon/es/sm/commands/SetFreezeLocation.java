@@ -19,20 +19,46 @@ public class SetFreezeLocation implements CommandExecutor {
 
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player) {
-            manageCommand((Player) sender);
+            manageCommand((Player) sender, args);
         }
         return false;
     }
 
-    private void manageCommand(Player launcher) {
+    private void manageCommand(Player launcher, String[] args) {
         if (launcher.hasPermission(Perms.loc_permission)) {
-            launcher.sendMessage(lang.prefix + "Has establecido la localizacion de SS en tu posicion.");
-            fm.getConfig().set("freeze.world", launcher.getLocation().getWorld().getName());
-            fm.getConfig().set("freeze.x", launcher.getLocation().getX());
-            fm.getConfig().set("freeze.y", launcher.getLocation().getY());
-            fm.getConfig().set("freeze.z", launcher.getLocation().getZ());
-            fm.saveConfig();
-            Data.punishLoc = Utils.getSSLocation();
+            if (args.length == 0) {
+                launcher.sendMessage("");
+                launcher.sendMessage("/setfreeze pre");
+                launcher.sendMessage("/setfreeze post");
+                launcher.sendMessage("");
+                return;
+            } else {
+                if (args[0].equalsIgnoreCase("pre")) {
+                    launcher.sendMessage(lang.prefix + "Has establecido la localizacion de SS en tu posicion.");
+                    fm.getConfig().set("freeze.world", launcher.getLocation().getWorld().getName());
+                    fm.getConfig().set("freeze.x", launcher.getLocation().getX());
+                    fm.getConfig().set("freeze.y", launcher.getLocation().getY());
+                    fm.getConfig().set("freeze.z", launcher.getLocation().getZ());
+                    fm.saveConfig();
+                    Data.punishLoc = Utils.getSSLocation();
+                    return;
+                }
+                if (args[0].equalsIgnoreCase("post")) {
+                    launcher.sendMessage(lang.prefix + "Has establecido la localizacion de SS en tu posicion.");
+                    fm.getConfig().set("postfreeze.world", launcher.getLocation().getWorld().getName());
+                    fm.getConfig().set("postfreeze.x", launcher.getLocation().getX());
+                    fm.getConfig().set("postfreeze.y", launcher.getLocation().getY());
+                    fm.getConfig().set("postfreeze.z", launcher.getLocation().getZ());
+                    fm.saveConfig();
+                    Data.punishPostLoc = Utils.getSSPostLocation();
+                    return;
+                }
+                launcher.sendMessage("");
+                launcher.sendMessage("/setfreeze pre");
+                launcher.sendMessage("/setfreeze post");
+                launcher.sendMessage("");
+            }
+
         } else {
             launcher.sendMessage(lang.no_prem);
         }

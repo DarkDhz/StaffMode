@@ -58,7 +58,8 @@ public class Freeze implements CommandExecutor {
                     Data.freeze_helmet.put(target.getName(), target.getInventory().getHelmet());
                     target.getInventory().setHelmet(lang.frozen_item);
                     p.sendMessage(lang.freeze_cmd_player_freezed.replaceAll("%player", target.getName()));
-                    final Location pLoc = target.getLocation();
+                    final Location pLoc = Data.punishLoc;
+                    p.teleport(pLoc);
 
                     (new BukkitRunnable() {
                         @Override
@@ -69,6 +70,7 @@ public class Freeze implements CommandExecutor {
                                 //    target.sendMessage(msg);
                                 //}
                             } else {
+                                target.teleport(Data.punishPostLoc);
                                 cancel();
                             }
                         }
@@ -77,8 +79,8 @@ public class Freeze implements CommandExecutor {
                         @Override
                         public void run() {
                             if (Data.frozen.contains(target.getName())) {
-                                if (!target.getLocation().equals(Data.punishLoc)) {
-                                    target.teleport(Data.punishLoc);
+                                if (!target.getLocation().equals(pLoc)) {
+                                    target.teleport(pLoc);
                                 }
                             } else {
                                 cancel();
