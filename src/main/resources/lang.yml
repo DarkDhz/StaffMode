@@ -22,16 +22,6 @@ messages:
       target_unfreezed: "%prefix &fYa no estas en revisión."
       ss_title: "Estas en revisión"
       ss_subtitle: "Conectate"
-      ss_msg:
-        - "&1"
-        - "&7&m================================"
-        - "&2"
-        - "&f¡Estás congelado para poder ser revisado!"
-        - "&c&o(Conectate a Discord, no te desconectes)"
-        - "&7https://discord.gg/fwPuWPw"
-        - "&3"
-        - "&7&m================================"
-        - "&4"
     punish:
       usage: "%prefix /punish <player>"
       already_open: "%prefix &c¡%player ya esta siendo sancionado!"

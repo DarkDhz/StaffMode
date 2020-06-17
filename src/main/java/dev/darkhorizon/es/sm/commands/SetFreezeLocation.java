@@ -9,7 +9,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class SetPunishLocation implements CommandExecutor {
+public class SetFreezeLocation implements CommandExecutor {
 
     private FileManger fm = FileManger.getInstance();
     private final Main plugin = Main.getPlugin(Main.class);
@@ -25,10 +25,11 @@ public class SetPunishLocation implements CommandExecutor {
     private void manageCommand(Player launcher) {
         if (launcher.hasPermission(Perms.loc_permission)) {
             launcher.sendMessage(lang.prefix + "Has establecido la localizacion de SS en tu posicion.");
-            fm.getConfig().set("punish.world", launcher.getLocation().getWorld().getName());
-            fm.getConfig().set("punish.x", launcher.getLocation().getX());
-            fm.getConfig().set("punish.y", launcher.getLocation().getY());
-            fm.getConfig().set("punish.z", launcher.getLocation().getZ());
+            fm.getConfig().set("freeze.world", launcher.getLocation().getWorld().getName());
+            fm.getConfig().set("freeze.x", launcher.getLocation().getX());
+            fm.getConfig().set("freeze.y", launcher.getLocation().getY());
+            fm.getConfig().set("freeze.z", launcher.getLocation().getZ());
+            fm.saveConfig();
         } else {
             launcher.sendMessage(lang.no_prem);
         }

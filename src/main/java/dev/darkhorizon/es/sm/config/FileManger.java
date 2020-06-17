@@ -86,6 +86,13 @@ public class FileManger {
         }
     }
 
+    public void saveConfig() {
+        try {
+            configConfig.save(config);
+        } catch (Exception ignored) {}
+
+    }
+
     public FileConfiguration getConfig() {
         return configConfig;
     }
