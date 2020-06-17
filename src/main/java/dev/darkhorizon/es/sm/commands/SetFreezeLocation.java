@@ -4,6 +4,8 @@ import dev.darkhorizon.es.sm.Main;
 import dev.darkhorizon.es.sm.config.FileManger;
 import dev.darkhorizon.es.sm.config.Lang;
 import dev.darkhorizon.es.sm.config.Perms;
+import dev.darkhorizon.es.sm.data.Data;
+import dev.darkhorizon.es.sm.utils.Utils;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -30,6 +32,7 @@ public class SetFreezeLocation implements CommandExecutor {
             fm.getConfig().set("freeze.y", launcher.getLocation().getY());
             fm.getConfig().set("freeze.z", launcher.getLocation().getZ());
             fm.saveConfig();
+            Data.punishLoc = Utils.getSSLocation();
         } else {
             launcher.sendMessage(lang.no_prem);
         }

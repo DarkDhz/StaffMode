@@ -1,6 +1,8 @@
 package dev.darkhorizon.es.sm.utils;
 
 import dev.darkhorizon.es.sm.Main;
+import dev.darkhorizon.es.sm.config.FileManger;
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
@@ -10,7 +12,10 @@ import java.util.List;
 
 public class Utils {
 
+    private static final FileManger fm = FileManger.getInstance();
+
     private static final Main plugin = Main.getPlugin(Main.class);
+
     public static void reverse(Object[] array) {
         if (array == null)
             return;
@@ -63,6 +68,14 @@ public class Utils {
             toReturn.add(s.replaceAll("&", "§").replaceAll("%prefix", prefix));
         }
         return toReturn;
+    }
+
+    public static Location getSSLocation() {
+        String world = fm.getConfig().getString("freeze.world");
+        int x = fm.getConfig().getInt("freeze.x");
+        int y = fm.getConfig().getInt("freeze.y");
+        int z = fm.getConfig().getInt("freeze.z");
+        return new Location(Bukkit.getWorld(world), x, y , z);
     }
 
 }

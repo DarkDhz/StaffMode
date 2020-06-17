@@ -77,8 +77,8 @@ public class Freeze implements CommandExecutor {
                         @Override
                         public void run() {
                             if (Data.frozen.contains(target.getName())) {
-                                if (!target.getLocation().equals(pLoc)) {
-                                    target.teleport(pLoc);
+                                if (!target.getLocation().equals(Data.punishLoc)) {
+                                    target.teleport(Data.punishLoc);
                                 }
                             } else {
                                 cancel();

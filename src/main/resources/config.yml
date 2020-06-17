@@ -19,3 +19,8 @@ config:
     examine: true
     stafflist: true
     staff: true
+freeze:
+  world: world
+  x: -128.242981499971
+  y: 80.0
+  z: 352.444352314207

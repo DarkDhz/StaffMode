@@ -24,6 +24,6 @@ commands:
   punish:
     usage: <command>
     aliases: [bangui, guiban, sancionar]
-  setpunish:
+  setfreeze:
     usage: <command>
-    aliases: [setpunishloc]
+    aliases: [setfreeze, setss, setssloc]
