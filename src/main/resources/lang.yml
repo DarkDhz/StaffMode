@@ -20,6 +20,8 @@ messages:
       freezed: "%prefix &fHas congelado a &c%player&f."
       unfreezed: "%prefix &fEl jugador &a%player &fya no esta en revisión."
       target_unfreezed: "%prefix &fYa no estas en revisión."
+      ss_title: "Estas en revisión"
+      ss_subtitle: "Conectate"
       ss_msg:
         - "&1"
         - "&7&m================================"

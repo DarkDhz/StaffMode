@@ -57,6 +57,8 @@ public class Lang {
     public String freeze_cmd_player_freezed = Utils.simpleMessageReplace("messages.commands.freeze.freezed", prefix, fm.getLang());
     public String freeze_cmd_player_unfreezed = Utils.simpleMessageReplace("messages.commands.freeze.unfreezed", prefix, fm.getLang());
     public String freeze_cmd_target_unfreezed = Utils.simpleMessageReplace("messages.commands.freeze.target_unfreezed", prefix, fm.getLang());
+    public String frozen_ss_title = Utils.simpleMessageReplace("messages.commands.freeze.ss_title", prefix, fm.getLang());
+    public String frozen_ss_subtitle = Utils.simpleMessageReplace("messages.commands.freeze.ss_subtitle", prefix, fm.getLang());
     public List<String> frozen_ss_msg = Utils.simpleListMessageReplace("messages.commands.freeze.ss_msg", prefix, fm.getLang());
     public ItemStack frozen_item = new ItemStack(Material.PACKED_ICE);
 

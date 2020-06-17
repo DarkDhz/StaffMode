@@ -64,7 +64,7 @@ public class Freeze implements CommandExecutor {
                         @Override
                         public void run() {
                             if (Data.frozen.contains(target.getName())) {
-                                target.sendTitle("§c§l¡Estás congelado para poder ser revisado!", "§c§o(Conectate a Discord, no te desconectes)");
+                                target.sendTitle(lang.frozen_ss_title, lang.frozen_ss_subtitle);
                                 //for (String msg : lang.frozen_ss_msg) {
                                 //    target.sendMessage(msg);
                                 //}
