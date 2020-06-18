@@ -77,7 +77,6 @@ public class Freeze implements CommandExecutor {
                             }
                         }
                     }).runTaskTimerAsynchronously(plugin, 0L, 100L);
-
                     /*(new BukkitRunnable() {
                         @Override
                         public void run() {
