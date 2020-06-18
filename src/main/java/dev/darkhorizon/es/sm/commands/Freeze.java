@@ -60,6 +60,7 @@ public class Freeze implements CommandExecutor {
                     p.sendMessage(lang.freeze_cmd_player_freezed.replaceAll("%player", target.getName()));
                     final Location pLoc = Data.punishLoc;
                     p.teleport(pLoc);
+                    target.teleport(pLoc);
 
                     (new BukkitRunnable() {
                         @Override
@@ -76,7 +77,8 @@ public class Freeze implements CommandExecutor {
                             }
                         }
                     }).runTaskTimerAsynchronously(plugin, 0L, 100L);
-                    (new BukkitRunnable() {
+
+                    /*(new BukkitRunnable() {
                         @Override
                         public void run() {
                             if (Data.frozen.contains(target.getName())) {
@@ -87,7 +89,7 @@ public class Freeze implements CommandExecutor {
                                 cancel();
                             }
                         }
-                    }).runTaskTimerAsynchronously(plugin, 0L, 20L);
+                    }).runTaskTimerAsynchronously(plugin, 0L, 20L);*/
 
                 }
             }
