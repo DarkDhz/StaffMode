@@ -121,9 +121,10 @@ public class Lang {
     public List<String> vanish_lore = Utils.simpleListMessageReplace("hotbar.vanish.lore", prefix, fm.getHotbar());
 
     // FLY
-    public int fly_slot = 2;
-    public ItemStack fly_item = new ItemStack(Material.FEATHER);
-    public String fly_title = "FLY (%state)";
+    public int fly_slot = fm.getHotbar().getInt("hotbar.fly.slot");
+    public ItemStack fly_item = new ItemStack(Material.getMaterial(fm.getHotbar().getInt("hotbar.fly.item")));
+    public String fly_title = Utils.simpleMessageReplace("hotbar.fly.title", prefix, fm.getHotbar());
+    public List<String> fly_lore = Utils.simpleListMessageReplace("hotbar.fly.lore", prefix, fm.getHotbar());
 
     // END OF HOTBAR
 

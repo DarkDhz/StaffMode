@@ -14,6 +14,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.block.CreatureSpawner;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -73,7 +74,7 @@ public class SEventsListener implements Listener {
             return;
         }
         if (Data.staff_players.contains(p.getName())) {
-            //items.updateVanish(p, e.getValue());
+            items.updateFly(p, e.getValue());
             return;
         }
     }
@@ -139,10 +140,21 @@ public class SEventsListener implements Listener {
                     return;
                 }
                 if (p.getItemInHand().getType() == lang.fly_item.getType() && p.getItemInHand().hasItemMeta()
-                        && p.getItemInHand().getItemMeta().getDisplayName().contains("FLY")) {
-                    p.sendMessage("klk mi pana");
+                        && p.getItemInHand().getItemMeta().getDisplayName().equals(lang.fly_title.replaceAll("%state", lang.vanish_title_active))) {
+                    p.sendMessage("§8[§6*§8] §7Modo de vuelo §bdesactivado §7para §a" + p.getName());
+
+                    p.setAllowFlight(false);
                     p.setFlying(false);
                     items.updateFly(p, false);
+                    e.setCancelled(true);
+                    return;
+                }
+                if (p.getItemInHand().getType() == lang.fly_item.getType() && p.getItemInHand().hasItemMeta()
+                        && p.getItemInHand().getItemMeta().getDisplayName().equals(lang.fly_title.replaceAll("%state", lang.vanish_title_unactive))) {
+                    p.sendMessage("§8[§6*§8] §7Modo de vuelo §bactivado §7para §a" + p.getName());
+                    p.setAllowFlight(true);
+                    p.setFlying(true);
+                    items.updateFly(p, true);
                     e.setCancelled(true);
                     return;
                 }

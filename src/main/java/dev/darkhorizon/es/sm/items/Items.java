@@ -69,13 +69,14 @@ public class Items {
     private ItemStack getFly(Player p, boolean state) {
         ItemStack item = lang.fly_item;
 
-
         ItemMeta meta = item.getItemMeta();
         if (state) {
             meta.addEnchant(Enchantment.DURABILITY, 0, false);
             meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        } else {
+            meta.removeEnchant(Enchantment.DURABILITY);
         }
-        meta.setLore(lang.vanish_lore);
+        meta.setLore(lang.fly_lore);
         String title = lang.fly_title;
 
         if (state) {
