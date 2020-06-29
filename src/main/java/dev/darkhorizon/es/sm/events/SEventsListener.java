@@ -138,11 +138,20 @@ public class SEventsListener implements Listener {
                     e.setCancelled(true);
                     return;
                 }
+                if (p.getItemInHand().getType() == lang.fly_item.getType() && p.getItemInHand().hasItemMeta()
+                        && p.getItemInHand().getItemMeta().getDisplayName().contains("FLY")) {
+                    p.sendMessage("klk mi pana");
+                    p.setFlying(false);
+                    items.updateFly(p, false);
+                    e.setCancelled(true);
+                    return;
+                }
                 if (p.getItemInHand().getType() == lang.random_item.getType() && p.getItemInHand().hasItemMeta() && p.getItemInHand().getItemMeta().getDisplayName().contains(lang.random_title)) {
                     p.performCommand("playertp");
                     e.setCancelled(true);
                     return;
                 }
+
             }
         }
 

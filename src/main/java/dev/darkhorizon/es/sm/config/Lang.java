@@ -120,6 +120,11 @@ public class Lang {
     public String vanish_title_unactive = Utils.simpleMessageReplace("hotbar.vanish.state_disabled", prefix, fm.getHotbar());
     public List<String> vanish_lore = Utils.simpleListMessageReplace("hotbar.vanish.lore", prefix, fm.getHotbar());
 
+    // FLY
+    public int fly_slot = 2;
+    public ItemStack fly_item = new ItemStack(Material.FEATHER);
+    public String fly_title = "FLY (%state)";
+
     // END OF HOTBAR
 
     // EXAMINE GUI

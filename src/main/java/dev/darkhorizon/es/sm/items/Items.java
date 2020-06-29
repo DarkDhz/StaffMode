@@ -48,6 +48,11 @@ public class Items {
         p.updateInventory();
     }
 
+    public void updateFly(Player p, boolean state) {
+        p.getInventory().setItem(lang.fly_slot, this.getFly(p, state));
+        p.updateInventory();
+    }
+
     public void setInventory(Player p) {
 
         p.getInventory().clear();
@@ -56,13 +61,13 @@ public class Items {
         p.getInventory().setItem(lang.vanish_slot, this.getVanish(p, plugin.ess.getUser(p).isVanished()));
         p.getInventory().setItem(lang.examine_slot, this.getExamine());
         p.getInventory().setItem(lang.slist_slot, this.getHead(p));
-        p.getInventory().setItem(2, this.getFly(p, true));
+        p.getInventory().setItem(lang.fly_slot, this.getFly(p, true));
         p.updateInventory();
     }
 
 
     private ItemStack getFly(Player p, boolean state) {
-        ItemStack item = new ItemStack(Material.FEATHER);
+        ItemStack item = lang.fly_item;
 
 
         ItemMeta meta = item.getItemMeta();
@@ -71,7 +76,7 @@ public class Items {
             meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         }
         meta.setLore(lang.vanish_lore);
-        String title = "FLY CHETAO (%state)";
+        String title = lang.fly_title;
 
         if (state) {
             title = title.replaceAll("%state", lang.vanish_title_active);
