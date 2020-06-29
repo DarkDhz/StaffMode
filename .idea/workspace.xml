@@ -24,9 +24,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67bced4b-a0b0-49bc-bd59-a80a910e5d40" name="Default Changelist" comment="">
+    <list default="true" id="67bced4b-a0b0-49bc-bd59-a80a910e5d40" name="Default Changelist" comment="Fixed message to users">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/events/SEventsListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/items/Items.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/darkhorizon/es/sm/items/Items.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -431,7 +430,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592474345170</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Fixed message to users">
+      <created>1593464273815</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1593464273815</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -500,11 +506,11 @@
     </state>
     <state x="391" y="70" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1593162737208" />
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586553464166" />
-    <state x="491" y="199" key="Vcs.Push.Dialog.v2" timestamp="1593162769900">
+    <state x="491" y="199" key="Vcs.Push.Dialog.v2" timestamp="1593464282715">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="368" y="147" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1592474355350" />
-    <state x="491" y="199" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1593162769900" />
+    <state x="491" y="199" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1593464282715" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586451775589" />
     <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1587212460910">
       <screen x="0" y="0" width="1920" height="1040" />

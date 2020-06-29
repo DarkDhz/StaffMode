@@ -5,7 +5,9 @@ import dev.darkhorizon.es.sm.Main;
 import dev.darkhorizon.es.sm.config.Lang;
 import dev.darkhorizon.es.sm.data.Data;
 import org.bukkit.Material;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
@@ -61,19 +63,21 @@ public class Items {
 
     private ItemStack getFly(Player p, boolean state) {
         ItemStack item = new ItemStack(Material.FEATHER);
-        //if (!state) {
-        //    item = lang.vanish_item_disabled;
-        //}
+
 
         ItemMeta meta = item.getItemMeta();
+        if (state) {
+            meta.addEnchant(Enchantment.DURABILITY, 0, false);
+            meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        }
         meta.setLore(lang.vanish_lore);
-        String title = "FLY CHETAO";
+        String title = "FLY CHETAO (%state)";
 
-        /*if (state) {
+        if (state) {
             title = title.replaceAll("%state", lang.vanish_title_active);
         } else {
             title = title.replaceAll("%state", lang.vanish_title_unactive);
-        }*/
+        }
         meta.setDisplayName(title);
         item.setItemMeta(meta);
         return item;
