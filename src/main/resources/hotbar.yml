@@ -34,6 +34,6 @@ hotbar:
   fly:
     slot: 2
     item: 288
-    title: "&9&lFLY &8(%state&8)"
+    title: "&d&lFLY &8(%state&8)"
     lore:
       -  "&7¡Clic para modificar el fly!"

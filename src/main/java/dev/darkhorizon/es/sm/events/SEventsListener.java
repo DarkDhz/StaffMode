@@ -83,7 +83,11 @@ public class SEventsListener implements Listener {
     public void onWorldChange(PlayerChangedWorldEvent event) {
         Player p = event.getPlayer();
         if (p.hasPermission(Perms.main_permission)) {
-            p.setFlying(true);
+            p.setAllowFlight(true);
+            if (Data.staff_players.contains(p.getName())) {
+                items.updateFly(p, true);
+                return;
+            }
         }
     }
 
@@ -142,7 +146,6 @@ public class SEventsListener implements Listener {
                 if (p.getItemInHand().getType() == lang.fly_item.getType() && p.getItemInHand().hasItemMeta()
                         && p.getItemInHand().getItemMeta().getDisplayName().equals(lang.fly_title.replaceAll("%state", lang.vanish_title_active))) {
                     p.sendMessage("§8[§6*§8] §7Modo de vuelo §bdesactivado §7para §a" + p.getName());
-
                     p.setAllowFlight(false);
                     p.setFlying(false);
                     items.updateFly(p, false);
