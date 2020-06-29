@@ -54,7 +54,29 @@ public class Items {
         p.getInventory().setItem(lang.vanish_slot, this.getVanish(p, plugin.ess.getUser(p).isVanished()));
         p.getInventory().setItem(lang.examine_slot, this.getExamine());
         p.getInventory().setItem(lang.slist_slot, this.getHead(p));
+        p.getInventory().setItem(2, this.getFly(p, true));
         p.updateInventory();
+    }
+
+
+    private ItemStack getFly(Player p, boolean state) {
+        ItemStack item = new ItemStack(Material.FEATHER);
+        //if (!state) {
+        //    item = lang.vanish_item_disabled;
+        //}
+
+        ItemMeta meta = item.getItemMeta();
+        meta.setLore(lang.vanish_lore);
+        String title = "FLY CHETAO";
+
+        /*if (state) {
+            title = title.replaceAll("%state", lang.vanish_title_active);
+        } else {
+            title = title.replaceAll("%state", lang.vanish_title_unactive);
+        }*/
+        meta.setDisplayName(title);
+        item.setItemMeta(meta);
+        return item;
     }
 
     private ItemStack getVanish(Player p, boolean state) {

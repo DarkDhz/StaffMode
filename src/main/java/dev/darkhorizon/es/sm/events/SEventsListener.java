@@ -8,6 +8,7 @@ import dev.darkhorizon.es.sm.data.Data;
 import dev.darkhorizon.es.sm.gui.PunishGUI;
 import dev.darkhorizon.es.sm.items.Items;
 import net.ess3.api.events.AfkStatusChangeEvent;
+import net.ess3.api.events.FlyStatusChangeEvent;
 import net.ess3.api.events.VanishStatusChangeEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -62,6 +63,26 @@ public class SEventsListener implements Listener {
         if (Data.staff_players.contains(p.getName())) {
             items.updateVanish(p, e.getValue());
             return;
+        }
+    }
+
+    @EventHandler
+    public void onFlyChange(FlyStatusChangeEvent e) {
+        Player p = Bukkit.getPlayer(e.getAffected().getName());
+        if (p == null) {
+            return;
+        }
+        if (Data.staff_players.contains(p.getName())) {
+            //items.updateVanish(p, e.getValue());
+            return;
+        }
+    }
+
+    @EventHandler
+    public void onWorldChange(PlayerChangedWorldEvent event) {
+        Player p = event.getPlayer();
+        if (p.hasPermission(Perms.main_permission)) {
+            p.setFlying(true);
         }
     }
 
