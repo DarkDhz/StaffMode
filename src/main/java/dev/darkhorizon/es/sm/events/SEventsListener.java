@@ -17,6 +17,7 @@ import org.bukkit.block.CreatureSpawner;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.block.BlockBreakEvent;
@@ -43,6 +44,33 @@ public class SEventsListener implements Listener {
         if (((Player) e.getEntity()).hasPermission(Perms.main_permission)) {
             e.setCancelled(true);
         }
+    }
+
+    @EventHandler(priority = EventPriority.HIGHEST)
+    public void onChat(AsyncPlayerChatEvent e) {
+        System.out.println(e.getHandlers());
+
+        for (String p : Data.frozen) {
+            Player reciever = Bukkit.getPlayer(p);
+            if (e.getRecipients().contains(reciever)) {
+                System.out.println(reciever.getName());
+                e.getRecipients().remove(reciever);
+            }
+        }
+    }
+
+    @EventHandler
+    public void onCommand(PlayerCommandPreprocessEvent e) {
+        if (!Data.frozen.contains(e.getPlayer().getName())) {
+            return;
+        }
+        String [] command = e.getMessage().split(" ");
+        for (String cmd : lang.allowed_commands) {
+            if (command[0].equalsIgnoreCase(cmd)) {
+                return;
+            }
+        }
+        e.setCancelled(true);
     }
 
     @EventHandler

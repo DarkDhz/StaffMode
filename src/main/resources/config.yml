@@ -29,3 +29,7 @@ postfreeze:
   x: -128.242981499971
   y: 80.0
   z: 352.444352314207
+allowed_commands:
+  - "/msg"
+  - "/ac"
+  - "/r"

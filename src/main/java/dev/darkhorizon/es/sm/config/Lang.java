@@ -49,6 +49,7 @@ public class Lang {
     public String staff_no_break = Utils.simpleMessageReplace("messages.events.advises.break", prefix, fm.getLang());
     public String staff_no_pvp = Utils.simpleMessageReplace("messages.events.advises.pvp", prefix, fm.getLang());
     public String staff_spawner_break = Utils.simpleMessageReplace("messages.events.advises.spawner_event", prefix, fm.getLang());
+    public List<String> allowed_commands = Utils.simpleListMessageReplace("allowed_commands", prefix, fm.getConfig());
 
     // /freeze retaled
 

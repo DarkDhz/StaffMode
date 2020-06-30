@@ -6,9 +6,11 @@ import dev.darkhorizon.es.sm.config.FileManger;
 import dev.darkhorizon.es.sm.data.Data;
 import dev.darkhorizon.es.sm.events.SEventsListener;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.json.simple.JSONObject;
 
 public class Main extends JavaPlugin {
 
@@ -22,6 +24,8 @@ public class Main extends JavaPlugin {
         this.initVariables();
         this.initCommands();
         this.initEvents();
+
+        //https://bukkit.org/threads/protocollib-get-the-content-of-the-message.478831/
     }
 
     @Override
